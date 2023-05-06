@@ -31,6 +31,21 @@
                     <li><a href="{{ url_for('register') }}">Register</a></li>
                 </ul>
             </div>
+        </nav>
+
+            
+        <!--Nav bar on mobile device screens-->
+        <ul class="sidenav" id="slide-out">
+            <li><a href="{{ url_for('landing_page') }}">Home</a></li>
+            <li><a href="{{ url_for('login') }}">Log In </a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+        </ul>
+
+    </header>
+
+    <section>
+        <h3 class="center-align">{% block header %} All Patterns {% endblock %}</h3>
+    </section>
 
         </nav>    
     <!--Javascript-->
