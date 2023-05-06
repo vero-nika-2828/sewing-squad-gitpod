@@ -1,4 +1,78 @@
 {% extends "base.html" %}
 {% block header %} Register {% endblock %}
 {% block content %}
+
+<div class="row">
+    <!--Registration form-->
+    <form class="col s12 m6 offset-m3" method="POST" action="{{ url_for('register') }}">
+        <div class="card-panel red lighten-5">
+            <!--Name input field-->
+            <div class="row">
+                <div class="input-field col s12 m6 offset-m3">
+                    <i class="material-icons prefix">face</i>
+                    <input id="firstname" name="firstname" type="text" class="validate">
+                    <label for="firstname">Your Name</label>
+                </div>
+            </div>
+
+            <!--Username input field-->
+            <div class="row">
+                <div class="input-field col s12 m6 offset-m3">
+                    <i class="material-icons prefix">person_add</i>
+                    <input id="username" name="username" type="text" class="validate">
+                    <label for="username">Username</label>
+
+                </div>
+            </div>
+
+            <!--Email input field-->
+            <div class="row">
+                <div class="input-field col s12 m6 offset-m3">
+                    <i class="material-icons prefix">email</i>
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                </div>
+            </div>
+
+            <!--Password input field-->
+            <div class="row">
+                <div class="row">
+                    <div class="input-field col s12 m6 offset-m3">
+                        <i class="material-icons prefix">lock</i>
+                        <input id="password" name="password" type="password" class="validate">
+                        <label for="password">Password</label>
+                        <span class="helper-text" data-error="wrong" data-success="right">
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Submit and reset button-->
+            <div class="row">
+                <button type="submit" value=" register"
+                    class="col s6 m3 offset-m3  waves-effect waves-light btn-large pink accent darken-2">Register
+                    <i class="material-icons right">login</i>
+                </button>
+
+                <button type="reset"
+                    class="col s6 m3 waves-effect waves-light btn-large center-align pink accent darken-2">Clear
+                    <i class="material-icons right center-align">backspace</i>
+                </button>
+            </div>
+
+
+        </div>
+    </form>
+
+    <!--Link to Log in Page for registered users-->
+    <div class="col s12 m12 center-align">
+        <p>
+            Already Registered?
+        <p>
+            <a href="{{ url_for('login') }}" alt=>Log In</a>
+    </div>
+</div>
+
 {% endblock %}
