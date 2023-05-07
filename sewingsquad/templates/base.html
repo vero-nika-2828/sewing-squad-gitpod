@@ -44,10 +44,27 @@
     </header>
 
     <section>
+        <!--flash messages-->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="row flash">
+                        <h4>{{ message }}</h4>
+                    </div>
+                {% endfor %}
+            {% endif%}
+        {% endwith %}
+    </section>  
+   
+    <section>
         <h3 class="center-align">{% block header %} All Patterns {% endblock %}</h3>
     </section>
 
-        </nav>    
+    <main class="container">
+        {% block content%}.
+        {% endblock %}
+    </main>
+
     <!--Javascript-->
     <script src="https://code.jquery.com/jquery-3.6.4.js"
         integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
