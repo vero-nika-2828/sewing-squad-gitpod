@@ -37,3 +37,8 @@ def register():
         return redirect(url_for("login"))
 
     return render_template("register.html")
+
+
+@app.route("/login")
+def login():
+    return render_template("login.html")

@@ -4,33 +4,15 @@
 
 <div class="row">
     <!--Registration form-->
-    <form class="col s12 m6 offset-m3" method="POST" action="{{ url_for('register') }}">
+    <form class="col s12 m6 offset-m3" method="POST" action="{{ url_for('login') }}">
         <div class="card-panel red lighten-5">
-            <!--Name input field-->
-            <div class="row">
-                <div class="input-field col s12 m6 offset-m3">
-                    <i class="material-icons prefix">face</i>
-                    <input id="firstname" name="firstname" type="text" minlength="5" maxlength="20" pattern="^[a-zA-Z0-9]{5,20}$" class="validate" required>
-                    <label for="firstname">Your Name</label>
-                </div>
-            </div>
-
             <!--Username input field-->
             <div class="row">
                 <div class="input-field col s12 m6 offset-m3">
                     <i class="material-icons prefix">person_add</i>
-                    <input id="username" name="username" type="text" minlength="5" maxlength="20" pattern="^[a-zA-Z0-9]{5,20}$" class="validate" required>
+                    <input id="username" name="username" type="text" class="validate">
                     <label for="username">Username</label>
 
-                </div>
-            </div>
-
-            <!--Email input field-->
-            <div class="row">
-                <div class="input-field col s12 m6 offset-m3">
-                    <i class="material-icons prefix">email</i>
-                    <input id="email" type="email" class="validate" required>
-                    <label for="email">Email</label>
                 </div>
             </div>
 
@@ -39,12 +21,12 @@
                 <div class="row">
                     <div class="input-field col s12 m6 offset-m3">
                         <i class="material-icons prefix">lock</i>
-                        <input id="password" name="password" type="password" minlength="5" maxlength="10" pattern="^[a-zA-Z0-9]{5,10}$" class="validate" required>
+                        <input id="password" name="password" type="password" class="validate">
                         <label for="password">Password</label>
                         <span class="helper-text" data-error="wrong" data-success="right">
                             <i class="material-icons prefix helper-text password-req" data-error="wrong"
                                 data-success="right" data-position="right"
-                                data-tooltip="Pasword must be between 5 -10 characters long. Allowed characters: a-z A-Z 0-9">info_outline</i>
+                                data-tooltip="Pasword must be between 5 -10 characters long. Allowed characters: a-z A-Z 0-9+">info_outline</i>
                         </span>
                     </div>
                 </div>
@@ -71,9 +53,9 @@
     <!--Link to Log in Page for registered users-->
     <div class="col s12 m12 center-align">
         <p>
-            Already Registered?
+            Already a Memeber?
         <p>
-            <a href="{{ url_for('login') }}" alt=>Log In</a>
+            <a href="{{ url_for('register') }}" alt=>Register</a>
     </div>
 </div>
 
