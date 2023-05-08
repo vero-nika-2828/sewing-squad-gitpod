@@ -75,7 +75,7 @@ def my_projects():
     return render_template("my_projects.html")
 
 
-@app.route("/add_project")
+@app.route("/add_project", methods=["GET", "POST"])
 def add_project():
     return render_template("add_project.html")
 
