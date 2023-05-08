@@ -7,13 +7,13 @@
     <form class="col s12 m6 offset-m3" method="POST" action="{{ url_for('register') }}">
         <div class="card-panel red lighten-5">
             <!--Name input field-->
-            <div class="row">
+            <!--<div class="row">
                 <div class="input-field col s12 m6 offset-m3">
                     <i class="material-icons prefix">face</i>
                     <input id="firstname" name="firstname" type="text" minlength="5" maxlength="20" pattern="^[a-zA-Z0-9]{5,20}$" class="validate" required>
                     <label for="firstname">Your Name</label>
                 </div>
-            </div>
+            </div>-->
 
             <!--Username input field-->
             <div class="row">
@@ -39,12 +39,12 @@
                 <div class="row">
                     <div class="input-field col s12 m6 offset-m3">
                         <i class="material-icons prefix">lock</i>
-                        <input id="password" name="password" type="password" minlength="5" maxlength="10" pattern="^[a-zA-Z0-9]{5,10}$" class="validate" required>
+                        <input id="password" name="password" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,10}$" class="validate" required>
                         <label for="password">Password</label>
                         <span class="helper-text" data-error="wrong" data-success="right">
                             <i class="material-icons prefix helper-text password-req" data-error="wrong"
                                 data-success="right" data-position="right"
-                                data-tooltip="Pasword must be between 5 -10 characters long. Allowed characters: a-z A-Z 0-9">info_outline</i>
+                                data-tooltip="Pasword must be between 5 -15 characters long. Allowed characters: a-z A-Z 0-9">info_outline</i>
                         </span>
                     </div>
                 </div>

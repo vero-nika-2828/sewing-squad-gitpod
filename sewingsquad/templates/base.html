@@ -27,6 +27,8 @@
                 <a href="#" data-target="slide-out" class="right sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('landing_page') }}">Home</a></li>
+                    <li><a href="{{ url_for('my_projects') }}">My Projects</a></li>
+                    <li><a href="{{ url_for('add_project') }}">Add projects</a></li>
                     <li><a href="{{ url_for('login') }}">Log In</a></li>
                     <li><a href="{{ url_for('register') }}">Register</a></li>
                 </ul>
@@ -37,6 +39,8 @@
         <!--Nav bar on mobile device screens-->
         <ul class="sidenav" id="slide-out">
             <li><a href="{{ url_for('landing_page') }}">Home</a></li>
+            <li><a href="{{ url_for('my_projects') }}">My Projects</a></li>
+            <li><a href="{{ url_for('add_project') }}">Add projects</a></li>
             <li><a href="{{ url_for('login') }}">Log In </a></li>
             <li><a href="{{ url_for('register') }}">Register</a></li>
         </ul>

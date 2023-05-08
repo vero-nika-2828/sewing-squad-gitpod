@@ -5,7 +5,7 @@ class Users(db.Model):
     # schema for the Users model
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(15), unique=True, nullable=False)
-    email = db.Column(db.String(72), unique=True, nullable=False)
+    email = db.Column(db.String(50), unique=True, nullable=False)
     password = db.Column(db.String(10), nullable=False)
     users_works = db.relationship(
         "SewingWorks", backref="users", cascade="all, delete", lazy=True)

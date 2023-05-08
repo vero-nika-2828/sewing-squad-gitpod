@@ -24,14 +24,14 @@ def register():
             return redirect(url_for("template.register"))
 
         newuser = Users(
-            firstname=request.form.get("firstname").lower(),
+            # firstname=request.form.get("firstname").lower(),
             username=request.form.get("username").lower(),
-            email=request.form.get("email").lower(),
+            email=request.form.get("email"),
             password=generate_password_hash(request.form.get("password")),
         )
 
         # Add to database
-        db.sessionadd(newuser)
+        db.session.add(newuser)
         db.session.commit()
 
         flash("Registration successful")
@@ -68,3 +68,15 @@ def login():
             flash("Incorrect Username and/or Password")       
 
     return render_template("login.html")
+
+
+@app.route("/my_projects")
+def my_projects():
+    return render_template("my_projects.html")
+
+
+@app.route("/add_project")
+def add_project():
+    return render_template("add_project.html")
+
+
