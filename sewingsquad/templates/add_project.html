@@ -1,4 +1,129 @@
 {% extends "base.html" %}
 {% block header %} Add projects {% endblock %}
 {% block content %}
+
+<div class="card-panel row">
+    <!--Form to add project-->
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
+            <div class="row">
+                <div class="input-field col s10 m8 offset-m2">
+                    <i class="material-icons prefix">content_paste</i>
+                    <input id="projectname" name="projectname" type="text" class="validate">
+                    <label for="projectname">Project name</label>
+                </div>
+            </div>
+
+            <div class="input-field col s10 m8 offset-m2">
+                <select>
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">Winter Clothers</option>
+                    <option value="2">Summer clothes</option>
+                    <option value="3">Trousers</option>
+                    <option value="4">Shirts</option>
+                    <option value="5">Tops</option>
+                    <option value="6">Dresses</option>
+                    <option value="7">Wedding Dresses</option>
+                    <option value="8">Skirs</option>
+                    <option value="9">Shorts</option>
+
+
+                </select>
+                <label>Category</label>
+              </div>
+
+              <div class="input-field col s12 m8 offset-m2">
+                <select multiple>
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                  <option value="4">Option 1</option>
+                  <option value="5">Option 2</option>
+                  <option value="6">Option 3</option>
+                  <option value="7">Option 1</option>
+                  <option value="8">Option 2</option>
+                  <option value="9">Option 3</option>
+                </select>
+                <label>Fabric type</label>
+              </div>
+
+
+            <!--<div class="row">
+                <div class="input-field col s10 m8">
+                  <input id="fabrictype" name="fabrictype" type="text" class="validate">
+                  <label for="fabrictype">Fabric type</label>
+                </div>
+            </div>  -->
+
+            <div class="row">
+                <div class="input-field col s10 m8 offset-m2">
+                    <i class="material-icons prefix">straighten</i>
+                    <input id="fabricquantity" name="fabricquantity" type="text" class="validate">
+                    <label for="fabricquantity">Fabric Quantity (in meters)</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s10 m8 offset-m2">
+                  <i class="material-icons prefix">square_foot</i>
+                  <input id="othermaterials" name="othermaterials" type="text" class="validate">
+                  <label for="othermaterials">Other materials</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s10 m8 offset-m2">
+                <i class="material-icons prefix">timer</i>
+                  <input id="sewingtime" name="sewingtime" type="text" class="validate">
+                  <label for="sewingtime">Sewing time (in minutes) </label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s10 m8 offset-m2">
+                  <i class="material-icons prefix">create</i>
+                  <input id="sewingtip" name="sewingtip" type="text" class="validate">
+                  <label for="sewingtip">Sewing tip</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s10 m8 offset-m2">
+                  <i class="material-icons prefix">image</i>
+                  <input id="photoURL" name="photoURL" type="text" class="validate">
+                  <label for="photoURL">Photo URL</label>
+                </div>
+            </div>
+
+
+
+
+            <!--Submit and reset button-->
+            <div class="row">
+                <button type="submit" value=" register"
+                    class="col s12 m3 offset-m3  waves-effect waves-light btn-large pink accent darken-2">
+                    Register
+                    <i class="material-icons right">login</i>
+                </button>
+
+                <button type="reset"
+                    class="col s12 m3 waves-effect waves-light btn-large center-align pink accent darken-2">
+                    Clear
+                    <i class="material-icons right center-align">backspace</i>
+                </button>
+            </div>
+
+
+        </div>
+    </form>
+
+    <!--Link to Log in Page for registered users-->
+    <div class="col s12 m12 center-align">
+        <p>
+            Already Registered?
+        <p>
+            <a href="{{ url_for('login') }}" alt=>Log In</a>
+    </div>
+</div>
+
 {% endblock %}
