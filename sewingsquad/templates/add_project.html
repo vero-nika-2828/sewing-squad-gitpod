@@ -4,7 +4,7 @@
 
 <div class="card-panel row">
     <!--Form to add project-->
-    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('add_project') }}">
             <div class="row">
                 <div class="input-field col s10 m8 offset-m2">
                     <i class="material-icons prefix">content_paste</i>
@@ -16,8 +16,8 @@
             <div class="input-field col s10 m8 offset-m2">
                 <select>
                     <option value="" disabled selected>Choose your option</option>
-                    <option value="1">Winter Clothers</option>
-                    <option value="2">Summer clothes</option>
+                    <option value="1">Winter Clothes</option>
+                    <option value="2">Summer Clothes</option>
                     <option value="3">Trousers</option>
                     <option value="4">Shirts</option>
                     <option value="5">Tops</option>
@@ -34,15 +34,15 @@
               <div class="input-field col s12 m8 offset-m2">
                 <select multiple>
                   <option value="" disabled selected>Choose your option</option>
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                  <option value="3">Option 3</option>
-                  <option value="4">Option 1</option>
-                  <option value="5">Option 2</option>
-                  <option value="6">Option 3</option>
-                  <option value="7">Option 1</option>
-                  <option value="8">Option 2</option>
-                  <option value="9">Option 3</option>
+                  <option value="1">Cotton</option>
+                  <option value="2">Polyester</option>
+                  <option value="3">Silk</option>
+                  <option value="4">Wool</option>
+                  <option value="5">Nylon</option>
+                  <option value="6">Rayon</option>
+                  <option value="7">Linen</option>
+                  <option value="8">Denim</option>
+                  <option value="9">Fleece</option>
                 </select>
                 <label>Fabric type</label>
               </div>
@@ -59,7 +59,7 @@
                 <div class="input-field col s10 m8 offset-m2">
                     <i class="material-icons prefix">straighten</i>
                     <input id="fabricquantity" name="fabricquantity" type="text" class="validate">
-                    <label for="fabricquantity">Fabric Quantity (in meters)</label>
+                    <label for="fabricquantity">Fabric Quantity (in cm)</label>
                 </div>
             </div>
 
@@ -90,8 +90,8 @@
             <div class="row">
                 <div class="input-field col s10 m8 offset-m2">
                   <i class="material-icons prefix">image</i>
-                  <input id="photoURL" name="photoURL" type="text" class="validate">
-                  <label for="photoURL">Photo URL</label>
+                  <input id="photourl" name="photourl" type="text" class="validate">
+                  <label for="photourl">Photo URL</label>
                 </div>
             </div>
 
@@ -102,8 +102,8 @@
             <div class="row">
                 <button type="submit" value=" register"
                     class="col s12 m3 offset-m3  waves-effect waves-light btn-large pink accent darken-2">
-                    Register
-                    <i class="material-icons right">login</i>
+                    Add project
+                    <i class="material-icons right">add_circle</i>
                 </button>
 
                 <button type="reset"

@@ -19,7 +19,7 @@ def register():
 
         # If username already exists - flash messages
         if existing_user:
-            flash("This username already exists."), 
+            flash("This username already exists.") 
             flash("Please choose another unsername")
             return redirect(url_for("template.register"))
 
@@ -54,10 +54,10 @@ def login():
                     request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome back,{}".format(
-                    request.form.get("firstname").capitalize()))
+                    request.form.get("username").capitalize()))
                 return redirect(
                     url_for(
-                        "my_work",
+                        "my_projects",
                         username=session["user"]))
 
             else:
@@ -77,6 +77,24 @@ def my_projects():
 
 @app.route("/add_project", methods=["GET", "POST"])
 def add_project():
+    if request.method == "POST":
+        project = SewingWorks(
+            # id = db.Column(db.Integer, primary_key=True)
+            project_name=request.form.get("projectname"),
+            category=request.form.get("category"),
+            fabric_type=request.form.get("fabrictype"),
+            fabric_quantity=request.form.get("fabricquantity"),
+            other_materials=request.form.get("othermaterials"),
+            sewing_time=request.form.get("sewingtime"),
+            sewing_tip=request.form.get("sewingtip"),
+            photo_URL=request.form.get("photourl"),
+            users_id=session["user"]
+        )
+        db.session.add(project)
+        db.session.commit()
+        flash('Project Added Successfully!')
+        return redirect(url_for("my_projects"))
+
     return render_template("add_project.html")
 
 
