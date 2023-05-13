@@ -46,7 +46,6 @@ def login():
     if request.method == "POST":
         existing_user = Users.query.filter(
             Users.username == request.form.get("username").lower()).all()
-    
         if existing_user:
             # ensure hashed pasword matches use input
             if check_password_hash(
@@ -127,8 +126,14 @@ def edit_project(sewingwork_id):
         sewingwork.users_id = user.id,
         db.session.commit()
         flash(
-            "Your project {{sewingwork.project_name }} has been successfully edited."
+            "Your project has been successfully edited."
             )
     return render_template("edit_project.html", project=sewingwork)
 
 
+@app.route("/delete_project/<int:sewingwork_id>")
+def delete_project(sewingwork_id):
+    sewingwork = SewingWorks.query.get_or_404(sewingwork_id)
+    db.session.delete(sewingwork)       
+    db.session.commit()
+    return redirect(url_for("my_projects"))
