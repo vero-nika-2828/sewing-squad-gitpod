@@ -8,23 +8,23 @@
             <div class="row">
                 <div class="input-field col s10 m8 offset-m2">
                     <i class="material-icons prefix">content_paste</i>
-                    <input id="projectname" name="projectname" type="text" class="validate">
+                    <input id="projectname" name="projectname" type="text" value="{{ project.project_name }}" class="validate">
                     <label for="projectname">Project name</label>
                 </div>
             </div>
 
             <div class="input-field col s10 m8 offset-m2">
                 <select id="category" name="category" type="text">
-                    <option value="" disabled selected>Choose your option</option>
-                    <option value="1">Winter Clothes</option>
-                    <option value="2">Summer Clothes</option>
-                    <option value="3">Trousers</option>
-                    <option value="4">Shirts</option>
-                    <option value="5">Tops</option>
-                    <option value="6">Dresses</option>
-                    <option value="7">Wedding Dresses</option>
-                    <option value="8">Skirs</option>
-                    <option value="9">Shorts</option>
+                    <option value="" disabled selected>{{ project.category }}</option>
+                    <option value="Winter Clothes">Winter Clothes</option>
+                    <option value="Summer Clothes">Summer Clothes</option>
+                    <option value="Trousers">Trousers</option>
+                    <option value="Shirts">Shirts</option>
+                    <option value="Tops">Tops</option>
+                    <option value="Dresses">Dresses</option>
+                    <option value="Wedding Dresses">Wedding Dresses</option>
+                    <option value="Skirs">Skirs</option>
+                    <option value="Shorts">Shorts</option>
 
 
                 </select>
@@ -33,16 +33,16 @@
 
               <div class="input-field col s12 m8 offset-m2">
                 <select multiple id="fabrictype" name="fabrictype" type="text">
-                  <option value="" disabled selected>Choose your option</option>
-                  <option value="1">Cotton</option>
-                  <option value="2">Polyester</option>
-                  <option value="3">Silk</option>
-                  <option value="4">Wool</option>
-                  <option value="5">Nylon</option>
-                  <option value="6">Rayon</option>
-                  <option value="7">Linen</option>
-                  <option value="8">Denim</option>
-                  <option value="9">Fleece</option>
+                  <option value="" disabled selected>{{ project.fabric_type }}</option>
+                  <option value="Cotton">Cotton</option>
+                  <option value="Polyester">Polyester</option>
+                  <option value="Silk">Silk</option>
+                  <option value="Wool">Wool</option>
+                  <option value="Nylon">Nylon</option>
+                  <option value="Rayon">Rayon</option>
+                  <option value="Linen">Linen</option>
+                  <option value="Denim">Denim</option>
+                  <option value="Fleece">Fleece</option>
                 </select>
                 <label>Fabric type</label>
               </div>
@@ -51,7 +51,7 @@
             <div class="row">
                 <div class="input-field col s10 m8 offset-m2">
                     <i class="material-icons prefix">straighten</i>
-                    <input id="fabricquantity" name="fabricquantity" type="text" class="validate">
+                    <input id="fabricquantity" name="fabricquantity" value="{{ project.fabric_quantity }}"  type="text" class="validate">
                     <label for="fabricquantity">Fabric Quantity (in cm)</label>
                 </div>
             </div>
@@ -59,7 +59,7 @@
             <div class="row">
                 <div class="input-field col s10 m8 offset-m2">
                   <i class="material-icons prefix">square_foot</i>
-                  <input id="othermaterials" name="othermaterials" type="text" class="validate">
+                  <input id="othermaterials" name="othermaterials" value="{{ project.other_materials }}" type="text" class="validate">
                   <label for="othermaterials">Other materials</label>
                 </div>
             </div>
@@ -67,7 +67,7 @@
             <div class="row">
                 <div class="input-field col s10 m8 offset-m2">
                 <i class="material-icons prefix">timer</i>
-                  <input id="sewingtime" name="sewingtime" type="text" class="validate">
+                  <input id="sewingtime" name="sewingtime" value="{{ project.sewing_time}}" type="text" class="validate">
                   <label for="sewingtime">Sewing time (in minutes) </label>
                 </div>
             </div>
@@ -75,7 +75,7 @@
             <div class="row">
                 <div class="input-field col s10 m8 offset-m2">
                   <i class="material-icons prefix">create</i>
-                  <input id="sewingtip" name="sewingtip" type="text" class="validate">
+                  <input id="sewingtip" name="sewingtip" value="{{ project.sewing_tip}}"  type="text" class="validate">
                   <label for="sewingtip">Sewing tip</label>
                 </div>
             </div>
@@ -83,7 +83,7 @@
             <div class="row">
                 <div class="input-field col s10 m8 offset-m2">
                   <i class="material-icons prefix">image</i>
-                  <input id="photourl" name="photourl" type="text" class="validate">
+                  <input id="photourl" name="photourl" value="{{ project.photo_URL }}" type="text" class="validate">
                   <label for="photourl">Photo URL</label>
                 </div>
             </div>
@@ -101,7 +101,7 @@
 
                 <a href="{{ url_for('my_projects') }}" class="col s12 m3 waves-effect waves-light btn-large center-align pink accent darken-2">
                     Back
-                    <i class="material-icons right center-align">backspace</i>
+                    <i class="material-icons right center-align">arrow_back</i>
                 </a>
             </div>
 

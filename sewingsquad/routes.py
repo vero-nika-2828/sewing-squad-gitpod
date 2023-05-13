@@ -112,6 +112,10 @@ def edit_project(sewingwork_id):
     sewingwork = SewingWorks.query.get_or_404(sewingwork_id)
 
     if request.method == "POST":
+        username = session["user"]
+
+        user = Users.query.filter_by(username=username).first()
+
         sewingwork.project_name = request.form.get("projectname"),
         sewingwork.category = request.form.get("category"),
         sewingwork.fabric_type = request.form.get("fabrictype"),
@@ -122,6 +126,9 @@ def edit_project(sewingwork_id):
         sewingwork.photo_URL = request.form.get("photourl"),
         sewingwork.users_id = user.id,
         db.session.commit()
+        flash(
+            "Your project {{sewingwork.project_name }} has been successfully edited."
+            )
     return render_template("edit_project.html", project=sewingwork)
 
 
