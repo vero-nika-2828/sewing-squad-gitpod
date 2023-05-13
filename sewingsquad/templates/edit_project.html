@@ -93,17 +93,16 @@
 
             <!--Submit and reset button-->
             <div class="row">
-                <button type="submit" value=" register"
+                <button type="submit" value="register"
                     class="col s12 m3 offset-m3  waves-effect waves-light btn-large pink accent darken-2">
                     Edit project
                     <i class="material-icons right">edit_note</i>
                 </button>
 
-                <button type="reset"
-                    class="col s12 m3 waves-effect waves-light btn-large center-align pink accent darken-2">
-                    Clear
+                <a href="{{ url_for('my_projects') }}" class="col s12 m3 waves-effect waves-light btn-large center-align pink accent darken-2">
+                    Back
                     <i class="material-icons right center-align">backspace</i>
-                </button>
+                </a>
             </div>
 
 
