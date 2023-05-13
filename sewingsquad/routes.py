@@ -122,6 +122,6 @@ def edit_project(sewingwork_id):
         sewingwork.photo_URL = request.form.get("photourl"),
         sewingwork.users_id = user.id,
         db.session.commit()
-    return render_template("edit_project.html", sewingwork=sewingwork)
+    return render_template("edit_project.html", project=sewingwork)
 
 
