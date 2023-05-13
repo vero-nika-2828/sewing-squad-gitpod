@@ -89,7 +89,6 @@ def add_project():
 
         if user:
             project = SewingWorks(
-                # id = db.Column(db.Integer, primary_key=True)
                 project_name=request.form.get("projectname"),
                 category=request.form.get("category"),
                 fabric_type=request.form.get("fabrictype"),
@@ -106,5 +105,23 @@ def add_project():
         return redirect(url_for("my_projects"))
 
     return render_template("add_project.html")
+
+
+@app.route("/edit_project/<int:sewingwork_id>", methods=["GET", "POST"])
+def edit_project(sewingwork_id):
+    sewingwork = SewingWorks.query.get_or_404(sewingwork_id)
+
+    if request.method == "POST":
+        sewingwork.project_name = request.form.get("projectname"),
+        sewingwork.category = request.form.get("category"),
+        sewingwork.fabric_type = request.form.get("fabrictype"),
+        sewingwork.fabric_quantity = request.form.get("fabricquantity"),
+        sewingwork.other_materials = request.form.get("othermaterials"),
+        sewingwork.sewing_time = request.form.get("sewingtime"),
+        sewingwork.sewing_tip = request.form.get("sewingtip"),
+        sewingwork.photo_URL = request.form.get("photourl"),
+        sewingwork.users_id = user.id,
+        db.session.commit()
+    return render_template("edit_project.html", sewingwork=sewingwork)
 
 
