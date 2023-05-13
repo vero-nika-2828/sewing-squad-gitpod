@@ -72,24 +72,34 @@ def login():
 
 @app.route("/my_projects")
 def my_projects():
-    return render_template("my_projects.html")
+    if "user" in session:
+        username = session["user"]
+        user = Users.query.filter_by(username=username).first()
+        my_projects = list(SewingWorks.query.filter_by(users_id=user.id).all())
+       
+    return render_template("my_projects.html", my_projects=my_projects)
 
 
 @app.route("/add_project", methods=["GET", "POST"])
 def add_project():
     if request.method == "POST":
-        project = SewingWorks(
-            # id = db.Column(db.Integer, primary_key=True)
-            project_name=request.form.get("projectname"),
-            category=request.form.get("category"),
-            fabric_type=request.form.get("fabrictype"),
-            fabric_quantity=request.form.get("fabricquantity"),
-            other_materials=request.form.get("othermaterials"),
-            sewing_time=request.form.get("sewingtime"),
-            sewing_tip=request.form.get("sewingtip"),
-            photo_URL=request.form.get("photourl"),
-            users_id=session["user"]
-        )
+        username = session["user"]
+
+        user = Users.query.filter_by(username=username).first()
+
+        if user:
+            project = SewingWorks(
+                # id = db.Column(db.Integer, primary_key=True)
+                project_name=request.form.get("projectname"),
+                category=request.form.get("category"),
+                fabric_type=request.form.get("fabrictype"),
+                fabric_quantity=request.form.get("fabricquantity"),
+                other_materials=request.form.get("othermaterials"),
+                sewing_time=request.form.get("sewingtime"),
+                sewing_tip=request.form.get("sewingtip"),
+                photo_URL=request.form.get("photourl"),
+                users_id=user.id,
+            )
         db.session.add(project)
         db.session.commit()
         flash('Project Added Successfully!')
