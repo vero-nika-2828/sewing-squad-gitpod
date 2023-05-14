@@ -2,9 +2,10 @@
 {% block header %} Add projects {% endblock %}
 {% block content %}
 
-<div class="card-panel row">
+<div class="row">
     <!--Form to add project-->
     <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('add_project') }}">
+        <div class="card-panel row red lighten-5">
             <div class="row">
                 <div class="input-field col s10 m8 offset-m2">
                     <i class="material-icons prefix">content_paste</i>
@@ -87,6 +88,7 @@
                   <label for="photourl">Photo URL</label>
                 </div>
             </div>
+        
 
 
 
@@ -109,14 +111,6 @@
 
         </div>
     </form>
-
-    <!--Link to Log in Page for registered users-->
-    <div class="col s12 m12 center-align">
-        <p>
-            Already Registered?
-        <p>
-            <a href="{{ url_for('login') }}" alt=>Log In</a>
-    </div>
 </div>
 
 {% endblock %}
