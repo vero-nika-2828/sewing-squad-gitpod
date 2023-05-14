@@ -3,4 +3,5 @@ $(document).ready(function () {
     $('.password-req').tooltip();
     $('select').formSelect();
     $('.modal').modal();
+    $('.collapsible').collapsible();
 });
