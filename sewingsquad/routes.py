@@ -1,5 +1,6 @@
 # Imports
 from flask import render_template, request, flash, session, redirect, url_for
+from sqlalchemy import or_
 from werkzeug.security import generate_password_hash, check_password_hash
 from sewingsquad import app, db
 from sewingsquad.models import Users, SewingWorks
@@ -15,8 +16,11 @@ def landing_page():
 def search():
     query = request.form.get("query")
     all_projects = list(
-        SewingWorks.query.filter_by(
-            {"$text": {"$search": query}}).all())
+        SewingWorks.query.filter(
+            or_(
+                SewingWorks.project_name.like(
+                    '%{}%'.format(query)), SewingWorks.category.like(
+                        '%{}%'.format(query)))).all())
     return render_template("index.html", all_projects=all_projects)
 
 
