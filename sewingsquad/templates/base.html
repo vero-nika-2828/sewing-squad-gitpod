@@ -67,7 +67,27 @@
             {% endif%}
         {% endwith %}
     </section>  
-   
+
+    <!--Header image and search bar-->
+    <div class="row card-panel">
+        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('search') }}">
+            <div class="row valign-wrapper center-align">
+                <div class="input-field col s 12 m8">
+                    <i class="material-icons right center-align">search</i>
+                    <input id="query" name="query" type="text" minlenght="3" class="validate" required>
+                    <label for="query">Search</label>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <a href="{{ url_for_('landing_page') }}" class="btn">Reset</a>
+                <button type="submit" class="btn">
+                <i class="material-icons right center-align">search</i>
+
+                </button>
+            </div>
+        </form>
+    </div>
+
     <section>
         <h3 class="center-align">{% block header %} All Patterns {% endblock %}</h3>
     </section>
