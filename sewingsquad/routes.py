@@ -14,7 +14,7 @@ def landing_page():
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
-    query = request.form.get("query")
+    query = request.form.get("query").lower()
     all_projects = list(
         SewingWorks.query.filter(
             or_(
@@ -110,13 +110,13 @@ def add_project():
 
         if user:
             project = SewingWorks(
-                project_name=request.form.get("projectname"),
-                category=request.form.get("category"),
-                fabric_type=request.form.get("fabrictype"),
+                project_name=request.form.get("projectname").lower(),
+                category=request.form.get("category").lower(),
+                fabric_type=request.form.get("fabrictype").lower(),
                 fabric_quantity=request.form.get("fabricquantity"),
-                other_materials=request.form.get("othermaterials"),
+                other_materials=request.form.get("othermaterials").lower(),
                 sewing_time=request.form.get("sewingtime"),
-                sewing_tip=request.form.get("sewingtip"),
+                sewing_tip=request.form.get("sewingtip").lower(),
                 photo_URL=request.form.get("photourl"),
                 users_id=user.id,
             )
@@ -137,13 +137,14 @@ def edit_project(sewingwork_id):
 
         user = Users.query.filter_by(username=username).first()
 
-        sewingwork.project_name = request.form.get("projectname"),
-        sewingwork.category = request.form.get("category"),
-        sewingwork.fabric_type = request.form.get("fabrictype"),
+        sewingwork.project_name = request.form.get("projectname").lower(),
+        sewingwork.category = request.form.get("category").lower(),
+        sewingwork.fabric_type = request.form.get("fabrictype").lower(),
         sewingwork.fabric_quantity = request.form.get("fabricquantity"),
-        sewingwork.other_materials = request.form.get("othermaterials"),
+        sewingwork.other_materials = request.form.get(
+            "othermaterials").lower(),
         sewingwork.sewing_time = request.form.get("sewingtime"),
-        sewingwork.sewing_tip = request.form.get("sewingtip"),
+        sewingwork.sewing_tip = request.form.get("sewingtip").lower(),
         sewingwork.photo_URL = request.form.get("photourl"),
         sewingwork.users_id = user.id,
         db.session.commit()

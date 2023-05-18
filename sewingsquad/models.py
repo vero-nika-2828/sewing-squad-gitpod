@@ -38,4 +38,5 @@ class SewingWorks(db.Model):
 
     def __repr__(self):
         return self
-        print("SewingWorks database is pulled")
+        
+    
