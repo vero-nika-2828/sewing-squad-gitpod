@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block header %} My projects {% endblock %}
+{% block content %}
+
+    <div class="row">
+        <div class="center-align s12 m4">
+            <a href="{{ url_for('add_project')}}" class="btn pink accent darken-2">
+                Add project
+                <i class="material-icons right">add_circle</i> 
+            </a>
+        </div>
+
+    </div>
+
+    <!--Card with the added project-->
+        <div class="row">
+            {% for project in my_projects %}
+            <div class="col s12 m4 l3">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{ project.photo_URL }}">   
+                    </div>
+
+                    <div class="card-content">
+                        <span class="card-title">{{ project.project_name}}</span>
+                        <p>{{ project.sewing_tip }}</p>
+                    </div>
+
+                    <div class="card-action">
+                        <!--Edit button-->
+                        <a href="{{ url_for('edit_project', sewingwork_id=project.id) }}" class="btn" aria-label="Edit Project">Edit</a>
+                        <!--Delete button-->
+                        <a href="#modal-{{ project.id }}" class="btn red modal-trigger" aria-label="Delete Project" >Delete</a>
+
+                            <!-- Modal Structure -->
+                            <div id="modal-{{ project.id }}" class="modal fade">
+                            <div class="modal-content">
+                                <h4>Are you sure you want to delete this project</h4>
+                                <p>This action is irreversible</p>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="{{ url_for('delete_project', sewingwork_id=project.id) }}" class="modal-close waves-effect waves-green btn-flat">Yes</a>
+                                <a class="modal-close waves-effect waves-green btn-flat" data-bs-dismiss="modal">No</a>
+                            </div>
+                            </div>
+
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+          
+        </div>
+   
+
+{% endblock %}
