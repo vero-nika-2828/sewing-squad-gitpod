@@ -101,6 +101,13 @@ def my_projects():
     return render_template("my_projects.html", my_projects=my_projects)
 
 
+@app.route("/project/<int:sewingwork_id>")
+def project(sewingwork_id):
+    project_db = SewingWorks.query.get_or_404(sewingwork_id)
+    
+    return render_template("index.html", this_project=project_db)
+
+
 @app.route("/add_project", methods=["GET", "POST"])
 def add_project():
     if request.method == "POST":
