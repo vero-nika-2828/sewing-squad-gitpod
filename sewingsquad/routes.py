@@ -20,7 +20,8 @@ def search():
             or_(
                 SewingWorks.project_name.like(
                     '%{}%'.format(query)), SewingWorks.category.like(
-                        '%{}%'.format(query)))).all())
+                        '%{}%'.format(query)), SewingWorks.fabric_type.like(
+                            '%{}%'.format(query)))).all())
     return render_template("index.html", all_projects=all_projects)
 
 
