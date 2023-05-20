@@ -67,34 +67,38 @@
         </ul>
 
     </header>
-    <!--Under header-->
-    <section class="background">
-        <section>
-            <!--flash messages-->
-            {% with messages = get_flashed_messages() %}
-                {% if messages %}
-                    {% for message in messages %}
-                        <div class="row flash">
-                            <h4>{{ message }}</h4>
-                        </div>
-                    {% endfor %}
-                {% endif%}
-            {% endwith %}
-        </section>  
 
-        <section class="header">
-            
-        </section>
+    <section>
+        <!--flash messages-->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="row flash">
+                        <h4>{{ message }}</h4>
+                    </div>
+                {% endfor %}
+            {% endif%}
+        {% endwith %}
+    </section> 
     
-        <section>
-            <h3 class="center-align">{% block header %} All Patterns {% endblock %}</h3>
-        </section>
 
-        <main class="container">
-            {% block content%}.
-            {% endblock %}
-        </main>
-   </section>
+    <section class="header">
+        <h1>Sewing Squad</h1>
+    </section>
+    
+ 
+
+
+ 
+    <section>
+        <h3 class="center-align">{% block header %} All Patterns {% endblock %}</h3>
+    </section>
+ 
+    <main class="container">
+        {% block content%}.
+        {% endblock %}
+    </main>
+
     <footer class="page-footer footer-copyright">
             <div class="row">
             <div class="col l6 s6">
