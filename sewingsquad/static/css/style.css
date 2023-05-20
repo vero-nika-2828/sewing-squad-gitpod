@@ -2,17 +2,28 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-
-  }
+}
 
 .header{
   width: 100%;
   min-height:60vh;
-  background-color: #f25278;
   background:url("../images/background.PNG");
   background-repeat:no-repeat;
   background-position: center;
   background-size: cover;
+  
+}
+
+.header-text{
+  width: 500px;
+  height: 200px;
+  position: relative;
+  top: 20%;
+  left:40%;
+  /*margin: 2rem;*/
+  margin-right: -25%;
+  background-color: #f25278;
+  text-align: center;
 }
 
 main {
