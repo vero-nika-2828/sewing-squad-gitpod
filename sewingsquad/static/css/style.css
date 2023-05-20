@@ -2,11 +2,10 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-
 }
 
 nav{
-  background-color: rgba(243, 89, 125,0.8);
+  background-color: rgba(252, 131, 131,0.9);
 }
 
 .header{
@@ -23,7 +22,7 @@ nav{
 }
 
 .title-container{
-  background-color:  rgba(243, 89, 125,0.8);  
+  background-color:  rgba(252, 131, 131,0.9);  
   margin-bottom: 10px;
   border-radius: 25px;
 }
