@@ -22,8 +22,10 @@
                     </div>
 
                     <div class="card-content">
-                        <span class="card-title">{{ project.project_name}}</span>
-                        <p>{{ project.sewing_tip }}</p>
+                        <span class="card-title">{{ project.project_name.capitalize()}}</span>
+                        <p>Time: {{ project.sewing_time }}</p>
+                        <p>Fabric type: {{ project.fabric_type}}</p>
+                        <p>Fabric quantity: {{ project.fabric_quantity }}</p>
                     </div>
 
                     <div class="card-action">
