@@ -2,11 +2,26 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+
   }
 
-  main {
+  .background{
     flex: 1 0 auto;
+    background:url("../images/background.PNG");
+    background-repeat: repeat;
+    background-position: center;
+    background-size: contain;
+   
   }
+
+/*.header{
+  width: 100%;
+  height:60vh;
+  }*/
+
+/*main {
+    flex: 1 0 auto;
+}*/
 
 
 .flashes h4 {
@@ -16,3 +31,4 @@ body {
 .horizontal-list{
     display: flex;
 }
+
