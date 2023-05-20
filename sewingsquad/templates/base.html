@@ -22,52 +22,60 @@
 <body>
     <header>
         <div class="row header">
-        <nav>
-            <!--Nav bar on larger screens-->
-            <div class="row nav-wrapper">
-                <a href="{{ url_for('landing_page') }}" class="left brand-logo">Logo</a>
-                <a href="#" data-target="slide-out" class="right sidenav-trigger"><i class="material-icons">menu</i></a>
-         
-                <form class="col s4 m2 center" method="POST" action="{{ url_for('search') }}">
-                    <div class="row valign-wrapper center-align">
-                        <div class="input-field col s 12 m8">
-                            <i class="material-icons prefix center-align">search</i>
-                            <input id="query" name="query" type="text" minlenght="3" class="validate" required>
-                            <label for="query">Search</label>
-                         </div>
-                    </div>
-                </form>
-               
-              
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="{{ url_for('landing_page') }}">Home</a></li>
-                    {% if session.user %}
-                    <li><a href="{{ url_for('my_projects') }}">My Projects</a></li>
-                    <li><a href="{{ url_for('add_project') }}">Add projects</a></li>
-                     <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-                    {% else %}
-                    <li><a href="{{ url_for('login') }}">Log In</a></li>
-                    <li><a href="{{ url_for('register') }}">Register</a></li>
-                    {% endif %}
-                </ul>
-            </div>
-        </nav>
+            <nav>
+                <!--Nav bar on larger screens-->
+                <div class="row nav-wrapper">
+                    <a href="{{ url_for('landing_page') }}" class="left brand-logo">Logo</a>
+                    <a href="#" data-target="slide-out" class="right sidenav-trigger"><i class="material-icons">menu</i></a>
+            
+                    <form class="col s4 m2 center" method="POST" action="{{ url_for('search') }}">
+                        <div class="row valign-wrapper center-align">
+                            <div class="input-field col s 12 m8">
+                                <i class="material-icons prefix center-align">search</i>
+                                <input id="query" name="query" type="text" minlenght="3" class="validate" required>
+                                <label for="query">Search</label>
+                            </div>
+                        </div>
+                    </form>
+                
+                
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="{{ url_for('landing_page') }}">Home</a></li>
+                        {% if session.user %}
+                        <li><a href="{{ url_for('my_projects') }}">My Projects</a></li>
+                        <li><a href="{{ url_for('add_project') }}">Add projects</a></li>
+                        <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                        {% else %}
+                        <li><a href="{{ url_for('login') }}">Log In</a></li>
+                        <li><a href="{{ url_for('register') }}">Register</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </nav>
 
-        <div class="row center-align valign-wrapper header-title">
-            <div class="col s10 m6 offset-s1 offset-m3">
-              <div class="card-panel white-text title-container">
-    
-                    <h1>Sewing Squad</h1>
-                    <h5>Sew it! Wear it! Love it!</h5>
-                    <i class="material-icons">diversity_2</i>
-    
-              
-              </div>
+            <div class="row center-align valign-wrapper header-title">
+                <div class="col s10 m6 offset-s1 offset-m3">
+                    <div class="card-panel white-text title-container">
+                        <h1>Sewing Squad</h1>
+                        <h5>Sew it! Wear it! Love it!</h5>
+                        <i class="material-icons">diversity_2</i>
+                        <div class="row">
+                            <form class="col s8 m8 center" method="POST" action="{{ url_for('search') }}">
+                                <div class="row valign-wrapper center-align">
+                                    <div class="input-field col s 12 m8">
+                                    <i class="material-icons prefix center-align">search</i>
+                                    <input id="query" name="query" type="text" minlenght="3" class="validate" required>
+                                    <label for="query">Search</label>
+                                    </div>
+                                </div>
+                            </form>
+                                                        
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
-                
-
-    </div>
             
         <!--Nav bar on mobile device screens-->
         <ul class="sidenav" id="slide-out">
