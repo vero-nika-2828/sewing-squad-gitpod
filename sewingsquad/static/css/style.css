@@ -8,6 +8,10 @@ nav{
   background-color: rgba(252, 131, 131,0.9);
 }
 
+.sidenav{
+  background-color: rgba(252, 131, 131,0.9);
+}
+
 .header{
   background:url("../images/background.PNG");
   background-repeat:no-repeat;
@@ -18,7 +22,7 @@ nav{
 
 .header-title{
   width: 100%;
-  min-height:60vh;
+  min-height:55vh;
 }
 
 .title-container{

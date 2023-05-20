@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('.sidenav').sidenav();
+    $('.sidenav').sidenav({edge:"right"});
     $('.password-req').tooltip();
     $('select').formSelect();
     $('.modal').modal();
