@@ -2,11 +2,14 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+
+}
+
+nav{
+  background-color: rgba(243, 89, 125,0.8);
 }
 
 .header{
-  width: 100%;
-  min-height:60vh;
   background:url("../images/background.PNG");
   background-repeat:no-repeat;
   background-position: center;
@@ -14,17 +17,17 @@ body {
   
 }
 
-.header-text{
-  width: 500px;
-  height: 200px;
-  position: relative;
-  top: 20%;
-  left:40%;
-  /*margin: 2rem;*/
-  margin-right: -25%;
-  background-color: #f25278;
-  text-align: center;
+.header-title{
+  width: 100%;
+  min-height:60vh;
 }
+
+.title-container{
+  background-color:  rgba(243, 89, 125,0.8);  
+  margin-bottom: 10px;
+  border-radius: 25px;
+}
+
 
 main {
   flex: 1 0 auto;
