@@ -31,6 +31,10 @@ nav{
   border-radius: 25px;
 }
 
+.flash{
+  background-color: rgba(252, 131, 131,0.9);
+  margin-top: -20px;
+}
 
 main {
   flex: 1 0 auto;
