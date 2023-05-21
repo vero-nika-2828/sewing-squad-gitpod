@@ -28,6 +28,7 @@ The platform facilitates /enables the members to share their patterns, sewing in
 * Post some of my work for others to see
 * Help others with their sewing journey 
 
+
 ## Site Owner Goals
 
 
@@ -55,6 +56,9 @@ The platform facilitates /enables the members to share their patterns, sewing in
 * People who want to learn hot to make new clothes 
 * People who want to improve their sewing skills
 
+
+
+
 ### First Time Visitor Goals
 
 
@@ -75,6 +79,9 @@ The platform facilitates /enables the members to share their patterns, sewing in
 13. I want the links to work when I click on them 
 14. I want to be able to read the content effortlessly
 
+
+
+
 ### Returning Visitor Goals
 
 
@@ -85,6 +92,7 @@ The platform facilitates /enables the members to share their patterns, sewing in
 19. I want to be able to edit my projects
 20. I want to be able to delete my projects
 21. I want to be able to log out from my account when I finish working with it
+
 
 ### Site owner's Goals 
 
