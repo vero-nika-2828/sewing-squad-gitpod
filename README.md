@@ -38,6 +38,24 @@ The platform facilitates /enables the members to share their patterns, sewing in
 * Make it easy for users to navigate across the site
 
 
+# User Experience
+
+
+## User Stories
+
+
+### Target user
+
+
+* People who are interested in sewing 
+* People who want to get some ideas for their sewing projects
+* People who like fashion 
+* People who like making their own clothes
+* People who want to share their ideas with others
+* People who want to learn hot to make new clothes 
+* People who want to improve their sewing skills
+
+
 
 
 
