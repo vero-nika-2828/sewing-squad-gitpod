@@ -1,72 +1,44 @@
 {% extends "base.html" %}
 {% block header %} All projects {% endblock %}
 {% block content %}
-        <!--Header image and search bar-->
-        <!--<div class="row card-panel">
-            <form class="col s12 m8" method="POST" action="{{ url_for('search') }}">
-                 <div class="row valign-wrapper center-align">
-                     <div class="input-field col s 12 m8">
-                         <i class="material-icons prefix center-align">search</i>
-                         <input id="query" name="query" type="text" minlenght="3" class="validate" required>
-                         <label for="query">Search</label>
-                         <span class="helper-text" data-error="wrong" data-success="right">Search by name, category or fabric type</span>
-                      </div>
-                 </div>
-     
-     
-                 <div class="col s12 m4 offset-m6 center-align">
-                     <a href="{{ url_for('landing_page') }}" class="btn">Reset</a>
-                     <button type="submit" class="btn">
-                     <i class="material-icons right center-align">search</i>
-                        Search
-                     </button>
-                 </div>
-             </form>
-        </div>-->
-
     <!--Card with the added project-->
         <div class="row">
             {% for post in all_projects %}
-                <div class="col s12 m4 l3">
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="image" src="{{ post.photo_URL }}">   
-                        </div>
-
-                        <div class="card-content">
-                            <span class="card-title">{{ post.project_name.capitalize()}}</span>
-                            <p>Time: {{ post.sewing_time }}</p>
-                            <p>Fabric type: {{ post.fabric_type}}</p>
-                            <p>Fabric quantity: {{ post.fabric_quantity }}</p>
-                        </div>
-                    
-
-                        <div class="card-action">
-                            <!--Add to favourite button-->
-                            <div class="row">
-                                <a href="#"aria-label="Add to favourites button">
-                                    <i class="material-icons left">favorite_border</i>
-                                </a>
-                            </div>
-
-                            <div class="row">
-                                <a href="{{ url_for('project', sewingwork_id=post.id) }}"aria-label="See more details">
-                                    See more details
-                                </a>
-                            </div>
-
-                        </div>
-
-                        <ul class="collapsible">
-                            <li>
-                            <div class="collapsible-header"><i class="material-icons">expand_more</i>Comments</div>
-                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                            </li>
-            
-                        </ul>
-    
+            <div class="col s12 m4 l3">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{ post.photo_URL }}">   
                     </div>
+
+                    <div class="card-content">
+                        <span class="card-title">{{ post.project_name}}</span>
+                        <p>Time: {{ post.sewing_time }}</p>
+                        <p>Fabric type: {{ post.fabric_type}}</p>
+                        <p>Fabric quantity: {{ post.fabric_quantity }}</p>
+                        <p>Fabric quantity: {{ post.fabric_quantity }}</p>
+                    </div>
+                
+
+                    <div class="card-action">
+                        <!--Add to favourite button-->
+                        <div class="row">
+                            <a href="{{ url_for('landing_page')}}"aria-label="Add to favourites button">
+                                <i class="material-icons left">favorite_border</i>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <ul class="collapsible">
+                        <li>
+                          <div class="collapsible-header"><i class="material-icons">expand_more</i>Comments</div>
+                          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                        </li>
+        
+                    </ul>
+ 
                 </div>
+            </div>
             {% endfor %}
           
         </div>
