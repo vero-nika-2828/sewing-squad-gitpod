@@ -55,7 +55,25 @@ The platform facilitates /enables the members to share their patterns, sewing in
 * People who want to learn hot to make new clothes 
 * People who want to improve their sewing skills
 
+### First Time Visitor Goals
 
+
+1. I want to be able to see what this website is for
+2. I want to be able to create my own account easily
+3. I want to be notified whether my registration was successful
+4. I want to be told clearly what what information is needed for registration
+5. I want to know what the password requirements are
+6. I want to be notified when I fill in something incorrectly or when missed something
+7. I want to be able to add my own projects
+
+
+8. I want to be able to see a list of other people’s projects
+9. I want to see more information on the projects that are interesting to me
+10. I want to be able to navigate through the website and find information easily 
+11. I want to be able to navigate the site across variety of screen sizes
+12. I want to be able to view the website on the variety of web browsers
+13. I want the links to work when I click on them 
+14. I want to be able to read the content effortlessly
 
 
 
