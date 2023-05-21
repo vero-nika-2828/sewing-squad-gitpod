@@ -27,7 +27,6 @@ nav{
 
 .title-container{
   background-color:  rgba(252, 131, 131,0.9);  
-  margin-bottom: 10px;
   border-radius: 25px;
 }
 
@@ -67,5 +66,12 @@ footer li{
   font-size: 2rem;
 }
 
+/*Media queries*/
+ 
+@media screen and (max-width: 672px){
+  .card-panel{
+    margin-top: 5rem;
+  }
 
+}
 
