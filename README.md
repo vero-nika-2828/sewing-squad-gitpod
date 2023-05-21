@@ -1,3 +1,125 @@
+# *Sewing Squad* 
+
+
+![Overview](./assets/readme%20_docs/project_image.JPG)
+
+
+Link to the page: [Sewing Squad](https://vero-nika-2828.github.io/yasmin-jas-photography/)
+
+
+# Project Overview
+
+
+Sewing Squad is a friendly community of people who share the same passion for sewing, making their own clothes. They desire to combine their skills together with those of others to not only become better seamsters/seamstresses themselves but to help others reach their potential. 
+
+The platform facilitates /enables the members to share their patterns, sewing instructions and advice/tips on making the garment more customised/ to alter the garments to fit their style. The squad consists of members of variety of ages and experience levels.
+
+
+
+
+# Project objectives
+
+
+## User Goals
+
+
+* Find people who share the same interest
+* Get inspiration from other people’s creations
+* Store my work  
+* Post some of my work for others to see
+* Help others with their sewing journey 
+
+
+## Site Owner Goals
+
+
+* Build a community of people who are passionate about sewing
+* Enable users to share their sewing projects with others
+* Enable users to save their own projects
+* Encourage people to register (plant charge for membership in the future)
+* Make it easy for users to navigate across the site
+
+
+# User Experience
+
+
+## User Stories
+
+
+### Target user
+
+
+* People who are interested in sewing 
+* People who want to get some ideas for their sewing projects
+* People who like fashion 
+* People who like making their own clothes
+* People who want to share their ideas with others
+* People who want to learn hot to make new clothes 
+* People who want to improve their sewing skills
+
+
+
+
+### First Time Visitor Goals
+
+
+1. I want to be able to see what this website is for
+2. I want to be able to create my own account easily
+3. I want to be notified whether my registration was successful
+4. I want to be told clearly what what information is needed for registration
+5. I want to know what the password requirements are
+6. I want to be notified when I fill in something incorrectly or when missed something
+7. I want to be able to add my own projects
+
+
+8. I want to be able to see a list of other people’s projects
+9. I want to see more information on the projects that are interesting to me
+10. I want to be able to navigate through the website and find information easily 
+11. I want to be able to navigate the site across variety of screen sizes
+12. I want to be able to view the website on the variety of web browsers
+13. I want the links to work when I click on them 
+14. I want to be able to read the content effortlessly
+
+
+
+
+### Returning Visitor Goals
+
+
+15. I want to be able to log in to my account repeatedly
+16. I want to be given a confirmation that I am logged in 
+17. I want to be able to view a list with projects I added
+18. I want to be able to go to add a project directly
+19. I want to be able to edit my projects
+20. I want to be able to delete my projects
+21. I want to be able to log out from my account when I finish working with it
+
+
+
+
+### Site owner's Goals 
+
+
+22. I want users to create their account
+23. I want to store the user’s project entries in a database
+24. I want to be able to retrieve the project entries from database for my website
+26. I want the projects entries to be linked to each account
+27. I want users to see all the projects in database
+28. I want users to be able to read more details on the project they choose to view 
+29. I want users to see their own projects
+30. I want users to be able to edit their own projects 
+31. I want users to be able to delete their own projects 
+32. I want users to be able to red what the website is for
+33. I want users to be able to navigate through the website easily
+34. I want users to be able able to understand website easily
+
+
+
+
+
+
+
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome Veronika Nemergutova,
