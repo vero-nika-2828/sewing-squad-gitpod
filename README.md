@@ -16,6 +16,28 @@ The platform facilitates /enables the members to share their patterns, sewing in
 
 
 
+# Project objectives
+
+
+## User Goals
+
+
+* Find people who share the same interest
+* Get inspiration from other people’s creations
+* Store my work  
+* Post some of my work for others to see
+* Help others with their sewing journey 
+
+## Site Owner Goals
+
+
+* Build a community of people who are passionate about sewing
+* Enable users to share their sewing projects with others
+* Enable users to save their own projects
+* Encourage people to register (plant charge for membership in the future)
+* Make it easy for users to navigate across the site
+
+
 
 
 
