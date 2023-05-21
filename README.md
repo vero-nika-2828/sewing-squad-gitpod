@@ -86,6 +86,22 @@ The platform facilitates /enables the members to share their patterns, sewing in
 20. I want to be able to delete my projects
 21. I want to be able to log out from my account when I finish working with it
 
+### Site owner's Goals 
+
+
+22. I want users to create their account
+23. I want to store the user’s project entries in a database
+24. I want to be able to retrieve the project entries from database for my website
+26. I want the projects entries to be linked to each account
+27. I want users to see all the projects in database
+28. I want users to be able to read more details on the project they choose to view 
+29. I want users to see their own projects
+30. I want users to be able to edit their own projects 
+31. I want users to be able to delete their own projects 
+32. I want users to be able to red what the website is for
+33. I want users to be able to navigate through the website easily
+34. I want users to be able able to understand website easily
+
 
 
 
