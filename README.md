@@ -75,6 +75,18 @@ The platform facilitates /enables the members to share their patterns, sewing in
 13. I want the links to work when I click on them 
 14. I want to be able to read the content effortlessly
 
+### Returning Visitor Goals
+
+
+15. I want to be able to log in to my account repeatedly
+16. I want to be given a confirmation that I am logged in 
+17. I want to be able to view a list with projects I added
+18. I want to be able to go to add a project directly
+19. I want to be able to edit my projects
+20. I want to be able to delete my projects
+21. I want to be able to log out from my account when I finish working with it
+
+
 
 
 
