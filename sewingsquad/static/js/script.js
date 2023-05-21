@@ -6,5 +6,5 @@ $(document).ready(function () {
     $('.collapsible').collapsible();
 });
 
-
+//Display the current year in footer's copyright
 $('#year').html(new Date().getFullYear());
