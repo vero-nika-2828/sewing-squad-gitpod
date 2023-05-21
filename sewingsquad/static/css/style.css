@@ -4,6 +4,10 @@ body {
   flex-direction: column;
 }
 
+.brand-logo i{
+
+}
+
 nav{
   background-color: rgba(252, 131, 131,0.9);
 }
@@ -30,7 +34,7 @@ nav{
   border-radius: 25px;
 }
 
-.fa-people-group{
+.title-icon{
    font-size: 5rem;
 } 
 
