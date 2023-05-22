@@ -4,16 +4,12 @@ body {
   flex-direction: column;
 }
 
-.brand-logo i{
-
-}
-
 nav{
-  background-color: rgba(252, 131, 131,0.9);
+  background-color:  rgba(242, 82, 120, 0.9);
 }
 
 .sidenav{
-  background-color: rgba(252, 131, 131,0.9);
+  background-color:  rgba(242, 82, 120, 0.9);
 }
 
 .header{
@@ -30,7 +26,7 @@ nav{
 }
 
 .title-container{
-  background-color:  rgba(252, 131, 131,0.9);  
+  background-color:   rgba(242, 82, 120, 0.9);  
   border-radius: 25px;
 }
 
@@ -39,7 +35,7 @@ nav{
 } 
 
 .flash{
-  background-color: rgba(252, 131, 131,0.9);
+  background-color:  rgba(242, 82, 120, 0.9);
   margin-top: -20px;
 }
 
@@ -56,8 +52,8 @@ main {
   display: flex;
 }
 
-footer{
-  background-color: rgba(252, 131, 131,1)
+.page-footer{
+  background-color:  rgba(242, 82, 120, 1);
 }
 
 footer ul{
