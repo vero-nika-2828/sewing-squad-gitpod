@@ -9,7 +9,10 @@ from sewingsquad.models import Users, SewingWorks
 @app.route("/")
 def landing_page():
     all_projects = list(SewingWorks.query.all())
-    return render_template("index.html", all_projects=all_projects)
+    all_users = list(Users.query.all())
+    return render_template(
+        "index.html", all_projects=all_projects, 
+        all_users=all_users)
 
 
 @app.route("/search", methods=["GET", "POST"])
