@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block header %} Add projects {% endblock %}
+{% block header %} Add project {% endblock %}
 {% block content %}
 
 <div class="row">
@@ -9,13 +9,13 @@
             <div class="row">
                 <div class="input-field col s10 m8 offset-m2">
                     <i class="material-icons prefix">content_paste</i>
-                    <input id="projectname" name="projectname" type="text" class="validate">
+                    <input id="projectname" name="projectname" type="text" class="validate" required>
                     <label for="projectname">Project name</label>
                 </div>
             </div>
 
-            <div class="input-field col s10 m8 offset-m2">
-                <select id="category" name="category" type="text">
+            <div class="input-field col s10 m8 offset-m2" required>
+                <select id="category" name="category" type="text" required>
                     <option value="" disabled selected>Choose your option</option>
                     <option value="Winter clothes">Winter Clothes</option>
                     <option value="Summer clothes">Summer Clothes</option>
@@ -33,8 +33,8 @@
               </div>
 
               <div class="input-field col s12 m8 offset-m2">
-                <select multiple id="fabrictype" name="fabrictype" type="text">
-                  <option value="" disabled selected>Choose your option</option>
+                <select multiple id="fabrictype" name="fabrictype" type="text" required>
+                  <option value="" disabled selected required>Choose your option</option>
                   <option value="Cotton">Cotton</option>
                   <option value="Polyester">Polyester</option>
                   <option value="Silk">Silk</option>
@@ -52,7 +52,7 @@
             <div class="row">
                 <div class="input-field col s10 m8 offset-m2">
                     <i class="material-icons prefix">straighten</i>
-                    <input id="fabricquantity" name="fabricquantity" type="text" class="validate">
+                    <input id="fabricquantity" name="fabricquantity" type="text" class="validate" required>
                     <label for="fabricquantity">Fabric Quantity (in cm)</label>
                 </div>
             </div>
@@ -60,7 +60,7 @@
             <div class="row">
                 <div class="input-field col s10 m8 offset-m2">
                   <i class="material-icons prefix">square_foot</i>
-                  <input id="othermaterials" name="othermaterials" type="text" class="validate">
+                  <input id="othermaterials" name="othermaterials" type="text" class="validate" required>
                   <label for="othermaterials">Other materials</label>
                 </div>
             </div>
@@ -68,7 +68,7 @@
             <div class="row">
                 <div class="input-field col s10 m8 offset-m2">
                 <i class="material-icons prefix">timer</i>
-                  <input id="sewingtime" name="sewingtime" type="text" class="validate">
+                  <input id="sewingtime" name="sewingtime" type="text" class="validate" required>
                   <label for="sewingtime">Sewing time (in minutes) </label>
                 </div>
             </div>
@@ -76,7 +76,7 @@
             <div class="row">
                 <div class="input-field col s10 m8 offset-m2">
                   <i class="material-icons prefix">create</i>
-                  <input id="sewingtip" name="sewingtip" type="text" class="validate">
+                  <input id="sewingtip" name="sewingtip" type="text" class="validate" required>
                   <label for="sewingtip">Sewing tip</label>
                 </div>
             </div>
@@ -84,7 +84,7 @@
             <div class="row">
                 <div class="input-field col s10 m8 offset-m2">
                   <i class="material-icons prefix">image</i>
-                  <input id="photourl" name="photourl" type="text" class="validate">
+                  <input id="photourl" name="photourl" type="text" class="validate" required>
                   <label for="photourl">Photo URL</label>
                 </div>
             </div>
