@@ -22,7 +22,7 @@ nav{
 
 .header-title{
   width: 100%;
-  min-height:55vh;
+  min-height:30vh;
 }
 
 .title-container{
@@ -64,6 +64,14 @@ footer ul{
 footer li{
   margin:2px;
   font-size: 2rem;
+}
+
+.margin-left{
+  margin-left: 10px;
+}
+
+.margin-right{
+  margin-right: 10px;
 }
 
 /*Media queries*/
