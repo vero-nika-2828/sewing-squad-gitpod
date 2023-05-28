@@ -52,6 +52,9 @@ main {
   display: flex;
 }
 
+.card{
+  min-height:700px;
+}
 
 .page-footer{
   background-color:  rgba(242, 82, 120, 1);
