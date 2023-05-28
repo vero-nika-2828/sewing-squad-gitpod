@@ -52,6 +52,7 @@ main {
   display: flex;
 }
 
+
 .page-footer{
   background-color:  rgba(242, 82, 120, 1);
 }
@@ -74,6 +75,7 @@ footer li{
   margin-right: 10px;
 }
 
+
 /*Media queries*/
  
 @media screen and (max-width: 672px){
@@ -82,4 +84,13 @@ footer li{
   }
 
 }
+
+/*@media screen and (max-width: 587px){
+  .card .card-content {
+    min-height
+    /*max-height: 1000px;
+  }
+
+}*/
+
 
