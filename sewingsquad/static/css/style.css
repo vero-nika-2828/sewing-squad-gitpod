@@ -52,8 +52,17 @@ main {
   display: flex;
 }
 
+.card-image {
+  max-height: 17rem;
+  overflow: hidden;
+ 
+}
+
 .card{
-  min-height:700px;
+  max-height:38rem;
+  object-fit: cover;
+  overflow: hidden;
+  
 }
 
 .page-footer{
@@ -76,6 +85,10 @@ footer li{
 
 .margin-right{
   margin-right: 10px;
+}
+
+i.left {
+  margin-right: -15px;
 }
 
 
