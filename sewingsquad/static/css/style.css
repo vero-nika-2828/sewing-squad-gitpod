@@ -52,19 +52,6 @@ main {
   display: flex;
 }
 
-.card-image {
-  max-height: 17rem;
-  overflow: hidden;
- 
-}
-
-.card{
-  max-height:38rem;
-  object-fit: cover;
-  overflow: hidden;
-  
-}
-
 .page-footer{
   background-color:  rgba(242, 82, 120, 1);
 }
@@ -94,19 +81,19 @@ i.left {
 
 /*Media queries*/
  
-@media screen and (max-width: 672px){
-  .card-panel{
-    margin-top: 5rem;
+@media screen and (min-width: 605px){
+  .card-image {
+    min-height: 17rem;
+    max-height: 17rem;
+    overflow: hidden; 
+  }
+
+  .card .card-content {
+    min-height: 15rem;
+    max-height: 15rem;
   }
 
 }
 
-/*@media screen and (max-width: 587px){
-  .card .card-content {
-    min-height
-    /*max-height: 1000px;
-  }
-
-}*/
 
 
