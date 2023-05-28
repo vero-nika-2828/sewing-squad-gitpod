@@ -52,6 +52,10 @@ main {
   display: flex;
 }
 
+.btn, .btn-large{
+  margin-right: 15px;
+}
+
 .page-footer{
   background-color:  rgba(242, 82, 120, 1);
 }
@@ -64,6 +68,10 @@ footer ul{
 footer li{
   margin:2px;
   font-size: 2rem;
+}
+
+footer li:hover{
+  transform: scale(1.5);
 }
 
 .margin-left{
