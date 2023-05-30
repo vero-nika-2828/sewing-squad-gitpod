@@ -151,6 +151,28 @@ def add_project():
 
     return render_template("add_project.html")
 
+    
+@app.route("/add_comment/<int:sewingwork_id>", methods=["POST"])
+def add_comment(sewingwork_id):
+    if request.method == "POST":
+        username = session["user"]
+      
+        user = Users.query.filter_by(username=username).first()
+        sewingwork = SewingWorks.query.get_or_404(sewingwork_id)
+        comments = list(Comments.query.all())
+        
+        if user:
+            comment = Comments(
+                comment=request.form.get("comment"),
+                comment_userid=user.id,
+                comment_worksid=sewingwork.id,
+            )
+        db.session.add(comment)
+        db.session.commit()
+        flash('Comment Added Successfully!')
+        return render_template(
+            "project.html", this_project=sewingwork, comments=comments)
+            
 
 @app.route("/edit_project/<int:sewingwork_id>", methods=["GET", "POST"])
 def edit_project(sewingwork_id):
