@@ -29,7 +29,7 @@
             <nav>
                 <!--Nav bar on larger screens-->
                 <div class="row nav-wrapper">
-                    <a href="{{ url_for('landing_page') }}" class="left brand-logo margin-left margin-right"> <span class="left">Sewing </span><i class="fa-solid fa-people-group margin-left"></i></span> Squad</a>
+                    <a href="{{ url_for('home')}}" class="left brand-logo margin-left margin-right"> <span class="left">Sewing </span><i class="fa-solid fa-people-group margin-left"></i></span> Squad</a>
                     <a href="#" data-target="slide-out" class="right sidenav-trigger"><i class="material-icons">menu</i></a>
             
                     <form class="col s6 offset-s2 center" method="POST" action="{{ url_for('search') }}">
@@ -44,14 +44,14 @@
                 
                 
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li><a href="{{ url_for('landing_page') }}">Home</a></li>
+                        <li><a href="{{ url_for('home') }}">Home</a></li>
                         {% if session.user %}
-                        <li><a href="{{ url_for('my_projects') }}">My Projects</a></li>
-                        <li><a href="{{ url_for('add_project') }}">Add project</a></li>
-                        <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                            <li><a href="{{ url_for('my_projects') }}">My Projects</a></li>
+                            <li><a href="{{ url_for('add_project') }}">Add project</a></li>
+                            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                         {% else %}
-                        <li><a href="{{ url_for('login') }}">Log In</a></li>
-                        <li><a href="{{ url_for('register') }}">Register</a></li>
+                            <li><a href="{{ url_for('login') }}">Log In</a></li>
+                            <li><a href="{{ url_for('register') }}">Register</a></li>
                         {% endif %}
                     </ul>
                 </div>
@@ -83,7 +83,7 @@
             
         <!--Nav bar on mobile device screens-->
         <ul class="sidenav" id="slide-out">
-            <li><a href="{{ url_for('landing_page') }}">Home</a></li>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
             {% if session.user %}
             <li><a href="{{ url_for('my_projects') }}">My Projects</a></li>
             <li><a href="{{ url_for('add_project') }}">Add projects</a></li>
@@ -122,7 +122,7 @@
     <footer class="page-footer footer-copyright">
         <div class="row s12 m6 offset-m3 ">
             <div class="col s12 center-align">
-              <h5 class="center-align"><a href="{{ url_for('landing_page') }}" class="white-text">Sewing Squad</a></h5>
+              <h5 class="center-align"><a href="{{ url_for('home') }}" class="white-text">Sewing Squad</a></h5>
             </div>
             
             <div class="col s4 offset-s4 center-align">

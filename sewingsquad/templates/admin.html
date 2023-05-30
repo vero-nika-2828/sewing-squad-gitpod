@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block header %} Admin page {% endblock %}
+{% block content %}
+
+<div class="row">
+
+    <!--Link to Log in Page for registered users-->
+    <div class="col s12 m12 center-align">
+        <p>
+            As an admin you can add, edit and delete categories. 
+            You can also edit and delete posts as well as users.
+        <p>
+            <a href="{{ url_for('register') }}" alt=>Register</a>
+    </div>
+</div>
+
+{% endblock %}
