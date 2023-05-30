@@ -3,7 +3,7 @@ from flask import render_template, request, flash, session, redirect, url_for
 from sqlalchemy import or_
 from werkzeug.security import generate_password_hash, check_password_hash
 from sewingsquad import app, db
-from sewingsquad.models import Users, SewingWorks
+from sewingsquad.models import Users, SewingWorks, Comments
 
 
 @app.route("/")
@@ -172,7 +172,7 @@ def add_comment(sewingwork_id):
         flash('Comment Added Successfully!')
         return render_template(
             "project.html", this_project=sewingwork, comments=comments)
-            
+
 
 @app.route("/edit_project/<int:sewingwork_id>", methods=["GET", "POST"])
 def edit_project(sewingwork_id):
