@@ -139,7 +139,9 @@ def add_project():
                 other_materials=request.form.get("othermaterials").lower(),
                 sewing_time=request.form.get("sewingtime"),
                 sewing_tip=request.form.get("sewingtip").lower(),
+                instructions=request.form.get("instructions").lower(),
                 photo_URL=request.form.get("photourl"),
+                secondaryphoto_URL=request.form.get("secondaryphotourl"),
                 users_id=user.id,
             )
         db.session.add(project)
@@ -167,7 +169,9 @@ def edit_project(sewingwork_id):
             "othermaterials").lower(),
         sewingwork.sewing_time = request.form.get("sewingtime"),
         sewingwork.sewing_tip = request.form.get("sewingtip").lower(),
+        sewingwork.instructions = request.form.get("instructions").lower(),
         sewingwork.photo_URL = request.form.get("photourl"),
+        sewingwork.secondaryphoto_URL = request.form.get("secondaryphotourl"),
         sewingwork.users_id = user.id,
         db.session.commit()
         flash(

@@ -9,6 +9,10 @@ class Users(db.Model):
     password = db.Column(db.String(260), nullable=False)
     users_works = db.relationship(
         "SewingWorks", backref="users", cascade="all, delete", lazy=True)
+    users_comments = db.relationship(
+        "Comments", backref="users", cascade="all, delete", lazy=True)
+    users_likes = db.relationship(
+        "Likes", backref="users", cascade="all, delete", lazy=True)
 
     def __repr__(self):
         return self.username
@@ -30,13 +34,59 @@ class SewingWorks(db.Model):
         db.Integer, nullable=False)
     sewing_tip = db.Column(
         db.Text, nullable=False)
+    instructions = db.Column(
+        db.Text, nullable=False)    
     photo_URL = db.Column(
         db.String(260), nullable=False)
+    secondaryphoto_URL = db.Column(
+        db.String(260))
     users_id = db.Column(
         db.Integer, db.ForeignKey(
             "users.id"), nullable=False)
+    works_comments = db.relationship(
+        "Comments", backref="sewing_works", cascade="all, delete", lazy=True)  
+    works_likes = db.relationship(
+            "Likes", backref="sewing_works", cascade="all, delete", lazy=True)  
+
+    def __repr__(self):
+        return self.project_name
+        
+
+class Comments(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    comment = db.Column(
+        db.Text, nullable=False)
+    comment_userid = db.Column(
+        db.Integer, db.ForeignKey(
+            "users.id"), nullable=False)
+    comment_worksid = db.Column(
+        db.Integer, db.ForeignKey(
+            "sewing_works.id"), nullable=False) 
+
+    def __repr__(self):
+        return self.comment
+
+
+class Likes(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    liked = db.Column(db.Boolean, default=False, nullable=False)
+    likes = db.Column(
+        db.Integer, nullable=False)
+    likes_userid = db.Column(
+        db.Integer, db.ForeignKey(
+            "users.id"), nullable=False)
+    likes_worksid = db.Column(
+        db.Integer, db.ForeignKey(
+            "sewing_works.id"), nullable=False) 
 
     def __repr__(self):
         return self
-        
-    
+
+
+class Category(db.Model):
+    # schema for the Category model
+    id = db.Column(db.Integer, primary_key=True)
+    category = db.Column(db.String(260), unique=True, nullable=False)
+
+    def __repr__(self):
+        return self.category
