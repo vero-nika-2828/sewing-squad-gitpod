@@ -35,17 +35,20 @@ nav{
 } 
 
 .flash{
-  background-color:  rgba(242, 82, 120, 0.9);
+  background-color:  rgba(242, 82, 120, 1);
+  color:white;
   margin-top: -20px;
+   
+}
+
+.flashes h4 {
+  line-height: 3;
+  padding-top: 1rem;
+  
 }
 
 main {
   flex: 1 0 auto;
-}
-
-
-.flashes h4 {
-  line-height: 3;
 }
 
 .horizontal-list{

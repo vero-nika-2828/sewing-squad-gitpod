@@ -118,9 +118,13 @@ def my_projects():
 
 @app.route("/project/<int:sewingwork_id>")
 def project(sewingwork_id):
-    project_db = SewingWorks.query.get_or_404(sewingwork_id)
+    if "user" in session:
+        project_db = SewingWorks.query.get_or_404(sewingwork_id)
 
-    return render_template("project.html", this_project=project_db)
+        return render_template("project.html", this_project=project_db)
+    else:
+        flash("You must be logged in to view this project")
+        return redirect(url_for("home"))
 
 
 @app.route("/add_project", methods=["GET", "POST"])
