@@ -57,11 +57,7 @@
                 </div>
             </nav>
 
-            <div class="row center-align valign-wrapper header-title">
-                <div class="col s10 m6 offset-s1 offset-m3">
-                    <div class="card-panel white-text title-container">
-                        <h1>Sewing <span><i class="fa-solid fa-people-group title-icon margin-right"></i></span>Squad</h1>
-                        <h5>Sew it! Wear it! Love it!</h5>
+            {% block hero %}{% endblock %}
                         
                         <!--<div class="row">
                             <form class="col s8 m8 center" method="POST" action="{{ url_for('search') }}">
