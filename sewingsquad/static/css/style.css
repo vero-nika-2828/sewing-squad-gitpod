@@ -89,6 +89,10 @@ i.left {
   margin-right: -15px;
 }
 
+.horizontal-list i{
+  margin-right: 5px;
+}
+
 
 /*Media queries*/
  
