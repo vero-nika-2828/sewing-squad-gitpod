@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Dancing+Script:wght@700&family=Diphylleia&family=Great+Vibes&family=Handlee&family=Inter&family=Kalam:wght@700&family=Kaushan+Script&family=Kumbh+Sans:wght@100;300;400;600&family=Montserrat:wght@200&family=Noto+Sans+Chorasmian&family=Orbit&family=Pacifico&family=Roboto&family=Sacramento&display=swap" rel="stylesheet">
+
     <!--Font awesome-->
     <script src="https://kit.fontawesome.com/352d1ba5ff.js" crossorigin="anonymous"></script>
 
@@ -31,17 +36,8 @@
                 <div class="row nav-wrapper">
                     <a href="{{ url_for('home')}}" class="left brand-logo margin-left margin-right"> <span class="left">Sewing </span><i class="fa-solid fa-people-group margin-left"></i></span> Squad</a>
                     <a href="#" data-target="slide-out" class="right sidenav-trigger"><i class="material-icons">menu</i></a>
-            
-                    <form class="col s6 offset-s2 center hide-on-small-only" method="POST" action="{{ url_for('search') }}">
-                        <div class="row valign-wrapper center-align">
-                            <div class="input-field col s 12 m8">
-                                <i class="material-icons prefix center-align">search</i>
-                                <input id="query" name="query" type="text" minlenght="3" class="validate" required>
-                                <label for="query">Search</label>
-                            </div>
-                        </div>
-                    </form>
-                
+                    
+                    {% block search %}{% endblock %}
                 
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
                         <li><a href="{{ url_for('home') }}">Home</a></li>
@@ -58,20 +54,6 @@
             </nav>
 
             {% block hero %}{% endblock %}
-                        
-                        <div class="row show-on-small">
-                            <form class="col s8 m8 center" method="POST" action="{{ url_for('search') }}">
-                                <div class="row valign-wrapper center-align">
-                                    <div class="input-field col s 12 m8">
-                                    <i class="material-icons prefix center-align">search</i>
-                                    <input id="query" name="query" type="text" minlenght="3" class="validate" required>
-                                    <label for="query">Search</label>
-                                    </div>
-                                </div>
-                            </form>
-                                                        
-                        </div>
-
                     </div>
                 </div>
             </div>
@@ -118,7 +100,7 @@
     <footer class="page-footer footer-copyright">
         <div class="row s12 m6 offset-m3 ">
             <div class="col s12 center-align">
-              <h5 class="center-align"><a href="{{ url_for('home') }}" class="white-text">Sewing Squad</a></h5>
+              <h4 class="center-align"><a href="{{ url_for('home') }}" class="white-text">Sewing Squad</a></h4>
             </div>
             
             <div class="col s4 offset-s4 center-align">

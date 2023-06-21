@@ -6,6 +6,11 @@ body {
 
 nav{
   background-color:  rgba(242, 82, 120, 0.9);
+  margin-bottom: 20px;
+}
+
+nav .brand-logo i{
+  margin-right:  5px;
 }
 
 .sidenav{
@@ -22,7 +27,6 @@ nav{
   background-repeat:no-repeat;
   background-position: center;
   background-size: cover;
-  
 }
 
 .header-title{
@@ -32,7 +36,17 @@ nav{
 
 .title-container{
   background-color:   rgba(242, 82, 120, 0.8);
-  border-radius: 25px;
+  width: fit-content;
+  border-radius: 50%;
+}
+
+.brand-logo, .title-container h1, .page-footer h4{
+  font-family: 'Sacramento', cursive;
+}
+
+.title-container h5{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
 }
 
 .title-icon{
