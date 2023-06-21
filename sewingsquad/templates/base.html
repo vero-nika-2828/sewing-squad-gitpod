@@ -32,7 +32,7 @@
                     <a href="{{ url_for('home')}}" class="left brand-logo margin-left margin-right"> <span class="left">Sewing </span><i class="fa-solid fa-people-group margin-left"></i></span> Squad</a>
                     <a href="#" data-target="slide-out" class="right sidenav-trigger"><i class="material-icons">menu</i></a>
             
-                    <form class="col s6 offset-s2 center" method="POST" action="{{ url_for('search') }}">
+                    <form class="col s6 offset-s2 center hide-on-small-only" method="POST" action="{{ url_for('search') }}">
                         <div class="row valign-wrapper center-align">
                             <div class="input-field col s 12 m8">
                                 <i class="material-icons prefix center-align">search</i>
@@ -59,7 +59,7 @@
 
             {% block hero %}{% endblock %}
                         
-                        <!--<div class="row">
+                        <div class="row show-on-small">
                             <form class="col s8 m8 center" method="POST" action="{{ url_for('search') }}">
                                 <div class="row valign-wrapper center-align">
                                     <div class="input-field col s 12 m8">
@@ -70,7 +70,7 @@
                                 </div>
                             </form>
                                                         
-                        </div>-->
+                        </div>
 
                     </div>
                 </div>
