@@ -212,3 +212,17 @@ def delete_project(sewingwork_id):
     db.session.delete(sewingwork)       
     db.session.commit()
     return redirect(url_for("my_projects"))
+
+
+@app.errorhandler(404)
+def handle_404(error):
+    """404 error handler"""
+    return render_template(
+        '404.html'), 404
+
+
+@app.errorhandler(500)
+def handle_500(error):
+    """500 error handler"""
+    return render_template(
+        '500.html'), 404
