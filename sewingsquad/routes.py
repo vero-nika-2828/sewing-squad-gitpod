@@ -36,7 +36,18 @@ def search():
                     '%{}%'.format(query)), SewingWorks.category.like(
                         '%{}%'.format(query)), SewingWorks.fabric_type.like(
                             '%{}%'.format(query)))).all())
-    return render_template("index.html", all_projects=all_projects)
+            
+    results = all_projects.count(query)
+    print(results)
+    print(all_projects)
+
+    if results > 0:
+        return render_template(
+            "index.html", all_projects=all_projects, results=results)     
+    else:
+        flash("Sorry! There are no entries for '{}'".format(query))
+        return render_template(
+            "index.html", all_projects=all_projects, results=results)  
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -173,7 +184,7 @@ def add_comment(sewingwork_id):
             )
         db.session.add(comment)
         db.session.commit()
-        flash('Comment Added Successfully!')
+        flash('Comment added successfully!')
         return render_template(
             "project.html", this_project=sewingwork, comments=comments)
 
@@ -216,13 +227,13 @@ def delete_project(sewingwork_id):
 
 @app.errorhandler(404)
 def handle_404(error):
-    """404 error handler"""
+    # 404 error handler
     return render_template(
         '404.html'), 404
 
 
 @app.errorhandler(500)
 def handle_500(error):
-    """500 error handler"""
+    # 500 error handler
     return render_template(
         '500.html'), 404
