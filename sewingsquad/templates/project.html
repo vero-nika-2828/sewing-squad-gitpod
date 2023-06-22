@@ -12,7 +12,11 @@
                     </div>
                     <div class="col s12 m6">
                         <h2>Instructions</h2>
-                        <p>Placeholder</p>
+                        <ol>
+                            {% for line in this_project.instructions.split(",") %}
+                                <li>{{ line }}</li>
+                            {% endfor %}
+                        </ol>
                         
                     </div>
                 </div>
