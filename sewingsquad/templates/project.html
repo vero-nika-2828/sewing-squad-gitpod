@@ -10,28 +10,29 @@
                     <div class="card-image col s12 m6">
                         <img src="{{ this_project.photo_URL }}">   
                     </div>
+                    
                     <div class="col s12 m6">
-                        <h2>Instructions</h2>
-                        <ol>
-                            {% for line in this_project.instructions.split(",") %}
-                                <li>{{ line }}</li>
-                            {% endfor %}
-                        </ol>
-                        
+                        <div class="card-content col s12 m6">
+                            <span class="card-title">{{ this_project.project_name}}</span>
+                            <p>{{ this_project.sewing_tip }}</p>
+                        </div>
+
                     </div>
                 </div>
             </div>
           
         </div>
 
-
         <div class="row">
-            <div class="col s12 m12">
-                <div class="card">
-                    <div class="card-content col s12 m6">
-                        <span class="card-title">{{ this_project.project_name}}</span>
-                        <p>{{ this_project.sewing_tip }}</p>
-                    </div>
+            <div class="col s12 m6">
+                <div class="card-content">
+                    <h2>Instructions</h2>
+                    <ol>
+                        {% for line in this_project.instructions.split(",") %}
+                            <li>{{ line }}</li>
+                        {% endfor %}
+                    </ol>
+                    
                  </div>
             </div>
           
@@ -93,7 +94,11 @@
                             <span class="card-title">Comments</span>
 
                             {% for comment in this_project.works_comments %}
-                                <p>{{ comment.comment }}</p>
+                                <p><strong>
+                                    <i class="material-icons prefix">account_circle</i> 
+                                    {{comment.users.username.capitalize() }}:</strong>
+                                    <br> 
+                                    "{{ comment.comment }}"</p> <br>
                             {% endfor %}
 
                         </div>
