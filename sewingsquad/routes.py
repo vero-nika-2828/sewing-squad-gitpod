@@ -155,6 +155,8 @@ def project(sewingwork_id):
 
 @app.route("/add_project", methods=["GET", "POST"])
 def add_project():
+    categories = Category.query.all()
+
     if request.method == "POST":
         username = session["user"]
 
@@ -179,7 +181,7 @@ def add_project():
         flash('Project Added Successfully!')
         return redirect(url_for("my_projects"))
 
-    return render_template("add_project.html")
+    return render_template("add_project.html", categories=categories)
 
     
 @app.route("/add_comment/<int:sewingwork_id>", methods=["POST"])
@@ -207,6 +209,7 @@ def add_comment(sewingwork_id):
 @app.route("/edit_project/<int:sewingwork_id>", methods=["GET", "POST"])
 def edit_project(sewingwork_id):
     sewingwork = SewingWorks.query.get_or_404(sewingwork_id)
+    categories = Category.query.all()
 
     if request.method == "POST":
         username = session["user"]
@@ -229,7 +232,7 @@ def edit_project(sewingwork_id):
         flash(
             "Your project has been successfully edited."
             )
-    return render_template("edit_project.html", project=sewingwork)
+    return render_template("edit_project.html", categories=categories, project=sewingwork)
 
 
 @app.route("/delete_project/<int:sewingwork_id>")

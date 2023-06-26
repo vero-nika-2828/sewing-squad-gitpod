@@ -15,18 +15,10 @@
 
             <div class="input-field col s10 m8 offset-m2" required>
                 <select id="category" name="category" type="text">
-                    <option value="" disabled>{{ project.category }}</option>
-                    <option value="Winter clothes">Winter Clothes</option>
-                    <option value="Summer clothes">Summer Clothes</option>
-                    <option value="Trousers">Trousers</option>
-                    <option value="Shirts">Shirts</option>
-                    <option value="Tops">Tops</option>
-                    <option value="Dresses">Dresses</option>
-                    <option value="Wedding Dresses">Wedding Dresses</option>
-                    <option value="Skirts">Skirts</option>
-                    <option value="Shorts">Shorts</option>
-
-
+                    <option value="" disabled selected>{{ project.category }}</option>
+                    {% for category in categories %}
+                      <option value={{category}}>{{category}}</option>
+                    {% endfor %}
                 </select>
                 <label>Category</label>
               </div>

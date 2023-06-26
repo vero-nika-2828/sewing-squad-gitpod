@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block header %} Cotegories {% endblock %}
+{% block header %} Categories {% endblock %}
 {% block content %}
 <div class="row">
     <!--Form to add project-->
@@ -34,11 +34,13 @@
 </div>
 
 <div class="row center-align">
-    <h3>Category list</h3>
-    <ul>
-        {% for category in categories %}
-            <li>{{category}}</li>
-        {% endfor %}
-    </ul> 
+    <div class="card-panel col s12 m8 offset-m2 red lighten-5">
+        <h4>Category list</h4>
+        <ul>
+            {% for category in categories %}
+                <li>{{category}}</li>
+            {% endfor %}
+        </ul> 
+    </div>
 </div>
 {% endblock %}
