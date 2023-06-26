@@ -45,7 +45,7 @@ def search():
             "index.html", all_projects=all_projects, results=results)     
     else:
         flash("Sorry! No results found for '{}'".format(query))
-        flash("Please try another search")
+        flash("Please try another search.")
         return render_template(
             "index.html", all_projects=all_projects, results=results)  
 

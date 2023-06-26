@@ -54,8 +54,8 @@ nav .brand-logo i{
 } 
 
 .flash{
-  background-color:  rgba(242, 82, 120, 1);
-  color:white;
+  color:rgba(242, 82, 120, 1);
+  font-weight: bold;
   margin-top: -20px;
    
 }
