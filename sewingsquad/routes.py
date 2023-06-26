@@ -3,7 +3,7 @@ from flask import render_template, request, flash, session, redirect, url_for
 from sqlalchemy import or_
 from werkzeug.security import generate_password_hash, check_password_hash
 from sewingsquad import app, db
-from sewingsquad.models import Users, SewingWorks, Comments
+from sewingsquad.models import Users, SewingWorks, Comments, Category
 
 
 @app.route("/")
@@ -25,6 +25,21 @@ def admin():
         return render_template("admin.html")
     return render_template("index.html")
 
+
+@app.route("/categories", methods=["GET", "POST"])
+def categories():
+    categories = list(Category.query.all())
+
+    if request.method == "POST":
+        new_category = Category(
+            category=request.form.get("category").lower(),       
+        )
+        db.session.add(new_category)
+        db.session.commit()
+        flash("Category added succesfully")
+
+    return render_template("categories.html", categories=categories)
+  
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
