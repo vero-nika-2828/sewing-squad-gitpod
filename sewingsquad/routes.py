@@ -37,9 +37,7 @@ def search():
                         '%{}%'.format(query)), SewingWorks.fabric_type.like(
                             '%{}%'.format(query)))).all())
             
-    results = all_projects.count(query)
-    print(results)
-    print(all_projects)
+    results = len(all_projects)
 
     if results > 0:
         return render_template(
