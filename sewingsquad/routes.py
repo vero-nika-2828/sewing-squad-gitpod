@@ -40,10 +40,12 @@ def search():
     results = len(all_projects)
 
     if results > 0:
+        flash("No. of results found for '{}': {}".format(query, results))
         return render_template(
             "index.html", all_projects=all_projects, results=results)     
     else:
-        flash("Sorry! There are no entries for '{}'".format(query))
+        flash("Sorry! No results found for '{}'".format(query))
+        flash("Please try another search")
         return render_template(
             "index.html", all_projects=all_projects, results=results)  
 
