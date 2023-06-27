@@ -30,9 +30,14 @@
             {% for project in my_projects %}
                 <div class="col s12 m6 l4">
                     <div class="card hoverable">
-                        <div class="card-image">
+                        <div class="card-image primary-image">
                             <img src="{{ project.photo_URL }}">   
                         </div>
+
+                        <div class="card-image secondary-image">
+                            <img src="{{ project.secondaryphoto_URL }}">   
+                        </div>
+
 
                         <div class="card-content">
                             <span class="card-title">{{ project.project_name.capitalize()}}</span>
