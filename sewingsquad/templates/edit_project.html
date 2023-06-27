@@ -2,9 +2,10 @@
 {% block header %} Edit projects {% endblock %}
 {% block content %}
 
-<div class="card-panel row">
+<div class="row">
     <!--Form to add project-->
     <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('edit_project', sewingwork_id=project.id) }}">
+      <div class="card-panel row red lighten-5">
             <div class="row">
                 <div class="input-field col s10 m8 offset-m2">
                     <i class="material-icons prefix">content_paste</i>
@@ -115,6 +116,7 @@
 
 
         </div>
+      </div>
     </form>
 
     <!--Link to Log in Page for registered users-->
