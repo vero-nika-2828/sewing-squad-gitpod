@@ -40,6 +40,9 @@
                             <p>Category: {{ project.category}}</p>
                             <p>Fabric type: {{ project.fabric_type}}</p>
                             <p>Fabric quantity: {{ project.fabric_quantity }}</p>
+                            <a href="{{ url_for('project', sewingwork_id=project.id)}}"aria-label="See more information">
+                                See more info
+                            </a>
                         </div>
 
                         <div class="card-action center-align">

@@ -31,12 +31,13 @@ def categories():
     categories = list(Category.query.all())
 
     if request.method == "POST":
-        new_category = Category(
-            category=request.form.get("category").lower(),       
-        )
-        db.session.add(new_category)
-        db.session.commit()
-        flash("Category added succesfully")
+        if user.id == 1:
+            new_category = Category(
+                category=request.form.get("category").lower(),       
+            )
+            db.session.add(new_category)
+            db.session.commit()
+            flash("Category added succesfully")
 
     return render_template("categories.html", categories=categories)
   
@@ -232,7 +233,7 @@ def edit_project(sewingwork_id):
         flash(
             "Your project has been successfully edited."
             )
-    return render_template("edit_project.html", categories=categories, project=sewingwork)
+    return render_template("edit_project.html", project=sewingwork, categories=categories)
 
 
 @app.route("/delete_project/<int:sewingwork_id>")
