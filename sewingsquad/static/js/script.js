@@ -8,7 +8,7 @@ $(document).ready(function () {
     
 });
 
-$('.card-image').on("mouseenter", function(){ 
+$('.primary-image').on("mouseenter", function(){ 
     $(this).hide();
     $(this).siblings('.secondary-image').show();
     console.log("It works");

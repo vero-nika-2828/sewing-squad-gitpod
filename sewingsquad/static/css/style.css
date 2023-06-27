@@ -53,6 +53,10 @@ nav .brand-logo i{
    font-size: 5rem;
 } 
 
+.secondary-image{
+  display: none;
+}
+
 .flash{
   color:rgba(242, 82, 120, 1);
   font-weight: bold;
@@ -119,7 +123,7 @@ i.left {
 /*Media queries*/
  
 @media screen and (min-width: 605px){
-  .card-image, .secondary-image {
+  .card-image {
     min-height: 15rem;
     max-height: 17rem;
     overflow: hidden; 
@@ -133,7 +137,7 @@ i.left {
 }
 
 @media screen and (min-width: 682px){
-  .card-image, .secondary-image {
+  .card-image {
     min-height: 17rem;
     max-height: 10rem;
 
