@@ -119,7 +119,7 @@ i.left {
 /*Media queries*/
  
 @media screen and (min-width: 605px){
-  .card-image {
+  .card-image, .secondary-image {
     min-height: 15rem;
     max-height: 17rem;
     overflow: hidden; 
@@ -133,7 +133,7 @@ i.left {
 }
 
 @media screen and (min-width: 682px){
-  .card-image {
+  .card-image, .secondary-image {
     min-height: 17rem;
     max-height: 10rem;
 
