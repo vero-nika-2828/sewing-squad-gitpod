@@ -31,13 +31,12 @@ def categories():
     categories = list(Category.query.all())
 
     if request.method == "POST":
-        if user.id == 1:
-            new_category = Category(
-                category=request.form.get("category").lower(),       
-            )
-            db.session.add(new_category)
-            db.session.commit()
-            flash("Category added succesfully")
+        new_category = Category(
+            category=request.form.get("category").lower(),       
+        )
+        db.session.add(new_category)
+        db.session.commit()
+        flash("Category added succesfully")
 
     return render_template("categories.html", categories=categories)
   
@@ -212,6 +211,9 @@ def edit_project(sewingwork_id):
     sewingwork = SewingWorks.query.get_or_404(sewingwork_id)
     categories = Category.query.all()
 
+    username = session["user"]
+    user = Users.query.filter_by(username=username).first()
+
     if request.method == "POST":
         username = session["user"]
 
@@ -233,7 +235,12 @@ def edit_project(sewingwork_id):
         flash(
             "Your project has been successfully edited."
             )
-    return render_template("edit_project.html", project=sewingwork, categories=categories)
+    if user.id == sewingwork.users_id or user.id == 1:
+        return render_template(
+            "edit_project.html", project=sewingwork, categories=categories)
+    else:
+        flash("You must be the owner of the post or an admin to edit")
+        return redirect(url_for("home"))
 
 
 @app.route("/delete_project/<int:sewingwork_id>")
