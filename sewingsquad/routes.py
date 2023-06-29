@@ -213,7 +213,7 @@ def edit_project(sewingwork_id):
 
     username = session["user"]
     user = Users.query.filter_by(username=username).first()
-
+ 
     if request.method == "POST":
         username = session["user"]
 
@@ -235,22 +235,29 @@ def edit_project(sewingwork_id):
         flash(
             "Your project has been successfully edited."
             )
+
     if user.id == sewingwork.users_id or user.id == 1:
         return render_template(
             "edit_project.html", project=sewingwork, categories=categories)
+
     else:
-        flash("You must be the owner of the post or an admin to edit")
+        flash("You must be an admin or the owner of the post to edit it")
         return redirect(url_for("home"))
 
-
+        
 @app.route("/delete_project/<int:sewingwork_id>")
-def delete_project(sewingwork_id):
+def delete_project(sewingwork_id): 
+
     sewingwork = SewingWorks.query.get_or_404(sewingwork_id)
-    db.session.delete(sewingwork)       
-    db.session.commit()
-    return redirect(url_for("my_projects"))
-
-
+        
+    if "user" not in session or session["user"] != sewingwork.users.username:
+        flash("You must be an admin or the owner of the post to delete it")
+    else:
+        db.session.delete(sewingwork)       
+        db.session.commit()
+        return redirect(url_for("my_projects"))
+        
+        
 @app.errorhandler(404)
 def handle_404(error):
     # 404 error handler
