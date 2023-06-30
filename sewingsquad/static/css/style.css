@@ -94,10 +94,9 @@ main {
   margin-right: 5px;
 }
 
-
-
 .btn, .btn-large{
   margin-right: 15px;
+  margin-bottom: 5px;
 }
 
 .page-footer{
@@ -132,14 +131,19 @@ i.left {
 
 
 /*Media queries*/
-
 @media screen and (min-width: 420px){
   #query + label{
     font-size: small;
   }
 }
 
- 
+@media screen and (min-width: 605px){
+  .btn, .btn-large{
+    margin-bottom: 0;
+  }
+
+}
+
 @media screen and (min-width: 605px){
   #query + label{
     font-size: 1rem;
