@@ -15,6 +15,7 @@
             </div>
 
             <div class="input-field col s10 m8 offset-m2" required>
+                <i class="material-icons prefix">category</i>
                 <select id="category" name="category" type="text">
                     <option value="" disabled selected>{{ project.category }}</option>
                     {% for category in categories %}
@@ -24,22 +25,13 @@
                 <label>Category</label>
               </div>
 
-        
-              <div class="input-field col s12 m8 offset-m2">
-                <select multiple id="fabrictype" name="fabrictype" type="text" required>
-                  <option value="" disabled selected>{{ project.fabric_type }}</option>
-                  <option value="Cotton">Cotton</option>
-                  <option value="Polyester">Polyester</option>
-                  <option value="Silk">Silk</option>
-                  <option value="Wool">Wool</option>
-                  <option value="Nylon">Nylon</option>
-                  <option value="Rayon">Rayon</option>
-                  <option value="Linen">Linen</option>
-                  <option value="Denim">Denim</option>
-                  <option value="Fleece">Fleece</option>
-                </select>
-                <label>Fabric type</label>
-              </div>
+              <div class="row">
+                <div class="input-field col s10 m8 offset-m2">
+                    <i class="material-icons prefix">dry_cleaning</i>
+                    <input id="fabrictype" name="fabrictype" type="text" value="{{ project.fabric_type }}" class="validate" required>
+                    <label for="fabrictype">Fabric type</label>
+                </div>
+            </div>
 
 
             <div class="row">

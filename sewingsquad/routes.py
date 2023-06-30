@@ -166,7 +166,7 @@ def add_project():
             project = SewingWorks(
                 project_name=request.form.get("projectname").lower(),
                 category=request.form.get("category").lower(),
-                fabric_type=request.form.get("fabrictype").lower(),
+                fabric_type=request.form.get("fabrictype"),
                 fabric_quantity=request.form.get("fabricquantity"),
                 other_materials=request.form.get("othermaterials").lower(),
                 sewing_time=request.form.get("sewingtime"),

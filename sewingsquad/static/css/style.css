@@ -35,6 +35,16 @@ nav .brand-logo i{
 
 .text-pink{
   color:#F25278;
+  font-family: 'Roboto', sans-serif;
+}
+
+.text-roboto{
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.dark-color{
+  color:#2F4858;
 }
 
 .header{
