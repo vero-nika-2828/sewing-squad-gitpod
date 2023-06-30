@@ -118,6 +118,17 @@ i.left {
   margin-right: -15px;
 }
 
+#query{
+  opacity: 0.5;
+  background:whitesmoke;
+  border-radius: 25px;
+}
+
+#query + label{
+  margin-left: 4rem;
+  color: white;
+  margin-top: -10px;
+}
 
 
 /*Media queries*/

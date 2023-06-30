@@ -6,7 +6,7 @@
             <div class="card-panel white-text title-container">
                 <h1>Sewing <span><i class="fa-solid fa-people-group title-icon margin-right"></i></span>Squad</h1>
                 <h5>Sew it! Wear it! Love it!</h5>
-                <div class="row hide-on-med-and-up">
+                <div class="row hide-on-large-only">
                     <form class="col s8 m8 center" method="POST" action="{{ url_for('search') }}">
                         <div class="row valign-wrapper center-align">
                             <div class="input-field col s 12 m8">
@@ -28,12 +28,12 @@
     {% endblock %}
 
     {% block search %}
-        <form class="col s6 offset-s2 center hide-on-small-only" method="POST" action="{{ url_for('search') }}">
+        <form class="col s6 offset-s2 center hide-on-med-and-down" method="POST" action="{{ url_for('search') }}">
             <div class="row valign-wrapper center-align">
-                <div class="input-field col s 12 m8">
+                <div class="input-field col s12 m8">
                     <i class="material-icons prefix center-align">search</i>
                     <input id="query" name="query" type="text" minlenght="3" class="validate" required>
-                    <label for="query">Search</label>
+                    <label for="query">Search by name, category, fabric</label>
                 </div>
             </div>
         </form>
