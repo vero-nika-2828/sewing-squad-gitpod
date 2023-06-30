@@ -13,7 +13,7 @@
                 <div class="input-field col s11 m8 offset-m2">
                     <i class="material-icons prefix">person_add</i>
                     <input id="username" name="username" type="text" minlength="5" maxlength="20" pattern="^[a-z A-Z 0-9]{5,20}$" class="validate" required>
-                    <label for="username">Username</label>
+                    <label for="username">Username<span>*</span></label>
 
                 </div>
             </div>
@@ -23,7 +23,7 @@
                 <div class="input-field col s11 m8 offset-m2">
                     <i class="material-icons prefix">email</i>
                     <input id="email" name="email" type="email" minlength="5" maxlength="72" class="validate" required>
-                    <label for="email">Email</label>
+                    <label for="email">Email<span>*</span></label>
                 </div>
             </div>
 
@@ -33,7 +33,7 @@
                     <div class="input-field col s11 m8 offset-m2">
                         <i class="material-icons prefix">lock</i>
                         <input id="password" name="password" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,10}$" class="validate" required>
-                        <label for="password">Password</label>
+                        <label for="password">Password<span>*</span></label>
                         <span class="helper-text" data-error="wrong" data-success="right">
                         </span>
                     </div>

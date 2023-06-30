@@ -33,6 +33,10 @@ nav .brand-logo i{
   color: white;
 }
 
+.text-pink{
+  color:#F25278;
+}
+
 .header{
   background:url("../images/background.PNG");
   background-repeat:repeat;
@@ -101,6 +105,7 @@ main {
 
 .page-footer{
   background-color:  rgba(242, 82, 120, 1);
+
 }
 
 footer ul{
@@ -127,6 +132,10 @@ footer li:hover{
 
 i.left {
   margin-right: -15px;
+}
+
+label > span {
+  color: #F25278;
 }
 
 
