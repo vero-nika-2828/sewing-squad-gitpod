@@ -1,29 +1,28 @@
 {% extends "base.html" %}
     {% block hero %} 
-    <div class="row center-align valign-wrapper header-title">
-        <div></div>
-        <div class="col s12 m12">
-            <div class="card-panel white-text title-container col s12 m10 l6 offset-m1 offset-l3">
-                <h1>Sewing <span><i class="fa-solid fa-people-group title-icon margin-right"></i></span>Squad</h1>
-                <h5>Sew it! Wear it! Love it!</h5>
-                <div class="row hide-on-large-only">
-                    <form class="col s8 m8 offset-s1 center" method="POST" action="{{ url_for('search') }}">
-                        <div class="row valign-wrapper center-align">
-                            <div class="input-field col s 12 m8">
-                            <i class="material-icons prefix center-align">search</i>
-                            <input id="query" name="query" type="text" minlenght="3" class="validate" required>
-                            <label for="query">Search by name, category, fabric</label>
-                            <span class="helper-text" data-error="wrong" data-success="right">Search by name, category, fabric</span>
+        <div class="row center-align valign-wrapper header-title">
+            <div></div>
+            <div class="col s12 m12">
+                <div class="card-panel white-text title-container col s12 m10 l6 offset-m1 offset-l3">
+                    <h1>Sewing <span><i class="fa-solid fa-people-group title-icon margin-right"></i></span>Squad</h1>
+                    <h5>Sew it! Wear it! Love it!</h5>
+                    <div class="row hide-on-large-only">
+                        <form class="col s8 m8 offset-s2 offset-m2 center" method="POST" action="{{ url_for('search') }}">
+                            <div class="row valign-wrapper center-align">
+                                <div class="input-field col s12 m12">
+                                    <i class="material-icons prefix center-align">search</i>
+                                    <input id="query" name="query" type="text" minlenght="3" class="validate" required>
+                                    <label for="query">Search by name, category, fabric</label>
+                                </div>
                             </div>
-                        </div>
-                    </form>
-                                                
+                        </form>
+                                                    
+                    </div>
                 </div>
             </div>
-        </div>
 
-        
-    </div>
+            
+        </div>
 
 
     {% endblock %}
