@@ -6,7 +6,6 @@ body {
 
 nav{
   background-color:  rgba(242, 82, 120, 0.9);
-  margin-bottom: 20px;
 }
 
 nav .brand-logo i{
@@ -36,14 +35,15 @@ nav .brand-logo i{
 
 .header{
   background:url("../images/background.PNG");
-  background-repeat:no-repeat;
+  background-repeat:repeat;
   background-position: center;
-  background-size: cover;
+
 }
 
 .header-title{
   width: 100%;
   min-height:30vh;
+  margin-top: 20px;
 }
 
 .title-container{
@@ -63,6 +63,7 @@ nav .brand-logo i{
 .title-icon{
    font-size: 5rem;
 } 
+
 
 .secondary-image{
   display: none;

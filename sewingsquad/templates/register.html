@@ -10,7 +10,7 @@
 
             <!--Username input field-->
             <div class="row">
-                <div class="input-field col s12 m8 offset-m2">
+                <div class="input-field col s11 m8 offset-m2">
                     <i class="material-icons prefix">person_add</i>
                     <input id="username" name="username" type="text" minlength="5" maxlength="20" pattern="^[a-z A-Z 0-9]{5,20}$" class="validate" required>
                     <label for="username">Username</label>
@@ -20,7 +20,7 @@
 
             <!--Email input field-->
             <div class="row">
-                <div class="input-field col s12 m8 offset-m2">
+                <div class="input-field col s11 m8 offset-m2">
                     <i class="material-icons prefix">email</i>
                     <input id="email" name="email" type="email" minlength="5" maxlength="72" class="validate" required>
                     <label for="email">Email</label>
@@ -29,17 +29,19 @@
 
             <!--Password input field-->
             <div class="row">
-                <div class="row">
-                    <div class="input-field col s12 m8 offset-m2">
+                <div class="row valign-wrapper">
+                    <div class="input-field col s11 m8 offset-m2">
                         <i class="material-icons prefix">lock</i>
                         <input id="password" name="password" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,10}$" class="validate" required>
                         <label for="password">Password</label>
                         <span class="helper-text" data-error="wrong" data-success="right">
-                            <i class="material-icons prefix helper-text password-req" data-error="wrong"
-                                data-success="right" data-position="right"
-                                data-tooltip="Pasword must be between 5 -15 characters long. Allowed characters: a-z A-Z 0-9">info_outline</i>
                         </span>
                     </div>
+
+                    <span>
+                        <i class="material-icons prefix helper-text password-req" data-position="left"
+                        data-tooltip="Pasword must be between 5 -10 characters long. Allowed characters: a-z A-Z 0-9+">info_outline</i>
+                    </span>
                 </div>
             </div>
 
