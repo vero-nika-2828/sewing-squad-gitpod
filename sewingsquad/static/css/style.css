@@ -24,7 +24,9 @@ nav .brand-logo i{
 }
 
 #query + label{
+  padding-left: 1rem;
   color: white;
+  font-size: x-small;
 }
 
 .pink-color{
@@ -129,8 +131,19 @@ i.left {
 
 
 /*Media queries*/
+
+@media screen and (min-width: 420px){
+  #query + label{
+    font-size: small;
+  }
+}
+
  
 @media screen and (min-width: 605px){
+  #query + label{
+    font-size: 1rem;
+  }
+
   .card-image {
     min-height: 15rem;
     max-height: 17rem;
@@ -159,7 +172,6 @@ i.left {
   }
 
   #query + label{
-    margin-left: 4rem;
     color: white;
     margin-top: -10px;
   }
@@ -174,6 +186,7 @@ i.left {
   }
 
 }
+
 
 
 
