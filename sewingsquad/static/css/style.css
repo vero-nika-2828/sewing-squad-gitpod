@@ -17,6 +17,16 @@ nav .brand-logo i{
   background-color:  rgba(242, 82, 120, 0.9);
 }
 
+#query{
+  opacity: 0.5;
+  background:whitesmoke;
+  border-radius: 25px;
+}
+
+#query + label{
+  color: white;
+}
+
 .pink-color{
   background-color:  rgba(242, 82, 120, 0.7);
   color: white;
@@ -118,18 +128,6 @@ i.left {
   margin-right: -15px;
 }
 
-#query{
-  opacity: 0.5;
-  background:whitesmoke;
-  border-radius: 25px;
-}
-
-#query + label{
-  margin-left: 4rem;
-  color: white;
-  margin-top: -10px;
-}
-
 
 /*Media queries*/
  
@@ -161,6 +159,12 @@ i.left {
 
   }
 
+  #query + label{
+    margin-left: 4rem;
+    color: white;
+    margin-top: -10px;
+  }
+
 }
 
 @media screen and (min-width: 1200px){
@@ -171,3 +175,6 @@ i.left {
   }
 
 }
+
+
+
