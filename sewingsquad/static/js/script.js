@@ -4,7 +4,7 @@ $(document).ready(function () {
     $('select').formSelect();
     $('.modal').modal();
     $('.collapsible').collapsible();
-    $('.secondary-image').hide();
+
     
 });
 

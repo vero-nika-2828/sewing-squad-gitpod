@@ -47,11 +47,18 @@ nav .brand-logo i{
   color:#2F4858;
 }
 
+.text-space{ 
+  margin-right: 3px;
+}
 .header{
   background:url("../images/background.PNG");
   background-repeat:repeat;
   background-position: center;
 
+}
+
+.transparent{
+  opacity: 0;
 }
 
 .header-title{
@@ -81,6 +88,21 @@ nav .brand-logo i{
 
 .secondary-image{
   display: none;
+}
+
+#comment-person-icon{
+  margin-left: unset;
+  margin-right: 0.5rem;
+}
+
+.comment-text{
+  padding-left: 20px;
+
+}
+
+.comment-text p{
+  margin-top: 0;
+
 }
 
 .flash{
@@ -139,6 +161,11 @@ footer li:hover{
 .margin-right{
   margin-right: 10px;
 }
+
+.no-bottom-margin{
+  margin-bottom: 0;
+}
+
 
 i.left {
   margin-right: -15px;

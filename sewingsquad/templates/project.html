@@ -12,10 +12,19 @@
                     </div>
                     
                     <div class="col s12 m6">
-                        <div class="card-content col s12 m6">
-                            <span class="card-title">{{ this_project.project_name}}</span>
-                            <p>{{ this_project.sewing_tip }}</p>
+                        <div class="card-content col s12 m12">
+                            <span class="card-title">{{ this_project.project_name.capitalize() }}</span>
+                            <p><span class="text-space">Time:</span> {{ this_project.sewing_time }} minutes</p>
+                            <p><span class="text-space">Category:</span> {{ this_project.category.capitalize() }}</p>
+                            <p><span class="text-space">Fabric type:</span> {{ this_project.fabric_type.capitalize() }}</p>
+                            <p><span class="text-space">Fabric quantity:</span> {{ this_project.fabric_quantity }} cm</p>
+
+                            <br>
+                            <p><span class="text-space"><strong>Sewing tip:</span></strong>{{ this_project.sewing_tip }}</p>
                         </div>
+
+
+
 
                     </div>
                 </div>
@@ -26,10 +35,10 @@
         <div class="row">
             <div class="col s12 m6">
                 <div class="card-content">
-                    <h2>Instructions</h2>
+                    <h3>Instructions</h3>
                     <ol>
                         {% for line in this_project.instructions.split(",") %}
-                            <li>{{ line }}</li>
+                            <li>{{ line.capitalize() }}</li>
                         {% endfor %}
                     </ol>
                     
@@ -44,7 +53,7 @@
   
                 <div class="col s12 m12">
                         <!--Return to my projects page-->
-                        <a href="{{ url_for('home') }}" class="btn" aria-label="Go to home page">Back to home page</a>
+                        <a href="{{ url_for('home') }}" class="btn pink accent darken-2" aria-label="Go to home page">Back to home page</a>
                 </div>   
                     
             </div>
@@ -54,7 +63,7 @@
                 <div class="col s12 m12 center-align">
                     <div class="col s12 m12">
                         <!--Return to my projects page-->
-                        <a href="{{ url_for('my_projects') }}" class="btn" aria-label="Go to my projects page">View My Projects</a>
+                        <a href="{{ url_for('my_projects') }}" class="btn pink accent darken-2" aria-label="Go to my projects page">View My Projects <spam class="transparent">_</spam></a>
                     </div>
                 </div>
 
@@ -62,33 +71,37 @@
      
 
 
-        <div class="row card-panel row red lighten-5">
-            
+        <div class="row">
+
             <div class="row">
                 <!--Comment section -->
                 <div class="row s12 m12">
-                    <div class="card">
-                        <div class="card-content col s12 m6">
-                            <span class="card-title">Comments</span>
+                    <div class="card-content col s12 m6">
+                        <h3>Comments</h3>
 
-                            {% for comment in this_project.works_comments %}
-                                <p><strong>
-                                    <i class="material-icons prefix">account_circle</i> 
-                                    {{comment.users.username.capitalize() }}:</strong>
-                                    <br> 
-                                    "{{ comment.comment }}"</p> 
-                                    <br>
-                            {% endfor %}
-
+                        {% for comment in this_project.works_comments %}
+                        <div class="row valign-wrapper no-bottom-margin">
+                            <i class="material-icons prefix col s1" id="comment-person-icon">account_circle</i> 
+                            <p  id="comment-by"><strong>   
+                                {{comment.users.username.capitalize() }}:</strong>
+                            </p>
                         </div>
+
+                        <div class="row comment-text">
+                            <p>"{{ comment.comment }}"</p> 
+                            <br>
+                        </div>
+                        {% endfor %}
+
                     </div>
+             
                 </div>
             </div>
 
             <div class="row">
             <!--Add comment -->
                 <form class="col s12 " method="POST" action="{{ url_for('add_comment', sewingwork_id=this_project.id) }}">
-                    <div class="card-panel row ">
+                    <div class="card-panel row red lighten-5">
                         <div class="row">
                             <div class="input-field col s12 ">
                                 <textarea id="comment" name="comment" type="text" rows="4" cols="50" class="validate"></textarea>
