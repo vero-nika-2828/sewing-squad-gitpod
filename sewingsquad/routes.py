@@ -220,9 +220,10 @@ def edit_project(sewingwork_id):
         user = Users.query.filter_by(username=username).first()
 
         sewingwork.project_name = request.form.get("projectname").lower(),
-        sewingwork.category = request.form.get("category").lower(),
+        sewingwork.category = request.form.get("category"),
         sewingwork.fabric_type = request.form.get("fabrictype").lower(),
-        sewingwork.fabric_quantity = request.form.get("fabricquantity"),
+        sewingwork.fabric_quantity = request.form.get(
+            "fabricquantity").lower(),
         sewingwork.other_materials = request.form.get(
             "othermaterials").lower(),
         sewingwork.sewing_time = request.form.get("sewingtime"),
@@ -235,6 +236,7 @@ def edit_project(sewingwork_id):
         flash(
             "Your project has been successfully edited."
             )
+        return redirect(url_for("my_projects"))
 
     if user.id == sewingwork.users_id or user.id == 1:
         return render_template(
