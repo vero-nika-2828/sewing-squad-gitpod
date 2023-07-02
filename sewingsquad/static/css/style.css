@@ -57,6 +57,10 @@ nav .brand-logo i{
 
 }
 
+.error500_header{
+  margin-top: 5px;
+}
+
 .transparent{
   opacity: 0;
 }
@@ -84,6 +88,10 @@ nav .brand-logo i{
 .title-icon{
    font-size: 5rem;
 } 
+
+.troubleshoot-icon{
+  font-size: 10rem;
+}
 
 
 .secondary-image{
