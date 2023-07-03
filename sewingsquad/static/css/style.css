@@ -59,12 +59,8 @@ nav .brand-logo i{
   background-repeat:repeat;
 }
 
-.error500_header{
+.error_header{
   margin-top: 5px;
-}
-
-.transparent{
-  opacity: 0;
 }
 
 .header-title{

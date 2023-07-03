@@ -237,14 +237,17 @@ def edit_project(sewingwork_id):
             "Your project has been successfully edited."
             )
         return redirect(url_for("my_projects"))
+    try:
+        if user.id == sewingwork.users_id or user.id == 1:
+            return render_template(
+                "edit_project.html", project=sewingwork, categories=categories)
 
-    if user.id == sewingwork.users_id or user.id == 1:
-        return render_template(
-            "edit_project.html", project=sewingwork, categories=categories)
-
-    else:
-        flash("You must be an admin or the owner of the post to edit it")
-        return redirect(url_for("home"))
+        else:
+            flash("You must be an admin or the owner of the post to edit it")
+            return redirect(url_for("home"))
+    except Exception:
+        flash("Error")
+        return redirect(url_for("login"))
 
         
 @app.route("/delete_project/<int:sewingwork_id>")
