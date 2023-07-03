@@ -248,7 +248,7 @@ def edit_project(sewingwork_id):
             return render_template(
                 "edit_project.html", project=sewingwork, categories=categories)
         else:
-            flash("You must be an admin or the owner of the post to edit it")
+            flash("Only an admin or the owner of the post can edit it")
             return redirect(url_for("home"))
     except KeyError:
         flash("You must be logged in to edit posts")
@@ -257,17 +257,13 @@ def edit_project(sewingwork_id):
         
 @app.route("/delete_project/<int:sewingwork_id>")
 def delete_project(sewingwork_id): 
-
     sewingwork = SewingWorks.query.get_or_404(sewingwork_id)
         
-    if "user" not in session or session["user"] != sewingwork.users.username:
-        flash("You must be an admin or the owner of the post to delete it")
-    else:
-        db.session.delete(sewingwork)       
-        db.session.commit()
-        return redirect(url_for("my_projects"))
+    db.session.delete(sewingwork)       
+    db.session.commit()
+    return redirect(url_for("my_projects"))
         
-        
+          
 @app.errorhandler(404)
 def handle_404(error):
     # 404 error handler

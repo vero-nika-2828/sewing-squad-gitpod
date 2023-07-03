@@ -88,16 +88,30 @@
                                     <a href="#modal-{{ post.id }}" class="btn red modal-trigger" aria-label="Delete Project" >Delete</a>
 
                                         <!-- Modal Structure -->
-                                        <div id="modal-{{ post.id }}" class="modal fade">
-                                            <div class="modal-content">
-                                                <h4>Are you sure you want to delete this project</h4>
-                                                <p>This action is irreversible</p>
+                                            <div id="modal-{{ post.id }}" class="modal fade">
+                                                <div class="modal-content">
+                                                    {% if session.user == "admin"  or session.user ==  post.users_id.username %}
+                                                        <h4>Are you sure you want to delete this project</h4>
+                                                        <p>This action is irreversible</p>
+                                                    {% else %}
+                                                        <h4>Sorry! You don't have permission to delete this post!</h4>
+                                                        <p >Only an admin or the owner of the post can delete it. Please get in touch with us if you believe that this content is not appropriate</p>
+                                                        
+                                                    {% endif %}
+                                                </div>
+                                                <div class="modal-footer center-align">
+                                                    {% if session.user == "admin"  or session.user ==  post.users_id.username %}
+                                                        <a href="{{ url_for('delete_project', sewingwork_id=post.id) }}" class="modal-close waves-effect waves-green btn">Yes</a>
+                                                        <a class="modal-close waves-effect waves-green btn red" data-bs-dismiss="modal">No</a>
+                                                    {% else %}
+                                                        <a href="{{ url_for('home') }}" class="modal-close waves-effect btn">Back to Home page</a>
+                                                    {% endif %}
+                                                </div>
                                             </div>
-                                            <div class="modal-footer center-align">
-                                                <a href="{{ url_for('delete_project', sewingwork_id=post.id) }}" class="modal-close waves-effect waves-green btn">Yes</a>
-                                                <a class="modal-close waves-effect waves-green btn red" data-bs-dismiss="modal">No</a>
-                                            </div>
-                                        </div>
+
+                                     
+
+                             
                                 </div>
 
 
