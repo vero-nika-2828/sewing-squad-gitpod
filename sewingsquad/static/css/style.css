@@ -16,6 +16,10 @@ nav .brand-logo i{
   background-color:  rgba(242, 82, 120, 0.9);
 }
 
+.sidenav li>a{
+  color: white;
+}
+
 #query{
   opacity: 0.5;
   background:whitesmoke;
