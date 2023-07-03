@@ -31,12 +31,15 @@ def categories():
     categories = list(Category.query.all())
 
     if request.method == "POST":
-        new_category = Category(
-            category=request.form.get("category").lower(),       
-        )
-        db.session.add(new_category)
-        db.session.commit()
-        flash("Category added succesfully")
+        if session["user"] == "admin":
+            new_category = Category(
+                category=request.form.get("category").lower(),       
+            )
+            db.session.add(new_category)
+            db.session.commit()
+            flash("Category added succesfully")
+        else:
+            flash("Only admin can add categories")
 
     return render_template("categories.html", categories=categories)
   
@@ -75,8 +78,8 @@ def register():
         # If username already exists - flash messages
         if existing_user:
             flash("This username already exists.") 
-            flash("Please choose another unsername")
-            return redirect(url_for("template.register"))
+            flash("Please choose another username")
+            return redirect(url_for("register"))
 
         newuser = Users(
             # firstname=request.form.get("firstname").lower(),
@@ -211,42 +214,44 @@ def edit_project(sewingwork_id):
     sewingwork = SewingWorks.query.get_or_404(sewingwork_id)
     categories = Category.query.all()
 
-    username = session["user"]
-    user = Users.query.filter_by(username=username).first()
- 
-    if request.method == "POST":
+    try:
+        if request.method == "POST":
+            username = session["user"]
+
+            user = Users.query.filter_by(username=username).first()
+
+            sewingwork.project_name = request.form.get("projectname").lower(),
+            sewingwork.category = request.form.get("category"),
+            sewingwork.fabric_type = request.form.get("fabrictype").lower(),
+            sewingwork.fabric_quantity = request.form.get(
+                "fabricquantity").lower(),
+            sewingwork.other_materials = request.form.get(
+                "othermaterials").lower(),
+            sewingwork.sewing_time = request.form.get("sewingtime"),
+            sewingwork.sewing_tip = request.form.get("sewingtip").lower(),
+            sewingwork.instructions = request.form.get("instructions").lower(),
+            sewingwork.photo_URL = request.form.get("photourl"),
+            sewingwork.secondaryphoto_URL = request.form.get(
+                "secondaryphotourl"),
+            sewingwork.users_id = user.id,
+            db.session.commit()
+            flash(
+                "Your project has been successfully edited."
+                )
+            return redirect(url_for("my_projects"))
+        
         username = session["user"]
 
         user = Users.query.filter_by(username=username).first()
 
-        sewingwork.project_name = request.form.get("projectname").lower(),
-        sewingwork.category = request.form.get("category"),
-        sewingwork.fabric_type = request.form.get("fabrictype").lower(),
-        sewingwork.fabric_quantity = request.form.get(
-            "fabricquantity").lower(),
-        sewingwork.other_materials = request.form.get(
-            "othermaterials").lower(),
-        sewingwork.sewing_time = request.form.get("sewingtime"),
-        sewingwork.sewing_tip = request.form.get("sewingtip").lower(),
-        sewingwork.instructions = request.form.get("instructions").lower(),
-        sewingwork.photo_URL = request.form.get("photourl"),
-        sewingwork.secondaryphoto_URL = request.form.get("secondaryphotourl"),
-        sewingwork.users_id = user.id,
-        db.session.commit()
-        flash(
-            "Your project has been successfully edited."
-            )
-        return redirect(url_for("my_projects"))
-    try:
         if user.id == sewingwork.users_id or user.id == 1:
             return render_template(
                 "edit_project.html", project=sewingwork, categories=categories)
-
         else:
             flash("You must be an admin or the owner of the post to edit it")
             return redirect(url_for("home"))
-    except Exception:
-        flash("Error")
+    except KeyError:
+        flash("You must be logged in to edit posts")
         return redirect(url_for("login"))
 
         
