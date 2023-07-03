@@ -55,10 +55,8 @@ nav .brand-logo i{
   margin-right: 3px;
 }
 .header{
-  background:url("../images/background.PNG");
+  background:url("../images/background.jpg");
   background-repeat:repeat;
-  background-position: center;
-
 }
 
 .error500_header{
