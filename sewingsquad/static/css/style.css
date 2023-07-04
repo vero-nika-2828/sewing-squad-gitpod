@@ -104,6 +104,15 @@ nav .brand-logo i{
   display: none;
 }
 
+
+.no-box-shadow{
+  box-shadow: none;
+}
+
+.comment-padding{
+  padding-left: 24px;
+}
+
 #comment-person-icon{
   margin-left: unset;
   margin-right: 20px;
@@ -159,12 +168,21 @@ main {
   margin-left: 10px;
 }
 
-.carousel-button-next, .carousel-button-prev:hover{
+.carousel-button-next:hover, .carousel-button-prev:hover{
    background-color: white;
    color:#F25278;
-   opacity:0.5;
+   opacity:0.7;
 }
 
+.carousel-item{
+  width: 100%;
+}
+
+.carousel .carousel-item>img {
+  width:100%;
+  object-fit: cover;
+  overflow: hidden;
+}
 
 .page-footer{
   background-color:  rgba(242, 82, 120, 1);
@@ -199,6 +217,10 @@ footer li:hover{
 
 .no-bottom-margin{
   margin-bottom: 0;
+}
+
+.description-margin{
+  margin-left: -15px;
 }
 
 
@@ -285,7 +307,10 @@ label > span {
 @media screen and (min-width: 993px){
   .card-image {
     min-height: 12rem;
+  }
 
+  .description-margin{
+    margin-left:unset;
   }
 
   #query + label{
