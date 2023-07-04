@@ -3,7 +3,11 @@ $(document).ready(function () {
     $('.password-req').tooltip();
     $('select').formSelect();
     $('.modal').modal();
-    $('.collapsible').collapsible();
+    $('.collapsible').collapsible();  
+    $('.carousel.carousel-slider').carousel({
+        fullWidth: true,
+        indicators: true
+});
 
     
 });
@@ -20,6 +24,14 @@ $('.primary-image').on("mouseenter", function(){
     },100);
 });
 
+
+$('.next').on("click", function(){
+    $('.carousel.carousel-slider').carousel("next")
+})
+
+$('.prev').on("click", function(){
+    $('.carousel.carousel-slider').carousel("prev")
+})
 
 //Display the current year in footer's copyright
 $('#year').html(new Date().getFullYear());

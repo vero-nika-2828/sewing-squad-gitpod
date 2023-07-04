@@ -38,6 +38,11 @@ nav .brand-logo i{
   color: white;
 }
 
+.pink-color-light{
+  background-color:  rgba(242, 82, 120, 0.5);
+  color: white;
+}
+
 .text-pink{
   color:#F25278;
   font-family: 'Roboto', sans-serif;
@@ -89,10 +94,6 @@ nav .brand-logo i{
   font-size: 5rem;
 }
 
-/*.title-icon{
-   font-size: 5rem;
-   padding-left: 10px;
-}*/ 
 
 .troubleshoot-icon{
   font-size: 10rem;
@@ -148,6 +149,23 @@ main {
   margin-bottom: 5px;
 }
 
+.carousel-button-next{
+  margin-top: -20%;
+  margin-right: 10px;
+}
+
+.carousel-button-prev{
+  margin-top: -20%;
+  margin-left: 10px;
+}
+
+.carousel-button-next, .carousel-button-prev:hover{
+   background-color: white;
+   color:#F25278;
+   opacity:0.5;
+}
+
+
 .page-footer{
   background-color:  rgba(242, 82, 120, 1);
 
@@ -173,6 +191,10 @@ footer li:hover{
 
 .margin-right{
   margin-right: 10px;
+}
+
+.margin-top{
+  margin-top: 1rem;
 }
 
 .no-bottom-margin{
@@ -224,6 +246,10 @@ label > span {
   #comment-person-icon{
     margin-right: 20px;
   }
+
+  .margin-top{
+    margin-top: unset;
+  }
 }
 
 @media screen and (min-width: 605px){
@@ -264,7 +290,6 @@ label > span {
 
   #query + label{
     color: white;
-    margin-top: -10px;
   }
 
   #comment-person-icon{
