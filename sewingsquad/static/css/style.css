@@ -159,12 +159,12 @@ main {
 }
 
 .carousel-button-next{
-  margin-top: -20%;
+  margin-top: -30%;
   margin-right: 10px;
 }
 
 .carousel-button-prev{
-  margin-top: -20%;
+  margin-top: -30%;
   margin-left: 10px;
 }
 
@@ -181,7 +181,9 @@ main {
 .carousel .carousel-item>img {
   width:100%;
   object-fit: cover;
+  object-position:top;
   overflow: hidden;
+  max-height: 450px;
 }
 
 .page-footer{
@@ -303,7 +305,13 @@ label > span {
 
   }
 }
-  
+
+@media screen and (min-width: 800px){
+  .carousel-button-next, .carousel-button-prev {
+    margin-top: -25%;
+  }
+}
+
 @media screen and (min-width: 993px){
   .card-image {
     min-height: 12rem;
@@ -329,9 +337,13 @@ label > span {
     max-height: 17rem;
   }
 
-
 }
 
+@media screen and (min-width: 1250px){
+  .carousel-button-next, .carousel-button-prev {
+    margin-top: -30%;
+  }
+}
 
 
 
