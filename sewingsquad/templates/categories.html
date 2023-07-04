@@ -33,14 +33,23 @@
     </form>
 </div>
 
-<div class="row center-align">
+<div class="row ">
     <div class="card-panel col s12 m8 offset-m2 red lighten-5">
-        <h4>Category list</h4>
-        <ul>
-            {% for category in categories %}
-                <li>{{category}}</li>
-            {% endfor %}
-        </ul> 
+        <div class="row center-align">
+            <h4>Category list</h4>
+        </div>
+        
+        <div class="row categorylist-margin">
+            <ul>
+                {% for category in categories %}
+                    <li class="s12">
+                        <div class="col s8 ">{{category}}</div>
+                        <div class="col s2 "><i class="material-icons prefix">edit</i></div>
+                        <div class="col s2 "><i class="material-icons prefix">close</i></div>
+                    </li>
+                {% endfor %}
+            </ul> 
+        </div>
     </div>
 </div>
 {% endblock %}

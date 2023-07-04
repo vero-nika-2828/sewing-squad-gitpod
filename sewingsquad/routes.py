@@ -261,6 +261,7 @@ def delete_project(sewingwork_id):
         
     db.session.delete(sewingwork)       
     db.session.commit()
+    flash("The post has been deleted succesfully")
     return redirect(url_for("my_projects"))
         
           
