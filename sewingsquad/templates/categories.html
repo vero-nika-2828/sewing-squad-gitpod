@@ -43,16 +43,16 @@
             <ul>
                 {% for category in categories %}
                     <li class="s12">
-                        <div class="col s8 ">{{category}}</div>
-                        <div class="col s2 ">      
+                        <div class="col s8 offset-s1 ">{{category}}</div>
+                        <div class="col s1 ">      
                             <!--Edit button--> 
-                            <a href="{{ url_for('edit_category', category_id=category.id) }}" class="btn" aria-label="Edit Category"><i class="material-icons prefix">edit</i></a>
+                            <a href="{{ url_for('edit_category', category_id=category.id) }}" class="teal-text" aria-label="Edit Category"><i class="material-icons prefix">edit</i></a>
       
                         </div>
 
-                        <div class="col s2 ">
+                        <div class="col s1 ">
                         <!--Delete button--> 
-                        <a href="#modal-{{ category.id }}" class="btn red modal-trigger" aria-label="Delete Category" ><i class="material-icons prefix">close</i></a>
+                        <a href="#modal-{{ category.id }}" class="red-text modal-trigger" aria-label="Delete Category" ><i class="material-icons prefix">close</i></a>
 
                         <!-- Modal Structure -->
                             <div id="modal-{{ category.id }}" class="modal fade center-align">
