@@ -132,15 +132,15 @@ The main colors of the website are pink and white. Lighter shades of pink are us
 
 In addition to main colours, teal color was used for edit buttons and red for delete buttons in order to aid intuitive navidation. 
 
-![Color Scheme](./sewingsquad/static/images/readme_docs/color_scheme.PNG)
+![Color Scheme](./sewingsquad/static/images/readme_docs/color_and_font/color_scheme.PNG)
 ## Typography
 
 Google Fonts website was used to import the fonts chosen for this website.
 
 Roboto was used as a general font for the website. Sacramento was used for logo in order to give a feel of embroidered letters. San seriff was added in case browser doesn't support the other two fonts. 
 
-![Font Sacramento](./sewingsquad/static/images/readme_docs/font_sacramento.PNG)
-![Font Roboto](./sewingsquad/static/images/readme_docs/font_roboto2.PNG)
+![Font Sacramento](./sewingsquad/static/images/readme_docs/color_and_font/font_sacramento.PNG)
+![Font Roboto](./sewingsquad/static/images/readme_docs/color_and_font/font_roboto.PNG)
 ## Imagery
 
 # Database Scheme & User Journey
