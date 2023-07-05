@@ -11,7 +11,7 @@ def home():
     all_projects = list(SewingWorks.query.all())
     all_users = list(Users.query.all())
     return render_template(
-        "index.html", all_projects=all_projects, 
+        "index.html", all_projects=all_projects,
         all_users=all_users)
 
 
@@ -40,8 +40,8 @@ def add_category():
     if request.method == "POST":
         if session["user"] == "admin":
             new_category = Category(
-                category=request.form.get("category").lower(),       
-            )
+                category=request.form.get("category").lower(),
+                )
             db.session.add(new_category)
             db.session.commit()
             flash("The category has been added successfully")
@@ -49,7 +49,7 @@ def add_category():
         else:
             flash("Only admin can add categories")
             return render_template("categories.html", categories=categories)
-    
+
     return render_template("categories.html", categories=categories)
 
 

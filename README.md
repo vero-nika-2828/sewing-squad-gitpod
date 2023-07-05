@@ -111,15 +111,31 @@ The platform facilitates /enables the members to share their patterns, sewing in
 24. I want to be able to retrieve the project entries from database for my website
 26. I want the projects entries to be linked to each account
 27. I want users to see all the projects in database
-28. I want users to be able to read more details on the project they choose to view 
+28. I want users to be able to read more details on the project of their choice
 29. I want users to see their own projects
+29. I want to be able to add, amend and delete categories wh
 30. I want users to be able to edit their own projects 
 31. I want users to be able to delete their own projects 
-32. I want users to be able to red what the website is for
+32. I want users to be able to understand what the website is for
 33. I want users to be able to navigate through the website easily
-34. I want users to be able able to understand website easily
 
 
+# Design
+
+## Design choices
+
+The site will be visited by people who sew for fun or professionally. The users are expected to visit the website with intention to present and share their work as well as help each other to find easier and more efficient ways to complete their projects. Threrore, the website design will be a mean of presenting each  Therefore, the design elements aim to make it easy to navigate through the site and find relevant information. 
+
+## Color Scheme
+
+The main colors of the website are pink and white. Lighter shades of pink are used for nagivation bar, footer and the title. Darker shades of pink were used to hightlight certain information such as project names or buttons. White color was used for text on pink background for better contrast while the rest of the text is in black. 
+
+In addition to main colours, teal color was used for edit buttons and red for delete buttons in order to aid intuitive navidation. 
+
+![Color Scheme](./sewingsquad/static/images/readme_docs/color_scheme.PNG)
+## Typography
+
+## Imagery
 
 # Database Scheme & User Journey
 
