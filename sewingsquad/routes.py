@@ -26,8 +26,15 @@ def admin():
     return render_template("index.html")
 
 
-@app.route("/categories", methods=["GET", "POST"])
+@app.route("/categories")
 def categories():
+    categories = list(Category.query.all())
+
+    return render_template("categories.html", categories=categories)
+
+
+@app.route("/add_category", methods=["GET", "POST"])
+def add_category():
     categories = list(Category.query.all())
 
     if request.method == "POST":
@@ -38,9 +45,11 @@ def categories():
             db.session.add(new_category)
             db.session.commit()
             flash("The category has been added successfully")
+            return redirect("categories")
         else:
             flash("Only admin can add categories")
-
+            return render_template("categories.html", categories=categories)
+    
     return render_template("categories.html", categories=categories)
 
 

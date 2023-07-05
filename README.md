@@ -125,13 +125,39 @@ The platform facilitates /enables the members to share their patterns, sewing in
 
 ## User Journey
 
+![User journey](./sewingsquad/static/images/readme_docs/user_journey.PNG)
+
 ## Database Scheme 
 
 ![Database Scheme](./sewingsquad/static/images/readme_docs/database_scheme.PNG)
 
 
+# Features
 
+## Register page 
 
+### Registration Form
+* Form is positioned in the middle of the screen
+* Opens when user clicks Register link in the  Login page or clicks on Log In in navigation menu
+* Form contains 3 input fields - username, email address, password
+* Each input field has a label with information required for that field 
+* Icons prefixed placed in frog of each input field to aid intuitive navigation(quicker comprehension of information required in each field 
+
+## Form error message
+* A form with empty fields will not be submitted and a message prompting the user to fill the field will appear (3)
+
+![Database Scheme](./sewingsquad/static/images/readme_docs/register_page_empty_field.PNG)
+
+* Information icon on the right side of the password field shows the password requirements  when hovered over 
+
+![Database Scheme](./sewingsquad/static/images/readme_docs/register_page_information_icon.PNG)
+
+* Register button  performs the registration and triggers the insertion of input data to database and  directs users to log in page
+* When user submits username that already exists, the registration will not be successful and the user will be informed about it with the message 
+
+![Duplicated user](./sewingsquad/static/images/readme_docs/register_page_duplicated_user.PNG)
+
+* Log in link is positioned at the bottom for quick navigation and directs the user to the user to Log in page
 
 
 
