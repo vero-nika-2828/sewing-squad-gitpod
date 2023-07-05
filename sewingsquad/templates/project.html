@@ -23,7 +23,7 @@
                     </div>
                     
                     <div class="col s12 m12 l6">
-                        <div class="card-content col s12 m12">
+                        <div class="card-content col s12 m12" id="description">
                             <h4 class="description-margin">Description:</h4>
                             <p><span class="text-space">Time:</span> {{ this_project.sewing_time }} minutes</p>
                             <p><span class="text-space">Category:</span> {{ this_project.category.capitalize() }}</p>
@@ -31,7 +31,7 @@
                             <p><span class="text-space">Fabric quantity:</span> {{ this_project.fabric_quantity }} cm</p>
 
                             <br>
-                            <p><span class="text-space"><strong>Sewing tip:</span></strong>{{ this_project.sewing_tip }}</p>
+                            <p><span class="text-space bold-font">Sewing tip:</span>{{ this_project.sewing_tip }}</p>
                         </div>
                     </div>
                 </div>
@@ -40,10 +40,10 @@
         </div>
 
         <div class="row">
-            <div class="card col s12 m6 no-box-shadow">
-                <div class="card-content col s12 m12  ">
-                    <h4>Instructions</h4>
-                    <ol>
+            <div class="row s12 m6 no-box-shadow adjusted-padding">
+                <div class="card-content col s12 m6">
+                    <h4 class="instruction-margin">Instructions</h4>
+                    <ol class="ol-margin">
                         {% for line in this_project.instructions.split(",") %}
                             <li>{{ line.capitalize() }}</li>
                         {% endfor %}
@@ -82,19 +82,19 @@
 
             <div class="row">
                 <!--Comment section -->
-                <div class="row s12 m12 no-box-shadow comment-padding">
+                <div class="row s12 m12 no-box-shadow adjusted-padding">
                     <div class="card-content col s12 m6">
                         <h4>Comments</h4>
 
                         {% for comment in this_project.works_comments %}
                         <div class="row valign-wrapper no-bottom-margin">
-                            <i class="material-icons prefix col s1" id="comment-person-icon">account_circle</i> 
+                            <i class="material-icons prefix col s1 margin-left" id="comment-person-icon">account_circle</i> 
                             <p  id="comment-by"><strong>   
                                 {{comment.users.username.title() }}:</strong>
                             </p>
                         </div>
 
-                        <div class="row comment-text">
+                        <div class="row comment-text margin-left">
                             <p>"{{ comment.comment }}"</p> 
                             <br>
                         </div>

@@ -63,16 +63,19 @@ The platform facilitates /enables the members to share their patterns, sewing in
 
 
 1. I want to be able to see what this website is for
+2. I want to have my own account with my entries
 2. I want to be able to create my own account easily
-3. I want to be notified whether my registration was successful
-4. I want to be told clearly what what information is needed for registration
-5. I want to know what the password requirements are
+3. I want to see a confirmation when my account gets created
+4. I want to be told clearly what information is needed for registration
+5. I want to know what my password should look like0
 6. I want to be notified when I fill in something incorrectly or when missed something
 7. I want to be able to add my own projects
-
-
 8. I want to be able to see a list of other people’s projects
+8. I want to be able to narrow the list of all the projects that are on the website to what fits my needs
+9. I want to see a quick overview of the project to be able to decide whether that I would like to know more about that particular project 
+9. I want to see image of the finished product 
 9. I want to see more information on the projects that are interesting to me
+9. I want to have an option to see more detailed description of project I choose
 10. I want to be able to navigate through the website and find information easily 
 11. I want to be able to navigate the site across variety of screen sizes
 12. I want to be able to view the website on the variety of web browsers
@@ -86,17 +89,23 @@ The platform facilitates /enables the members to share their patterns, sewing in
 
 
 15. I want to be able to log in to my account repeatedly
+15. I want to be able to navigate the site across variety of screen sizes
 16. I want to be given a confirmation that I am logged in 
 17. I want to be able to view a list with projects I added
 18. I want to be able to go to add a project directly
 19. I want to be able to edit my projects
+19. I dont want other people to edit my projects
+19. I dot want other people to delete my project
 20. I want to be able to delete my projects
+20. I want to be able to quick find individual projects of interest
 21. I want to be able to log out from my account when I finish working with it
 
 
 ### Site owner's Goals 
 
 
+22. I want to be able to control content on the webpage
+22. I want only registered users to be able to view full content
 22. I want users to create their account
 23. I want to store the user’s project entries in a database
 24. I want to be able to retrieve the project entries from database for my website

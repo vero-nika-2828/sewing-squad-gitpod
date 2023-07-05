@@ -109,7 +109,7 @@ nav .brand-logo i{
   box-shadow: none;
 }
 
-.comment-padding{
+.adjusted-padding{
   padding-left: 24px;
 }
 
@@ -226,6 +226,15 @@ footer li:hover{
 }
 
 
+.ol-margin {
+  margin-left: -10px;
+}
+
+.bold-font{
+  font-weight: bold;
+}
+
+
 i.left {
   margin-right: -15px;
 }
@@ -271,9 +280,6 @@ label > span {
     margin-right: 20px;
   }
 
-  .margin-top{
-    margin-top: unset;
-  }
 }
 
 @media screen and (min-width: 605px){
@@ -294,6 +300,10 @@ label > span {
 
   .btn, .btn-large{
     margin-bottom: 0;
+  }
+
+  .instruction-margin{
+    margin-top: 5rem;
   }
 
 }
@@ -319,6 +329,7 @@ label > span {
 
   .description-margin{
     margin-left:unset;
+    margin-top: 0;
   }
 
   #query + label{
@@ -328,6 +339,18 @@ label > span {
   #comment-person-icon{
     margin-right: 5px;
   }
+
+  .margin-top{
+    margin-top: unset;
+  }
+
+  .instruction-margin {
+    margin-top: unset;
+}
+
+  #description{
+  padding-top: 0;
+}
 
 }
 

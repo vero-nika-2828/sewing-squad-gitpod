@@ -105,7 +105,7 @@ def login():
         existing_user = Users.query.filter(
             Users.username == request.form.get("username").lower()).all()
         if existing_user:
-            # ensure hashed pasword matches use input
+            # ensure hashed pasword matches user input
             if check_password_hash(
                     existing_user[0].password,
                     request.form.get("password")):
