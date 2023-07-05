@@ -121,6 +121,16 @@ The platform facilitates /enables the members to share their patterns, sewing in
 
 
 
+# Database Scheme & User Journey
+
+## User Journey
+
+## Database Scheme 
+
+![Database Scheme](./sewingsquad/static/images/readme_docs/database_scheme.PNG)
+
+
+
 
 
 

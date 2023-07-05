@@ -44,7 +44,6 @@
                             <li><a href="{{ url_for('add_project') }}">Add project</a></li>
                             {% if session["user"] == 'admin' %} 
                                 <li><a href="{{ url_for('categories') }}">Categories</a></li>
-                                <li><a href="{{ url_for('admin') }}">Admin</a></li>
                             {% endif %}
                             <li><a href="{{ url_for('logout') }}">Log Out</a></li>
 

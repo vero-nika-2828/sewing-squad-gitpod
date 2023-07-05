@@ -42,8 +42,21 @@ def categories():
             flash("Only admin can add categories")
 
     return render_template("categories.html", categories=categories)
-  
 
+
+@app.route("/edit_category/<int:category_id>", methods=["GET", "POST"])
+def edit_category(category_id):
+    category = Category.query.get_or_404(category_id)
+
+    if request.method == "POST":
+        category.category = request.form.get("category").lower(),
+        db.session.commit()
+        flash("The category has been successfully edited.")
+        return redirect(url_for("categories"))
+
+    return render_template("edit_category.html", category=category)
+        
+  
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query").lower()

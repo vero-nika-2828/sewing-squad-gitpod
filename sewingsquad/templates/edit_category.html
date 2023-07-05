@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block header %} Categories {% endblock %}
+{% block content %}
+<div class="row">
+    <!--Form to add project-->
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('edit_category', category_id=category.id) }}">
+        <div class="card-panel row red lighten-5">
+            <div class="row">
+                <div class="input-field col s10 m8 offset-m2">
+                    <i class="material-icons prefix">content_paste</i>
+                    <input id="category" name="category" type="text" value="{{ category.category }}" class="validate" required>
+                    <label for="category">Project name</label>
+                </div>
+            </div>
+
+            <!--Submit and reset button-->
+            <div class="row">
+                <button type="submit" value="add category"
+                    class="col s12 m3 offset-m3  waves-effect waves-light btn-large pink accent darken-2">
+                    Edit category
+                    <i class="material-icons right">edit_note</i>
+                </button>
+
+                <a href="{{ url_for('categories') }}" class="col s12 m3 waves-effect waves-light btn-large center-align pink accent darken-2">
+                    Back
+                    <i class="material-icons right center-align">arrow_back</i>
+                </a>
+
+            </div>
+
+
+        </div>
+    </form>
+</div>
+
+{% endblock %}
