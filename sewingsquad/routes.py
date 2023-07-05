@@ -37,7 +37,7 @@ def categories():
             )
             db.session.add(new_category)
             db.session.commit()
-            flash("Category added succesfully")
+            flash("The category has been added successfully")
         else:
             flash("Only admin can add categories")
 
@@ -51,12 +51,22 @@ def edit_category(category_id):
     if request.method == "POST":
         category.category = request.form.get("category").lower(),
         db.session.commit()
-        flash("The category has been successfully edited.")
+        flash("The category has been edited successfully.")
         return redirect(url_for("categories"))
 
     return render_template("edit_category.html", category=category)
-        
+
+
+@app.route("/delete_category/<int:category_id>", methods=["GET", "POST"])
+def delete_category(category_id):
+    category = Category.query.get_or_404(category_id)
+
+    db.session.delete(category)       
+    db.session.commit()
+    flash("The category has been deleted successfully")
+    return redirect(url_for("categories"))   
   
+
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query").lower()
@@ -249,7 +259,7 @@ def edit_project(sewingwork_id):
             sewingwork.users_id = user.id,
             db.session.commit()
             flash(
-                "Your project has been successfully edited."
+                "Your project has been edited successfully ."
                 )
             return redirect(url_for("my_projects"))
         
@@ -274,7 +284,7 @@ def delete_project(sewingwork_id):
         
     db.session.delete(sewingwork)       
     db.session.commit()
-    flash("The post has been deleted succesfully")
+    flash("The post has been deleted successfully")
     return redirect(url_for("my_projects"))
         
           
