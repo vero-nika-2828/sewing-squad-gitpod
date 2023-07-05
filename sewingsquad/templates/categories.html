@@ -46,11 +46,13 @@
                         <div class="col s8 ">{{category}}</div>
                         <div class="col s2 ">      
                             <!--Edit button--> 
-                            <a href="{{ url_for('edit_category', category_id=category.id) }}" class="btn" aria-label="Edit Project"><i class="material-icons prefix">edit</i></a>
+                            <a href="{{ url_for('edit_category', category_id=category.id) }}" class="btn" aria-label="Edit Category"><i class="material-icons prefix">edit</i></a>
       
                         </div>
 
-                        <a href="#modal-{{ category.id }}" class="btn red modal-trigger" aria-label="Delete Project" >Delete</a>
+                        <div class="col s2 ">
+                        <!--Delete button--> 
+                        <a href="#modal-{{ category.id }}" class="btn red modal-trigger" aria-label="Delete Category" ><i class="material-icons prefix">close</i></a>
 
                         <!-- Modal Structure -->
                             <div id="modal-{{ category.id }}" class="modal fade">
@@ -60,11 +62,12 @@
                                 </div>
                                 <div class="modal-footer center-align">
 
-                                    <a href="{{ url_for('delete_project', category_id=category.id) }}" class="modal-close waves-effect waves-green btn">Yes</a>
+                                    <a href="{{ url_for('delete_category', category_id=category.id) }}" class="modal-close waves-effect waves-green btn">Yes</a>
                                     <a class="modal-close waves-effect waves-green btn red" data-bs-dismiss="modal">No</a>
                                 </div>
                             </div>
-                        <div class="col s2 "><i class="material-icons prefix">close</i></div>
+                        </div>
+                        
                     </li>
                 {% endfor %}
             </ul> 
