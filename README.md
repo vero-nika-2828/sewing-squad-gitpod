@@ -147,11 +147,12 @@ Roboto was used as a general font for the website. Sacramento was used for logo 
 
 ## User Journey
 
-![User journey](./sewingsquad/static/images/readme_docs/user_journey.PNG)
+![User journey](./sewingsquad/static/images/readme_docs/database_and_user_journey/user_journey.PNG)
+![User journey](./sewingsquad/static/images/readme_docs/database_and_user_journey/user_journey2.PNG)
 
 ## Database Scheme 
 
-![Database Scheme](./sewingsquad/static/images/readme_docs/database_scheme.PNG)
+![Database Scheme](./sewingsquad/static/images/readme_docs/database_and_user_journey/database_scheme.PNG)
 
 
 # Features
