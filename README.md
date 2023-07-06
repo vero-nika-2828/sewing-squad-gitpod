@@ -143,12 +143,16 @@ Roboto was used as a general font for the website. Sacramento was used for logo 
 ![Font Roboto](./sewingsquad/static/images/readme_docs/color_and_font/font_roboto.PNG)
 ## Imagery
 
+The images used by copying email addresses from etsy and other google search. Image addresses are saved in the database.
+
 # Database Scheme & User Journey
 
 ## User Journey
 
-![User journey](./sewingsquad/static/images/readme_docs/database_and_user_journey/user_journey11.PNG)
-![User journey](./sewingsquad/static/images/readme_docs/database_and_user_journey/user_journey12.PNG)
+![User journey legend](./sewingsquad/static/images/readme_docs/database_and_user_journey/user_journey_legend2.PNG)
+![User journey Part1](./sewingsquad/static/images/readme_docs/database_and_user_journey/user_journey11.PNG)
+![User journey Part2](./sewingsquad/static/images/readme_docs/database_and_user_journey/user_journey12.PNG)
+
 
 ## Database Scheme 
 
@@ -181,6 +185,34 @@ Roboto was used as a general font for the website. Sacramento was used for logo 
 ![Duplicated user](./sewingsquad/static/images/readme_docs/register_page_duplicated_user.PNG)
 
 * Log in link is positioned at the bottom for quick navigation and directs the user to the user to Log in page
+
+## Logo and Navigations Bar
+
+### Header
+* Repeats across all pages for consistency and easy navigation
+* Logo is positioned on the left size
+* Logo brings user to the Home page when clicked
+* Links to other pages are placed on the right to maintain the conventions expected by the user
+* Navigation menu will turn into hamburger menu on smaller devices
+* Hamburger menu opens to show list of other pages
+* Relates to following user stories:
+
+![Header desktop](./sewingsquad/static/images/readme_docs/header_and_footer/header_desktop.PNG)
+![Header small devices](./sewingsquad/static/images/readme_docs/header_and_footer/header_small_devices.PNG)
+
+### Footer
+* Repeats across all pages for consistency and easy navigation
+* Logo is centred in the middle
+* Logo brings user to the Home page when clicked
+* Links bring the user to the Github repositories or Linked in
+* Links open in a new tab
+* Links get bigger when hovered over for easier navigation
+* Link description added for accessibility and SEO
+* Relates to following user stories: 
+
+![Header small devices](./sewingsquad/static/images/readme_docs/header_and_footer/footer.PNG)
+
+
 
 
 

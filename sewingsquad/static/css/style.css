@@ -280,6 +280,10 @@ label > span {
     margin-right: 20px;
   }
 
+  .margin-top{
+    margin-top: unset;
+  }
+
 }
 
 @media screen and (min-width: 605px){
@@ -338,10 +342,6 @@ label > span {
 
   #comment-person-icon{
     margin-right: 5px;
-  }
-
-  .margin-top{
-    margin-top: unset;
   }
 
   .instruction-margin {
