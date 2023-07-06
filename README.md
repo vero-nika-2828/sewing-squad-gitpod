@@ -165,27 +165,36 @@ The images used by copying email addresses from etsy and other google search. Im
 
 ### Registration Form
 * Form is positioned in the middle of the screen
-* Opens when user clicks Register link in the  Login page or clicks on Log In in navigation menu
+* Opens when user clicks Register link in the Login page or Log in link in navigation menu
 * Form contains 3 input fields - username, email address, password
 * Each input field has a label with information required for that field 
-* Icons prefixed placed in frog of each input field to aid intuitive navigation(quicker comprehension of information required in each field 
+* Icons prefixed placed in front of each input field to aid intuitive navigation(quicker comprehension of information required in each field 
 
-## Form error message
-* A form with empty fields will not be submitted and a message prompting the user to fill the field will appear (3)
+![Register form](./sewingsquad/static/images/readme_docs/register_and_login/register.PNG)
 
-![Database Scheme](./sewingsquad/static/images/readme_docs/register_page_empty_field.PNG)
+* A form with empty fields will not be submitted and a message prompting the user to fill the field will appear 
+
+![Register empty input fields](./sewingsquad/static/images/readme_docs/register_and_login/register_empty_fields.PNG)
 
 * Information icon on the right side of the password field shows the password requirements  when hovered over 
 
-![Database Scheme](./sewingsquad/static/images/readme_docs/register_page_information_icon.PNG)
+![Regisrter information icon](./sewingsquad/static/images/readme_docs/register_and_login/register_information_icon.PNG)
+
+![Registration toolpit](./sewingsquad/static/images/readme_docs/register_and_login/register_information_icon_toolpit.PNG)
 
 * Register button  performs the registration and triggers the insertion of input data to database and  directs users to log in page
-* When user submits username that already exists, the registration will not be successful and the user will be informed about it with the message 
+* Clear button will clear all the text in input fields
 
-![Duplicated user](./sewingsquad/static/images/readme_docs/register_page_duplicated_user.PNG)
+![Register form buttons](./sewingsquad/static/images/readme_docs/register_and_login/register_form_buttons.PNG)
 
-* Log in link is positioned at the bottom for quick navigation and directs the user to the user to Log in page
 
+* The message "This username already exists" informs the user that the username they entered is already in use and registration will not be successful 
+
+![Duplicated user](./sewingsquad/static/images/readme_docs/register_and_login/register_duplicated%20user_text.PNG)
+
+* Log in link is positioned at the bottom for quick navigation and directs the user to Log in page
+
+![Duplicated user](./sewingsquad/static/images/readme_docs/register_and_login/register_login_link.PNG)
 ## Logo and Navigations Bar
 
 ### Header
@@ -198,7 +207,8 @@ The images used by copying email addresses from etsy and other google search. Im
 * Relates to following user stories:
 
 ![Header desktop](./sewingsquad/static/images/readme_docs/header_and_footer/header_desktop.PNG)
-![Header small devices](./sewingsquad/static/images/readme_docs/header_and_footer/header_small_devices.PNG)
+![Header desktop](./sewingsquad/static/images/readme_docs/header_and_footer/header_desktop2.PNG)
+![Header small devices](./sewingsquad/static/images/readme_docs/header_and_footer/header_desktop2.PNG)
 
 ### Footer
 * Repeats across all pages for consistency and easy navigation
@@ -210,7 +220,8 @@ The images used by copying email addresses from etsy and other google search. Im
 * Link description added for accessibility and SEO
 * Relates to following user stories: 
 
-![Header small devices](./sewingsquad/static/images/readme_docs/header_and_footer/footer.PNG)
+![Footer](./sewingsquad/static/images/readme_docs/header_and_footer/footer.PNG)
+![Footer](./sewingsquad/static/images/readme_docs/header_and_footer/footer2.PNG)
 
 
 

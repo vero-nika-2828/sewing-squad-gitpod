@@ -110,7 +110,7 @@ def register():
         # If username already exists - flash messages
         if existing_user:
             flash("This username already exists.") 
-            flash("Please choose another username")
+            flash("Please choose another username or log in")
             return redirect(url_for("register"))
 
         newuser = Users(
