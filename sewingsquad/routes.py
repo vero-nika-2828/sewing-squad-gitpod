@@ -107,7 +107,7 @@ def register():
         existing_user = Users.query.filter(
             Users.username == request.form.get("username").lower()).all()
 
-        # If username already exists - flash messages
+        # If username already exists - notifly user with flash message
         if existing_user:
             flash("This username already exists.") 
             flash("Please choose another username or log in")
@@ -193,10 +193,12 @@ def add_project():
     categories = Category.query.all()
 
     if request.method == "POST":
+        # check if project name exists
         existing_project = SewingWorks.query.filter(
             SewingWorks.project_name == request.form.get(
                 "projectname").lower()).all()
-        
+
+        # If project name already existist - notifly user with flash message
         if existing_project:
             flash("Sorry! This project already exist")
             flash("Check Home page or use another project name")
