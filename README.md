@@ -206,9 +206,9 @@ The images used by copying email addresses from etsy and other google search. Im
 * Hamburger menu opens to show list of other pages
 * Relates to following user stories:
 
+
 ![Header desktop](./sewingsquad/static/images/readme_docs/header_and_footer/header_desktop.PNG)
-![Header desktop](./sewingsquad/static/images/readme_docs/header_and_footer/header_desktop2.PNG)
-![Header small devices](./sewingsquad/static/images/readme_docs/header_and_footer/header_desktop2.PNG)
+![Header small devices](./sewingsquad/static/images/readme_docs/header_and_footer/header_small_devices.PNG)
 
 ### Footer
 * Repeats across all pages for consistency and easy navigation
@@ -221,7 +221,6 @@ The images used by copying email addresses from etsy and other google search. Im
 * Relates to following user stories: 
 
 ![Footer](./sewingsquad/static/images/readme_docs/header_and_footer/footer.PNG)
-![Footer](./sewingsquad/static/images/readme_docs/header_and_footer/footer2.PNG)
 
 
 

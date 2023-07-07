@@ -193,8 +193,20 @@ def add_project():
     categories = Category.query.all()
 
     if request.method == "POST":
-        username = session["user"]
+        existing_project = SewingWorks.query.filter(
+            SewingWorks.project_name == request.form.get(
+                "projectname").lower()).all()
+        
+        if existing_project:
+            flash("Sorry! This project already exist")
+            flash("Check Home page or use another project name")
 
+            return redirect(url_for("add_project"))
+
+        # Get the session user name 
+        # Filter for the session username in database
+        # Get user id for user_id 
+        username = session["user"]
         user = Users.query.filter_by(username=username).first()
 
         if user:
