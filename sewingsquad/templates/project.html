@@ -78,24 +78,25 @@
      
 
 
-        <div class="row">
+        <div class="row padding-top">
 
-            <div class="row">
+            <div class="row border-top">
                 <!--Comment section -->
-                <div class="row s12 m12 no-box-shadow adjusted-padding">
-                    <div class="card-content col s12 m6">
+                <div class="row s12 no-box-shadow adjusted-padding">
+                    <div class="card-content s12">
                         <h4>Comments</h4>
 
                         {% for comment in this_project.works_comments %}
+                        <div class="row">
                             <div class="col s8">
-                                <div class="row valign-wrapper no-bottom-margin">
+                                <div class="row s8 valign-wrapper no-bottom-margin">
                                     <i class="material-icons prefix col s1 margin-left" id="comment-person-icon">account_circle</i> 
                                     <p  id="comment-by"><strong>   
                                         {{comment.users.username.title() }}:</strong>
                                     </p>                          
                                 </div>
 
-                                <div class="row comment-text margin-left">
+                                <div class="row s8 comment-text margin-left">
                                     <p>"{{ comment.comment }}"</p> 
                                     <br>
                                 </div>

@@ -217,6 +217,10 @@ footer li:hover{
   margin-top: 1rem;
 }
 
+.padding-top{
+  padding-top: 3rem;
+}
+
 .no-bottom-margin{
   margin-bottom: 0;
 }
@@ -225,6 +229,9 @@ footer li:hover{
   margin-left: -15px;
 }
 
+.border-top{
+  border-top: 1px solid #ffebee;
+}
 
 .ol-margin {
   margin-left: -10px;
