@@ -11,9 +11,7 @@ class Users(db.Model):
         "SewingWorks", backref="users", cascade="all, delete", lazy=True)
     users_comments = db.relationship(
         "Comments", backref="users", cascade="all, delete", lazy=True)
-    users_likes = db.relationship(
-        "Likes", backref="users", cascade="all, delete", lazy=True)
-
+  
     def __repr__(self):
         return self.username
 
@@ -45,8 +43,6 @@ class SewingWorks(db.Model):
             "users.id"), nullable=False)
     works_comments = db.relationship(
         "Comments", backref="sewing_works", cascade="all, delete", lazy=True)  
-    works_likes = db.relationship(
-            "Likes", backref="sewing_works", cascade="all, delete", lazy=True)  
 
     def __repr__(self):
         return self.project_name
@@ -65,22 +61,6 @@ class Comments(db.Model):
 
     def __repr__(self):
         return self.comment
-
-
-class Likes(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    liked = db.Column(db.Boolean, default=False, nullable=False)
-    likes = db.Column(
-        db.Integer, nullable=False)
-    likes_userid = db.Column(
-        db.Integer, db.ForeignKey(
-            "users.id"), nullable=False)
-    likes_worksid = db.Column(
-        db.Integer, db.ForeignKey(
-            "sewing_works.id"), nullable=False) 
-
-    def __repr__(self):
-        return self
 
 
 class Category(db.Model):
