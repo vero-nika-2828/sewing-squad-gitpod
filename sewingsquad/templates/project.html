@@ -87,19 +87,43 @@
                         <h4>Comments</h4>
 
                         {% for comment in this_project.works_comments %}
-                        <div class="col s8">
-                            <div class="row valign-wrapper no-bottom-margin">
-                                <i class="material-icons prefix col s1 margin-left" id="comment-person-icon">account_circle</i> 
-                                <p  id="comment-by"><strong>   
-                                    {{comment.users.username.title() }}:</strong>
-                                </p>                          
+                            <div class="col s8">
+                                <div class="row valign-wrapper no-bottom-margin">
+                                    <i class="material-icons prefix col s1 margin-left" id="comment-person-icon">account_circle</i> 
+                                    <p  id="comment-by"><strong>   
+                                        {{comment.users.username.title() }}:</strong>
+                                    </p>                          
+                                </div>
+
+                                <div class="row comment-text margin-left">
+                                    <p>"{{ comment.comment }}"</p> 
+                                    <br>
+                                </div>
                             </div>
 
-                            <div class="row comment-text margin-left">
-                                <p>"{{ comment.comment }}"</p> 
-                                <br>
+                            <div class="col s1 ">      
+                                <!--Edit button--> 
+                                <a href="{{ url_for('edit_comment', comment_id=comment.id) }}" class="teal-text" aria-label="Edit Category"><i class="material-icons prefix">edit</i></a>
+        
                             </div>
-                        </div>
+
+                            <!--Delete button--> 
+                            <a href="#modal-{{ comment.id }}" class="red-text modal-trigger" aria-label="Delete Category" ><i class="material-icons prefix">close</i></a>
+
+                            <!-- Modal Structure -->
+                            <div id="modal-{{ comment.id }}" class="modal fade center-align">
+                                <div class="modal-content">
+                                    <h4>Are you sure you want to delete this category</h4>
+                                    <p>This action is irreversible</p>
+                                </div>
+                                <div class="modal-footer center-align">
+
+                                    <a href="{{ url_for('delete_comment', comment_id=comment.id) }}" class="modal-close waves-effect waves-green btn">Yes</a>
+                                    <a class="modal-close waves-effect waves-green btn red" data-bs-dismiss="modal">No</a>
+                                </div>
+                            </div>
+                        </div>                        
+
                         {% endfor %}
 
                     </div>
