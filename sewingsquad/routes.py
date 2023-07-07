@@ -311,6 +311,18 @@ def add_comment(sewingwork_id):
             "project.html", this_project=sewingwork, comments=comments)
 
 
+@app.route("/edit_comment/<int:comment_id>", methods=["GET", "POST"])
+def edit_comment(comment_id):
+    comment = Comments.query.get_or_404(comment_id)
+    
+    if request.method == "POST":
+        comment.comment = request.form.get("comment").lower(),
+
+        db.session.commit()
+        flash("The comment has been edited successfully")
+        return redirect(url_for("home"))
+
+
 @app.route("/delete_comment/<int:comment_id>", methods=["GET", "POST"])
 def delete_comment(comment_id):
     comment = Comments.query.get_or_404(comment_id)
