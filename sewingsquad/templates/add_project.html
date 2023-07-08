@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="input-field col s10 m8 offset-m2">
                     <i class="material-icons prefix">content_paste</i>
-                    <input id="projectname" name="projectname" type="text" class="validate" required>
+                    <input id="projectname" name="projectname" type="text" maxlength="30" class="validate" required>
                     <label for="projectname">Project name <span>*</span></label>
                 </div>
             </div>
@@ -17,9 +17,9 @@
             <div class="input-field col s10 m8 offset-m2" required>
                 <i class="material-icons prefix">category</i>
                 <select id="category" name="category" type="text" required>
-                    <option value="" disabled selected>Choose your option</option>
+                    <option value=""  disabled selected>Choose your option</option>
                     {% for category in categories %}
-                      <option value={{category}}>{{category}}</option>
+                      <option  value={{category}}>{{ category }}</option>
                     {% endfor %}
                   </select>
                 <label>Category <span>*</span></label>
@@ -69,7 +69,9 @@
                 <div class="input-field col s10 m8 offset-m2">
                   <i class="material-icons prefix">create</i>
                   <input id="instructions" name="instructions" type="text" class="validate" required>
-                  <label for="instructions">Instructions (separate steps with a comma ",") <span>*</span></label>
+                  <label for="instructions">Instructions <span>* </span></label>
+                  <span class="helper-text" data-error="wrong" data-success="right">(separate steps with a full-stop "." )</span>
+                
                 </div>
             </div>
 

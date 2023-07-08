@@ -85,7 +85,6 @@ nav .brand-logo i{
   font-family: 'Sacramento', cursive;
 }
 
-
 .title-container h5{
   font-family: 'Roboto', sans-serif;
 }
@@ -99,7 +98,6 @@ nav .brand-logo i{
 }
 
 
-
 .secondary-image{
   display: none;
 }
@@ -108,12 +106,17 @@ nav .brand-logo i{
   overflow: hidden;
 }
 
-.secondary-image img{
-  overflow: hidden;
-}
 
 .card .card-image {
-  overflow: hidden;
+  min-height: 15rem;
+  max-height: 17rem;
+  overflow: hidden; 
+}
+
+.secondary-image{
+  min-height: 15rem;
+  max-height: 17rem;
+  overflow: hidden; 
 }
 
 
@@ -123,6 +126,7 @@ nav .brand-logo i{
 
 .adjusted-padding{
   padding-left: 24px;
+  padding-right: 24px;
 }
 
 #comment-person-icon{
@@ -138,6 +142,10 @@ nav .brand-logo i{
 .comment-text p{
   margin-top: 0;
 
+}
+
+.comment label{
+  padding-left: 0.5rem;
 }
 
 .flash{
@@ -258,16 +266,37 @@ i.left {
   margin-right: -15px;
 }
 
+label, .helper-text{
+  font-size: x-small !important;
+}
+
 label > span {
   color: #F25278;
 }
 
+.small-text{
+  font-size:smaller;
+  
+}
 
 /*Media queries*/
 @media screen and (min-width: 300px){
   .title-icon{
     padding-left: 2rem;
     padding-right: 1rem;
+  }
+
+}
+
+@media screen and (min-width: 316px){
+  label, .helper-text{
+    font-size: small !important;
+  }
+}
+
+@media screen and (min-width: 334px){
+  label, .helper-text{
+    font-size: unset !important;
   }
 }
 
@@ -315,7 +344,7 @@ label > span {
     font-size: 1rem;
   }
 
-  .card-image {
+  .card .card-image {
     min-height: 15rem;
     max-height: 17rem;
     overflow: hidden; 

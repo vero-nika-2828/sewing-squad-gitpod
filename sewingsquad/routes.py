@@ -143,7 +143,7 @@ def login():
                     request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome {}".format(
-                    request.form.get("username").capitalize()))
+                    request.form.get("username").title()))
                 return redirect(
                     url_for(
                         "my_projects",

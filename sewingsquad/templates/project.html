@@ -29,9 +29,10 @@
                             <p><span class="text-space">Category:</span> {{ this_project.category.capitalize() }}</p>
                             <p><span class="text-space">Fabric type:</span> {{ this_project.fabric_type.capitalize() }}</p>
                             <p><span class="text-space">Fabric quantity:</span> {{ this_project.fabric_quantity }} cm</p>
+                            <p><span class="text-space">Other materials:</span> {{ this_project.other_materials }}</p>
 
                             <br>
-                            <p><span class="text-space bold-font">Sewing tip:</span>{{ this_project.sewing_tip }}</p>
+                            <p><span class="text-space bold-font">Sewing tip:</span>{{ this_project.sewing_tip.capitalize() }}</p>
                         </div>
                     </div>
                 </div>
@@ -44,8 +45,8 @@
                 <div class="card-content col s12 m6">
                     <h4 class="instruction-margin">Instructions</h4>
                     <ol class="ol-margin">
-                        {% for line in this_project.instructions.split(",") %}
-                            <li>{{ line.capitalize() }}</li>
+                        {% for line in this_project.instructions.split(".") %}
+                            <li>{{ line }} </li>
                         {% endfor %}
                     </ol>
                     
@@ -97,7 +98,7 @@
                                 </div>
 
                                 <div class="row s8 comment-text margin-left">
-                                    <p>"{{ comment.comment }}"</p> 
+                                    <p>"{{ comment.comment.capitalize() }}"</p> 
                                     <br>
                                 </div>
                             </div>
@@ -163,7 +164,7 @@
                 <form class="col s12 " method="POST" action="{{ url_for('add_comment', sewingwork_id=this_project.id) }}">
                     <div class="card-panel row red lighten-5">
                         <div class="row">
-                            <div class="input-field col s12 ">
+                            <div class="input-field col s12 comment">
                                 <textarea id="comment" name="comment" type="text" rows="4" cols="50" class="validate" required></textarea>
                                 <label for="comment">Add your comment here</label>
                             </div>

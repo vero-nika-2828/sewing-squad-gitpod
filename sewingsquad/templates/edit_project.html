@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="input-field col s10 m8 offset-m2">
                     <i class="material-icons prefix">content_paste</i>
-                    <input id="projectname" name="projectname" type="text" value="{{ project.project_name.capitalize() }}" class="validate" required>
+                    <input id="projectname" name="projectname" type="text"  maxlength="30" value="{{ project.project_name.capitalize() }}" class="validate" required>
                     <label for="projectname">Project name <span>*</span></label>
                 </div>
             </div>
@@ -70,7 +70,8 @@
                 <div class="input-field col s10 m8 offset-m2">
                   <i class="material-icons prefix">create</i>
                   <input id="instructions" name="instructions" value="{{ project.instructions.capitalize() }}" type="text" class="validate" required>
-                  <label for="instructions">Instructions (separate steps with a comma ",") <span>*</span></label>
+                  <label for="instructions">Instructions <span>* </span></label>
+                  <span class="helper-text" data-error="wrong" data-success="right">(separate steps with a full-stop "." )</span>
                 </div>
             </div>
 
