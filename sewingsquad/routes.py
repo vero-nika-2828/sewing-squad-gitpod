@@ -227,7 +227,7 @@ def add_project():
             )
         db.session.add(project)
         db.session.commit()
-        flash('Project Added Successfully!')
+        flash('Project has been added successfully!')
         return redirect(url_for("my_projects"))
 
     return render_template("add_project.html", categories=categories)
@@ -314,13 +314,14 @@ def add_comment(sewingwork_id):
 @app.route("/edit_comment/<int:comment_id>", methods=["GET", "POST"])
 def edit_comment(comment_id):
     comment = Comments.query.get_or_404(comment_id)
-    
+    commented_sewingwork = comment.comment_worksid
+        
     if request.method == "POST":
         comment.comment = request.form.get("comment").lower(),
 
         db.session.commit()
         flash("The comment has been edited successfully")
-        return redirect(url_for("home"))
+        return redirect(url_for("project", sewingwork_id=commented_sewingwork))
 
 
 @app.route("/delete_comment/<int:comment_id>", methods=["GET", "POST"])

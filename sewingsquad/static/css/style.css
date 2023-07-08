@@ -94,14 +94,26 @@ nav .brand-logo i{
   font-size: 5rem;
 }
 
-
 .troubleshoot-icon{
   font-size: 10rem;
 }
 
 
+
 .secondary-image{
   display: none;
+}
+
+.secondary-image img{
+  overflow: hidden;
+}
+
+.secondary-image img{
+  overflow: hidden;
+}
+
+.card .card-image {
+  overflow: hidden;
 }
 
 
@@ -291,6 +303,11 @@ label > span {
     margin-top: unset;
   }
 
+  .card-image img{
+    overflow: hidden;
+  }
+
+
 }
 
 @media screen and (min-width: 605px){
@@ -336,6 +353,10 @@ label > span {
 @media screen and (min-width: 993px){
   .card-image {
     min-height: 12rem;
+  }
+
+  .card-image img{
+    overflow: hidden;
   }
 
   .description-margin{
