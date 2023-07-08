@@ -327,13 +327,14 @@ def edit_comment(comment_id):
 @app.route("/delete_comment/<int:comment_id>", methods=["GET", "POST"])
 def delete_comment(comment_id):
     comment = Comments.query.get_or_404(comment_id)
+    commented_sewingwork = comment.comment_worksid
 
     db.session.delete(comment)       
     db.session.commit()
     flash("The comment has been deleted successfully")
-    return redirect(url_for("home"))   
+    return redirect(url_for("project", sewingwork_id=commented_sewingwork))
 
-          
+
 @app.errorhandler(404)
 def handle_404(error):
     # 404 error handler
