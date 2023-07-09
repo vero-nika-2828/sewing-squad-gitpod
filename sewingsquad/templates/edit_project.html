@@ -19,7 +19,7 @@
                 <select id="category" name="category" type="text">
                     <option value="{{ project.category }}" selected>{{ project.category.capitalize() }}</option>
                     {% for category in categories %}
-                      <option value={{category}}>{{category.capitalize}}</option>
+                      <option value={{category}}>{{category }}</option>
                     {% endfor %}
                 </select>
                 <label>Category <span>*</span></label>

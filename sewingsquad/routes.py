@@ -38,7 +38,7 @@ def add_category():
 
         if existing_category:
             flash("Sorry! This category already exist")
-            flash("Please use unique name.")
+            flash("Please use a unique name.")
 
             return redirect(url_for("add_category"))
 
