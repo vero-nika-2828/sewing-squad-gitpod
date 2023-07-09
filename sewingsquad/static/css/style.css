@@ -112,7 +112,6 @@ nav .brand-logo i{
   overflow: hidden;
 }
 
-
 .no-box-shadow{
   box-shadow: none;
 }
@@ -171,13 +170,20 @@ main {
   margin-bottom: 5px;
 }
 
+
+.carousel{
+  max-height: 6rem;
+  min-height: 6rem;
+
+}
+
 .carousel-button-next{
-  margin-top: -30%;
+  margin-top: -25%;
   margin-right: 10px;
 }
 
 .carousel-button-prev{
-  margin-top: -30%;
+  margin-top: -25%;
   margin-left: 10px;
 }
 
@@ -196,7 +202,6 @@ main {
   object-fit: cover;
   object-position:top;
   overflow: hidden;
-  max-height: 450px;
 }
 
 
@@ -274,13 +279,24 @@ label > span {
 }
 
 /*Media queries*/
+@media screen and (min-width: 258px){
+  .carousel{
+    max-height: 10rem;
+    min-height: 10rem;
+  
+  }
+}
+
 @media screen and (min-width: 300px){
   .title-icon{
     padding-left: 2rem;
     padding-right: 1rem;
   }
-
-
+  .carousel{
+    max-height: 12rem;
+    min-height: 12rem;
+  
+  }
 }
 
 @media screen and (min-width: 316px){
@@ -288,9 +304,9 @@ label > span {
     font-size: small !important;
   }
 
-  .card .card-image {
-    min-height: 14rem;
-    max-height: 14rem;
+  .card .card-image, .carousel {
+    min-height: 13rem;
+    max-height: 13rem;
   }
 }
 
@@ -298,6 +314,7 @@ label > span {
   label, .helper-text{
     font-size: unset !important;
   }
+
 }
 
 @media screen and (min-width: 342px){
@@ -312,8 +329,13 @@ label > span {
   }
 
   .card .card-image {
-    min-height: 16rem;
-    max-height: 16rem;
+    min-height: 22rem;
+    max-height: 22rem;
+  }
+
+  .carousel {
+    min-height: 14rem;
+    max-height: 14rem;
   }
 }
 
@@ -326,6 +348,18 @@ label > span {
     margin-right: 10px;
   }
 
+  .carousel {
+    min-height: 18rem;
+    max-height: 18rem;
+  }
+
+}
+
+@media screen and (min-width: 500px){
+  .carousel {
+    min-height: 21rem;
+    max-height: 21rem;
+  }
 }
 
 @media screen and (min-width: 601px){
@@ -353,6 +387,10 @@ label > span {
     max-height: 15rem;
   }
 
+  .carousel {
+    min-height: 25rem;
+    max-height: 25rem;
+  }
 
 }
 
@@ -371,22 +409,38 @@ label > span {
 
 }
 
+@media screen and (min-width: 650px){
+
+  .carousel-button-next, .carousel-button-prev {
+    margin-top: -20%;
+  }
+
+
+}
+
 @media screen and (min-width: 682px){
   .card-image {
     min-height: 17rem;
     max-height: 10rem;
   }
 
+  .carousel-button-next, .carousel-button-prev {
+    margin-top: -22%;
+  }
+
+
 }
 
 @media screen and (min-width: 800px){
-  .carousel-button-next, .carousel-button-prev {
-    margin-top: -25%;
-  }
 
   .card .card-image {
     min-height: 15rem;
     max-height: 15rem;
+  }
+
+  .carousel {
+    min-height: 28rem;
+    max-height: 28rem;
   }
 }
 
@@ -398,6 +452,11 @@ label > span {
 
   .card-image img{
     overflow: hidden;
+  }
+
+  .carousel {
+    min-height: 16rem;
+    max-height: 16rem;
   }
 
   .card-title{
@@ -451,11 +510,16 @@ label > span {
     max-height: 13rem;
   }
 
+  .carousel {
+    min-height: 19rem;
+    max-height: 19rem;
+  }
+
 }
 
-@media screen and (min-width: 1250px){
+@media screen and (min-width: 1300px){
   .carousel-button-next, .carousel-button-prev {
-    margin-top: -30%;
+    margin-top: -20%;
   }
 }
 
@@ -466,12 +530,30 @@ label > span {
     max-height: 16rem;
   }
 
+  .carousel {
+    min-height: 22rem;
+    max-height: 22rem;
+  }
+
+  .carousel-button-next, .carousel-button-prev {
+    margin-top: -20%;
+  }
+
 }
 
 @media screen and (min-width: 1600px){
   .card .card-image {
     min-height: 17rem;
     max-height: 17rem;
+  }
+
+  .carousel {
+    min-height: 25rem;
+    max-height: 25rem;
+  }
+
+  .carousel-button-next, .carousel-button-prev {
+    margin-top: -24%;
   }
 
 }
