@@ -5,6 +5,10 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+#title{
+  font-family: 'Sacramento', cursive;
+}
+
 nav{
   background-color:  rgba(242, 82, 120, 0.9);
 }
