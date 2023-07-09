@@ -257,7 +257,7 @@ i.left {
   margin-right: -15px;
 }
 
-label, .helper-text{
+label .helper-text{
   font-size: x-small !important;
 }
 
