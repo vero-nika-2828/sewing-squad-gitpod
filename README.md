@@ -64,60 +64,57 @@ The platform facilitates /enables the members to share their patterns, sewing in
 
 1. I want to be able to see what this website is for
 2. I want to have my own account with my entries
-2. I want to be able to create my own account easily
-3. I want to see a confirmation when my account gets created
-4. I want to be told clearly what information is needed for registration
-5. I want to know what my password should look like0
-6. I want to be notified when I fill in something incorrectly or when missed something
-7. I want to be able to add my own projects
-8. I want to be able to see a list of other people’s projects
-8. I want to be able to narrow the list of all the projects that are on the website to what fits my needs
-9. I want to see a quick overview of the project to be able to decide whether that I would like to know more about that particular project 
-9. I want to see image of the finished product 
-9. I want to see more information on the projects that are interesting to me
-9. I want to have an option to see more detailed description of project I choose
-10. I want to be able to navigate through the website and find information easily 
-11. I want to be able to navigate the site across variety of screen sizes
-12. I want to be able to view the website on the variety of web browsers
-13. I want the links to work when I click on them 
-14. I want to be able to read the content effortlessly
-
-
+3. I want to be able to create my own account easily
+4. I want to see a confirmation when my account gets created
+5. I want to be told clearly what information is needed for registration
+6. I want to know what my password should look like0
+7. I want to be notified when I fill in something incorrectly or when missed something
+8. I want to be able to add my own projects
+9. I want to be able to see a list of other people’s projects
+10. I want to be able to narrow the list of all the projects that are on the website to what fits my needs
+11. I want to see a quick overview of the project to be able to decide whether that I would like to know more about that particular project 
+12. I want to see image of the finished product 
+13. I want to see more information on the projects that are interesting to me
+14. I want to have an option to see more detailed description of project I choose
+15. I want to be able to navigate through the website and find information easily 
+16. I want to be able to navigate the site across variety of screen sizes
+17. I want to be able to view the website on the variety of web browsers
+18. I want the links to work when I click on them 
 
 
 ### Returning Visitor Goals
 
 
-15. I want to be able to log in to my account repeatedly
-15. I want to be able to navigate the site across variety of screen sizes
-16. I want to be given a confirmation that I am logged in 
-17. I want to be able to view a list with projects I added
-18. I want to be able to go to add a project directly
-19. I want to be able to edit my projects
-19. I dont want other people to edit my projects
-19. I dot want other people to delete my project
-20. I want to be able to delete my projects
-20. I want to be able to quick find individual projects of interest
-21. I want to be able to log out from my account when I finish working with it
+19. I want to be able to comment other user's posts and see what other people are commenting
+20. I want to be able to log in to my account repeatedly
+21. I want to be able to navigate the site across variety of screen sizes
+22. I want to be given a confirmation that I am logged in 
+23. I want to be able to view a list with projects I added
+24. I want to be able to go to add a project directly
+25. I want to be able to edit my projects
+26. I dont want other people to edit my projects
+27. I dot want other people to delete my project
+28. I want to be able to delete my projects
+29. I want to be able to quick find individual projects of interest
+30. I want to be able to log out from my account when I finish working with it
 
 
 ### Site owner's Goals 
 
-
-22. I want to be able to control content on the webpage
-22. I want only registered users to be able to view full content
-22. I want users to create their account
-23. I want to store the user’s project entries in a database
-24. I want to be able to retrieve the project entries from database for my website
-26. I want the projects entries to be linked to each account
-27. I want users to see all the projects in database
-28. I want users to be able to read more details on the project of their choice
-29. I want users to see their own projects
-29. I want to be able to add, amend and delete categories wh
-30. I want users to be able to edit their own projects 
-31. I want users to be able to delete their own projects 
-32. I want users to be able to understand what the website is for
-33. I want users to be able to navigate through the website easily
+31.	I want to be able to control content on the webpage
+32.	I want only registered users to be able to view full content
+33.	I want users to create their account
+34.	I want to store the user’s project entries in a database
+35.	I want to be able to add categories user’s can chose from 
+36.	I want the projects entries to be linked to each account
+37.	I want users to see all the projects in database
+38.	I want users to be able to read more details on the project of their choice
+39.	I want users to see their own projects
+40.	I want to be able to edit and delete categories 
+41.	I want users to be able to edit their own projects
+42.	I want users to be able to delete their own projects
+43.	I want users to be able to understand what the website is for
+44.	I want users to be able to navigate through the website easily
 
 
 # Design
@@ -168,7 +165,7 @@ The images used by copying email addresses from etsy and other google search. Im
 * Opens when user clicks Register link in the Login page or Log in link in navigation menu
 * Form contains 3 input fields - username, email address, password
 * Each input field has a label with information required for that field 
-* Icons prefixed placed in front of each input field to aid intuitive navigation(quicker comprehension of information required in each field 
+* Icons prefixed placed in front of each input field to aid intuitive navigation
 
 ![Register form](./sewingsquad/static/images/readme_docs/register_and_login/register.PNG)
 
@@ -195,6 +192,36 @@ The images used by copying email addresses from etsy and other google search. Im
 * Log in link is positioned at the bottom for quick navigation and directs the user to Log in page
 
 ![Duplicated user](./sewingsquad/static/images/readme_docs/register_and_login/register_login_link.PNG)
+
+## Log in page
+
+### Log in Form
+
+* Form is positioned in the middle of the screen
+* Opens when user clicks Login link in the  Register page or clicks on Log In in navigation menu
+* Form contains 2 input fields - username and password
+* Each input field has a label with information required for that field 
+*  Icons prefixed placed in front of each input field to aid intuitive navigation
+
+
+![Log in form](./sewingsquad/static/images/readme_docs/register_and_login/login.PNG)
+
+* A form with empty fields will not be submitted and a message prompting the user to fill the field will appear (see register section for more information)
+* Information icon on the right side of the password field shows the password requirements  when hovered over (see register section for more information)
+* Log in button triggers the validation of the password and username
+* Clear button will clear all the text in input fields
+
+![Log in button](./sewingsquad/static/images/readme_docs/register_and_login/login_form_buttons.PNG)
+
+* The message "Incorrect Username and/or Password" informs the user tha the log in was not successful
+
+![Log in error message](./sewingsquad/static/images/readme_docs/register_and_login/login_incorrect_username_message.PNG)
+
+* Register  link is positioned at the bottom for quick navigation and directs the user to the user to Registered page
+
+![Log in error message](./sewingsquad/static/images/readme_docs/register_and_login/login_register_link.PNG)
+
+
 ## Logo and Navigations Bar
 
 ### Header
