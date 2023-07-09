@@ -221,6 +221,10 @@ The images used by copying email addresses from etsy and other google search. Im
 
 ![Log in error message](./sewingsquad/static/images/readme_docs/register_and_login/login_register_link.PNG)
 
+## My Projects page
+	Add project button 
+	Opens add project form 
+
 
 ## Logo and Navigations Bar
 
