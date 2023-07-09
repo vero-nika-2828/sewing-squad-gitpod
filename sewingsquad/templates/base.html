@@ -39,6 +39,7 @@
                               
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
                         <li><a href="{{ url_for('home') }}">Home</a></li>
+                        <li><a href="{{ url_for('about') }}">About</a></li>
                         {% if session.user %}
                             <li><a href="{{ url_for('my_projects') }}">My Projects</a></li>
                             <li><a href="{{ url_for('add_project') }}">Add project</a></li>
@@ -67,6 +68,7 @@
         <!--Nav bar on mobile device screens-->
         <ul class="sidenav" id="slide-out">
             <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
             {% if session.user %}
                 <li><a href="{{ url_for('my_projects') }}">My Projects</a></li>
                 <li><a href="{{ url_for('add_project') }}">Add project</a></li>

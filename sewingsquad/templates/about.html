@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block header %} About {% endblock %}
+{% block content %}
+<div class="row">
+    <!--500 error container-->
+    <div class="col s12 m8 offset-m2">
+        <div class="card-panel red lighten-5">
+  
+            <!--500 error text-->
+            <div class="row">
+                 <div class="row valign-wrapper">
+                    <div class="col s12 m8 offset-m2 left ">
+			            <p><span class="brand-logo large-text bold-text"> Sewing Squad </span>is a vibrant community of people who love making their own clothes and who aspire to become the best seamsters/seamstresses. Everyone brings their own style, ideas, sewing experience and shares it with others.</p>
+                        <p>No matter where you are in your sewing journey, you will always find some inspiration here and support from other members of the community.</p>
+                        <p>The only person missing here is YOU! So, without any further ado come and join us! All you need to do is <a href="{{url_for('register')}}">register</a> and start sewing with us!</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

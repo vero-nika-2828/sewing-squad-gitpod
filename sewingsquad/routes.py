@@ -15,15 +15,9 @@ def home():
         all_users=all_users)
 
 
-@app.route("/admin")
-def admin():
-    username = session["user"]
-    user = Users.query.filter_by(username=username).first()
-
-    if user.id == 1:
-        flash("You are an admin")
-        return render_template("admin.html")
-    return render_template("index.html")
+@app.route("/about")
+def about():
+    return render_template("about.html")
 
 
 @app.route("/categories")

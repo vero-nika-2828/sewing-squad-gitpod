@@ -274,8 +274,15 @@ label > span {
 }
 
 .small-text{
-  font-size:smaller;
-  
+  font-size:smaller; 
+}
+
+.large-text{
+  font-size: xx-large ;
+}
+
+.bold-text{
+  font-weight: bold;
 }
 
 /*Media queries*/
