@@ -193,6 +193,8 @@ The images used by copying email addresses from etsy and other google search. Im
 
 ![Duplicated user](./sewingsquad/static/images/readme_docs/register_and_login/register_login_link.PNG)
 
+* Relates to following user stories: 3,4,6,7,33
+
 ## Log in page
 
 ### Log in Form
@@ -219,11 +221,33 @@ The images used by copying email addresses from etsy and other google search. Im
 
 * Register  link is positioned at the bottom for quick navigation and directs the user to the user to Registered page
 
+![Log in successful ](./sewingsquad/static/images/readme_docs/register_and_login/login_successful.JPG)
+
+* The message "Welcome + username" informs the user that the registration was successful and the user is redirected to My Projects page
+
 ![Log in error message](./sewingsquad/static/images/readme_docs/register_and_login/login_register_link.PNG)
 
-## My Projects page
-	Add project button 
-	Opens add project form 
+* Relates to following user stories: 6,7,20, 22
+
+
+
+## My Projects page and Home page
+
+* My project page is visible only to logged-in user while home page is visible to everyone
+
+###	Add Project button (My projects only)
+
+* The button directs the user to Add project page
+
+
+### Hero image
+### Title
+### Slogan
+### Search
+###	Cards 
+
+
+
 
 
 ## Logo and Navigations Bar

@@ -188,13 +188,14 @@ main {
   width: 100%;
 }
 
-.carousel .carousel-item>img {
+.carousel .carousel-item img{
   width:100%;
   object-fit: cover;
   object-position:top;
   overflow: hidden;
   max-height: 450px;
 }
+
 
 .page-footer{
   background-color:  rgba(242, 82, 120, 1);
@@ -386,6 +387,10 @@ label > span {
     overflow: hidden;
   }
 
+  .card-title{
+    font-size: 20px!important;
+  }
+
   .description-margin{
     margin-left:unset;
     margin-top: 0;
@@ -406,6 +411,13 @@ label > span {
   #description{
   padding-top: 0;
 }
+
+}
+
+@media screen and (min-width: 1050px){
+  .card-title{
+    font-size: 24px!important;
+  }
 
 }
 
