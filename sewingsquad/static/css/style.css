@@ -347,19 +347,18 @@ label > span {
     overflow: hidden; 
   }
 
+  
+  .card .card-content {
+    min-height: 15rem;
+    max-height: 15rem;
+  }
+
 
 }
 
 @media screen and (min-width: 605px){
   #query + label{
     font-size: 1rem;
-  }
-
-
-
-  .card .card-content {
-    min-height: 15rem;
-    max-height: 15rem;
   }
 
   .btn, .btn-large{
@@ -426,11 +425,22 @@ label > span {
   padding-top: 0;
 }
 
+.btn, .btn-large {
+  margin-right: 5px;
+}
+
 }
 
 @media screen and (min-width: 1050px){
   .card-title{
     font-size: 24px!important;
+  }
+
+}
+
+@media screen and (min-width: 1074px){
+  .btn, .btn-large {
+    margin-right: 15px;
   }
 
 }
