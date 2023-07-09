@@ -32,6 +32,16 @@ def add_category():
     categories = list(Category.query.all())
 
     if request.method == "POST":
+        existing_category = Category.query.filter(
+            Category.category == request.form.get(
+                "category").lower()).all()
+
+        if existing_category:
+            flash("Sorry! This category already exist")
+            flash("Please use unique name.")
+
+            return redirect(url_for("add_category"))
+
         if session["user"] == "admin":
             new_category = Category(
                 category=request.form.get("category").lower(),
