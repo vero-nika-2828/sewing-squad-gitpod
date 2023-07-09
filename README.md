@@ -239,7 +239,6 @@ The images used by copying email addresses from etsy and other google search. Im
 
 * The button directs the user to Add project page
 
-
 ### Hero image
 ### Title
 ### Slogan
