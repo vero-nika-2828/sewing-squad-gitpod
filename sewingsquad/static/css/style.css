@@ -98,6 +98,12 @@ nav .brand-logo i{
 }
 
 
+.card .card-image {
+  min-height: 12rem;
+  max-height: 12rem;
+  overflow: hidden; 
+}
+
 .secondary-image{
   display: none;
 }
@@ -105,9 +111,6 @@ nav .brand-logo i{
 .secondary-image img{
   overflow: hidden;
 }
-
-
-
 
 
 .no-box-shadow{
@@ -277,11 +280,17 @@ label > span {
     padding-right: 1rem;
   }
 
+
 }
 
 @media screen and (min-width: 316px){
   label, .helper-text{
     font-size: small !important;
+  }
+
+  .card .card-image {
+    min-height: 14rem;
+    max-height: 14rem;
   }
 }
 
@@ -300,6 +309,11 @@ label > span {
     font-size: 4rem;
     padding-left: 0;
     padding-top: 10px;
+  }
+
+  .card .card-image {
+    min-height: 16rem;
+    max-height: 16rem;
   }
 }
 
