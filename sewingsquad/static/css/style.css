@@ -5,9 +5,6 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-#title{
-  font-family: 'Sacramento', cursive;
-}
 
 nav{
   background-color:  rgba(242, 82, 120, 0.9);
@@ -35,6 +32,10 @@ nav .brand-logo i{
   padding-left: 1rem;
   color: white;
   font-size: x-small;
+}
+
+#query-label{
+  font-size: x-small!important;
 }
 
 .pink-color{
@@ -269,7 +270,7 @@ i.left {
   margin-right: -15px;
 }
 
-label .helper-text{
+label, .helper-text{
   font-size: x-small !important;
 }
 
@@ -351,8 +352,8 @@ label > span {
 }
 
 @media screen and (min-width: 420px){
-  #query + label{
-    font-size: small;
+  #query-label{
+    font-size: small!important;
   }
 
   #comment-person-icon{
@@ -406,8 +407,8 @@ label > span {
 }
 
 @media screen and (min-width: 605px){
-  #query + label{
-    font-size: 1rem;
+  #query-label{
+    font-size: 1rem!important;
   }
 
   .btn, .btn-large{
