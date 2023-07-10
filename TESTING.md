@@ -140,6 +140,16 @@
 
     </details>   
 
+  * PEP8 Validator (https://pep8ci.herokuapp.com/) -pass
+
+    <details>
+    <summary>PEP8 Validator screenshot</summary>
+    <br>
+  
+    ![Javascript Valiation](./sewingsquad/static/images/readme_docs/testing/PEP8.PNG)
+
+    </details> 
+
   ### Lighthouse
 
   <details>
