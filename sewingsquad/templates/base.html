@@ -40,7 +40,7 @@
             <nav>
                 <!--Nav bar on larger screens-->
                 <div class="row nav-wrapper">
-                    <a href="{{ url_for('home')}}" class="left brand-logo margin-left margin-right "> <span class="left">Sewing <i class="fa-solid fa-people-group margin-left margin-top"></i></span> Squad</a>
+                    <a href="{{ url_for('home')}}" class="left brand-logo margin-left margin-right "> <span class="left">Sewing</span> <span><i class="fa-solid fa-people-group margin-left margin-top"></i></span> Squad</a>
                     <a href="#" data-target="slide-out" class="right sidenav-trigger"><i class="material-icons">menu</i></a>
                               
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -66,9 +66,7 @@
             </nav>
 
             {% block hero %}{% endblock %}
-                    </div>
-                </div>
-            </div>
+         
         </div>
             
         <!--Nav bar on mobile device screens-->
@@ -92,7 +90,7 @@
 
     </header>
 
-    <section>
+    <div>
         <!--flash messages-->
         {% with messages = get_flashed_messages() %}
             {% if messages %}
@@ -103,7 +101,7 @@
                 {% endfor %}
             {% endif%}
         {% endwith %}
-    </section> 
+    </div> 
 
 
     <div>
@@ -118,7 +116,7 @@
     <footer class="page-footer footer-copyright">
         <div class="row s12 m6 offset-m3 ">
             <div class="col s12 center-align">
-              <h4 class="center-align"><a href="{{ url_for('home') }}" class="white-text">Sewing</span><i class="fa-solid fa-people-group margin-left margin-top"></i><span></span> Squad</a></h4>
+              <h4 class="center-align"><a href="{{ url_for('home') }}" class="white-text"><span>Sewing </span> <span><i class="fa-solid fa-people-group margin-left margin-top"></i></span> Squad</a></h4>
             </div>
             
             <div class="col s4 offset-s4 center-align">
