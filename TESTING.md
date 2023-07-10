@@ -10,8 +10,8 @@
      <summary>Base HTML</summary>
      <br>
 
-     ![Base HMTL results](./assets/readme_docs/automated_testing/w3c-validator-level-B1-page.JPG)
-
+     ![Base HMTL results](./sewingsquad/static/images/readme_docs/testing/W3C/home.PNG)
+    
     </details>  
 
    * index.html (Home) - pass
@@ -19,7 +19,7 @@
       <summary>Home</summary>
       <br>
 
-      ![Home page results](./assets/readme_docs/automated_testing/w3c-validator-index-page.jpg.JPG)
+      ![Home page results](./sewingsquad/static/images/readme_docs/testing/W3C/home.PNG)
 
       </details> 
 
@@ -29,7 +29,7 @@
       <summary>About</summary>
       <br>
 
-      ![About page test results](./assets/readme_docs/automated_testing/w3c-validator-level-A1-page.jpg)
+      ![About page test results](./sewingsquad/static/images/readme_docs/testing/W3C/about.PNG)
 
       </details> 
 
@@ -39,7 +39,7 @@
      <summary>Log In</summary>
      <br>
 
-     ![Log in test results ](./assets/readme_docs/automated_testing/w3c-validator-level-B1-page.JPG)
+     ![Log in test results ](./sewingsquad/static/images/readme_docs/testing/W3C/login.PNG)
 
     </details>  
 
@@ -49,7 +49,7 @@
      <summary>Register</summary>
      <br>
 
-     ![Register page test reulst](./assets/readme_docs/automated_testing/w3c-validator-level-B1-page.JPG)
+     ![Register page test reulst](./sewingsquad/static/images/readme_docs/testing/W3C/register.PNG)
 
     </details>  
 
@@ -58,7 +58,7 @@
      <summary>My Projects</summary>
      <br>
 
-     ![My projects page test reulst](./assets/readme_docs/automated_testing/w3c-validator-level-B1-page.JPG)
+     ![My projects page test reulst]()
 
     </details>      
 
@@ -67,7 +67,7 @@
      <summary>Add Project</summary>
      <br>
 
-     ![Add project page test reulst](./assets/readme_docs/automated_testing/w3c-validator-level-B1-page.JPG)
+     ![Add project page test reulst]()
 
     </details>  
 
@@ -76,7 +76,7 @@
      <summary>Edit Project</summary>
      <br>
 
-     ![Edit Project page test reulst](./assets/readme_docs/automated_testing/w3c-validator-level-B1-page.JPG)
+     ![Edit Project page test reulst](./sewingsquad/static/images/readme_docs/testing/W3C/edit_project.PNG)
 
     </details>  
 
@@ -85,7 +85,7 @@
      <summary>Project</summary>
      <br>
 
-     ![Project page test reulst](./assets/readme_docs/automated_testing/w3c-validator-level-B1-page.JPG)
+     ![Project page test reulst](./sewingsquad/static/images/readme_docs/testing/W3C/project.PNG)
 
     </details>  
 
@@ -94,7 +94,7 @@
      <summary>Categories</summary>
      <br>
 
-     ![Categories page test reulst](./assets/readme_docs/automated_testing/w3c-validator-level-B1-page.JPG)
+     ![Categories page test reulst](./sewingsquad/static/images/readme_docs/testing/W3C/categories.PNG)
 
     </details>  
 
@@ -103,7 +103,7 @@
      <summary>Edit Category</summary>
      <br>
 
-     ![Edit Category page test reulst](./assets/readme_docs/automated_testing/w3c-validator-level-B1-page.JPG)
+     ![Edit Category page test reulst](./sewingsquad/static/images/readme_docs/testing/W3C/edit-category.PNG)
 
     </details>
 
@@ -112,7 +112,7 @@
         <summary>404 error</summary>
         <br>
 
-        ![404 error page test reulst](./assets/readme_docs/automated_testing/w3c-validator-level-B1-page.JPG)
+        ![404 error page test reulst]()
 
         </details>      
       
@@ -138,3 +138,100 @@
     ![Javascript Valiation](./assets/readme_docs/automated_testing/jshint-validator-javascript.JPG)
 
     </details>   
+
+  ### Lighthouse
+
+  <details>
+    <summary>Home</summary>
+    <br>
+
+    ![Home page results](./sewingsquad/static/images/readme_docs/testing/W3C/home.PNG)
+
+  </details> 
+
+
+
+   <details>
+    <summary>About</summary>
+    <br>
+
+    ![About page test results](./sewingsquad/static/images/readme_docs/testing/W3C/about.PNG)
+
+   </details> 
+
+  <details>
+    <summary>Log In</summary>
+    <br>
+
+    ![Log in test results ](./sewingsquad/static/images/readme_docs/testing/W3C/login.PNG)
+
+  </details>  
+
+
+  <details>
+    <summary>Register</summary>
+    <br>
+
+  ![Register page test reulst](./sewingsquad/static/images/readme_docs/testing/W3C/register.PNG)
+
+  </details>  
+
+  <details>
+    <summary>My Projects</summary>
+    <br>
+
+    ![My projects page test reulst]()
+
+  </details>      
+
+  <details>
+    <summary>Add Project</summary>
+    <br>
+
+    ![Add project page test reulst]()
+
+  </details>  
+
+  <details>
+    <summary>Edit Project</summary>
+    <br>
+
+    ![Edit Project page test reulst](./sewingsquad/static/images/readme_docs/testing/W3C/edit_project.PNG)
+
+  </details>  
+
+
+  <details>
+    <summary>Project</summary>
+    <br>
+
+    ![Project page test reulst](./sewingsquad/static/images/readme_docs/testing/W3C/project.PNG)
+
+  </details>  
+
+  
+  <details>
+    <summary>Categories</summary>
+    <br>
+
+    ![Categories page test reulst](./sewingsquad/static/images/readme_docs/testing/W3C/categories.PNG)
+
+  </details>  
+
+  <details>
+    <summary>Edit Category</summary>
+    <br>
+
+    ![Edit Category page test reulst](./sewingsquad/static/images/readme_docs/testing/W3C/edit-category.PNG)
+
+  </details>
+
+   <details>
+      <summary>404 error</summary>
+      <br>
+
+      ![404 error page test reulst]()
+
+   </details>      
+      
+
