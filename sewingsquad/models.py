@@ -11,12 +11,13 @@ class Users(db.Model):
         "SewingWorks", backref="users", cascade="all, delete", lazy=True)
     users_comments = db.relationship(
         "Comments", backref="users", cascade="all, delete", lazy=True)
-  
+
     def __repr__(self):
         return self.username
 
 
 class SewingWorks(db.Model):
+    # schema for the Sewingworks model
     id = db.Column(db.Integer, primary_key=True)
     project_name = db.Column(
         db.String(260), unique=True, nullable=False)
@@ -33,7 +34,7 @@ class SewingWorks(db.Model):
     sewing_tip = db.Column(
         db.Text, nullable=False)
     instructions = db.Column(
-        db.Text, nullable=False)    
+        db.Text, nullable=False)
     photo_URL = db.Column(
         db.String(260), nullable=False)
     secondaryphoto_URL = db.Column(
@@ -42,13 +43,14 @@ class SewingWorks(db.Model):
         db.Integer, db.ForeignKey(
             "users.id"), nullable=False)
     works_comments = db.relationship(
-        "Comments", backref="sewing_works", cascade="all, delete", lazy=True)  
+        "Comments", backref="sewing_works", cascade="all, delete", lazy=True)
 
     def __repr__(self):
         return self.project_name
-        
+
 
 class Comments(db.Model):
+    # schema for the Users model
     id = db.Column(db.Integer, primary_key=True)
     comment = db.Column(
         db.Text, nullable=False)
@@ -57,7 +59,7 @@ class Comments(db.Model):
             "users.id"), nullable=False)
     comment_worksid = db.Column(
         db.Integer, db.ForeignKey(
-            "sewing_works.id"), nullable=False) 
+            "sewing_works.id"), nullable=False)
 
     def __repr__(self):
         return self.comment

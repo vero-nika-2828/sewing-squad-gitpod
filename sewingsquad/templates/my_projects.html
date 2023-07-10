@@ -1,17 +1,5 @@
 {% extends "base.html" %}
 
-    {% block search %}
-        <form class="col s6 offset-s2 center hide-on-small-only" method="POST" action="{{ url_for('search') }}">
-            <div class="row valign-wrapper center-align">
-                <div class="input-field col s 12 m8">
-                    <i class="material-icons prefix center-align">search</i>
-                    <input id="query" name="query" type="text" class="validate" required minlenght="3">
-                    <label for="query">Search</label>
-                </div>
-            </div>
-        </form>
-    {% endblock %}
-
     {% block header %} My projects {% endblock %}
     {% block content %}
 

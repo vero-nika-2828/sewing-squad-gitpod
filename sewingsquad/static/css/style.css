@@ -1,3 +1,4 @@
+/*Bode styling*/
 body {
   display: flex;
   min-height: 100vh;
@@ -5,7 +6,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-
+/*Nav bar styling*/
 nav{
   background-color:  rgba(242, 82, 120, 0.9);
 }
@@ -22,6 +23,7 @@ nav .brand-logo i{
   color: white;
 }
 
+/*Search bar styling*/
 #query{
   opacity: 0.5;
   background:whitesmoke;
@@ -38,6 +40,8 @@ nav .brand-logo i{
   font-size: x-small!important;
 }
 
+
+/*Color class for slider navigation*/
 .pink-color{
   background-color:  rgba(242, 82, 120, 0.7);
   color: white;
@@ -48,16 +52,20 @@ nav .brand-logo i{
   color: white;
 }
 
+
+/*Pink text for card title*/
 .text-pink{
   color:#F25278;
   font-family: 'Roboto', sans-serif;
 }
 
+
+/*Text class*/
 .text-roboto{
   font-family: 'Roboto', sans-serif;
 }
 
-
+/*Header text color*/
 .dark-color{
   color:#2F4858;
 }
@@ -65,13 +73,11 @@ nav .brand-logo i{
 .text-space{ 
   margin-right: 3px;
 }
+
+/*Header styling*/
 .header{
   background:url("../images/background.jpg");
   background-repeat:repeat;
-}
-
-.error_header{
-  margin-top: 5px;
 }
 
 .header-title{
@@ -98,11 +104,18 @@ nav .brand-logo i{
   font-size: 5rem;
 }
 
+
+/*500 and 404 error styling*/
+.error_header{
+  margin-top: 5px;
+}
+
 .troubleshoot-icon{
   font-size: 10rem;
 }
 
 
+/*Project page styling -card*/
 .card .card-image {
   min-height: 12rem;
   max-height: 12rem;
@@ -126,6 +139,7 @@ nav .brand-logo i{
   padding-right: 24px;
 }
 
+/*Project page styling -comment*/
 #comment-person-icon{
   margin-left: unset;
   margin-right: 20px;
@@ -145,6 +159,7 @@ nav .brand-logo i{
   padding-left: 0.5rem;
 }
 
+/*Flash messages*/
 .flash{
   color:rgba(242, 82, 120, 1);
   font-weight: bold;
@@ -162,6 +177,7 @@ main {
   flex: 1 0 auto;
 }
 
+/*Catyegory list styling*/
 .horizontal-list{
   display: flex;
 }
@@ -170,12 +186,14 @@ main {
   margin-right: 5px;
 }
 
+
+/*Add, Edit and Delete button margin*/
 .btn, .btn-large{
   margin-right: 15px;
   margin-bottom: 5px;
 }
 
-
+/*Carouserl styling for images */
 .carousel{
   max-height: 6rem;
   min-height: 6rem;
@@ -209,7 +227,7 @@ main {
   overflow: hidden;
 }
 
-
+/*Footer styling*/
 .page-footer{
   background-color:  rgba(242, 82, 120, 1);
 
@@ -229,6 +247,7 @@ footer li:hover{
   transform: scale(1.5);
 }
 
+/*Margin and padding adjustment classes*/
 .margin-left{
   margin-left: 10px;
 }
@@ -261,13 +280,14 @@ footer li:hover{
   margin-left: -10px;
 }
 
-.bold-font{
-  font-weight: bold;
-}
-
 
 i.left {
   margin-right: -15px;
+}
+
+/*Text-styling adjustment classes*/
+.bold-font{
+  font-weight: bold;
 }
 
 label, .helper-text{

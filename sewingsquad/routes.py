@@ -8,6 +8,7 @@ from sewingsquad.models import Users, SewingWorks, Comments, Category
 
 @app.route("/")
 def home():
+    # Queries data from Sewingworks and User database to display on the page
     all_projects = list(SewingWorks.query.all())
     all_users = list(Users.query.all())
     return render_template(
@@ -22,6 +23,7 @@ def about():
 
 @app.route("/categories")
 def categories():
+    # Queries data from Category database to display on the page
     categories = list(Category.query.all())
 
     return render_template("categories.html", categories=categories)
@@ -29,20 +31,24 @@ def categories():
 
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
+    # Queries data from Category database to display on the page
     categories = list(Category.query.all())
 
     if request.method == "POST":
+        # Check if the category exists
         existing_category = Category.query.filter(
             Category.category == request.form.get(
                 "category").lower()).all()
 
         if existing_category:
+            # If category exists show flash message
             flash("Sorry! This category already exist")
             flash("Please use a unique name.")
 
             return redirect(url_for("add_category"))
 
         if session["user"] == "admin":
+            # Allow only admin to add categories
             new_category = Category(
                 category=request.form.get("category").lower(),
                 )
@@ -51,6 +57,7 @@ def add_category():
             flash("The category has been added successfully")
             return redirect("categories")
         else:
+            # If the person adding category is not admin show flash message
             flash("Only admin can add categories")
             return render_template("categories.html", categories=categories)
 
@@ -59,9 +66,11 @@ def add_category():
 
 @app.route("/edit_category/<int:category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
+    # Pull the category for editing
     category = Category.query.get_or_404(category_id)
 
     if request.method == "POST":
+        # Edit category
         category.category = request.form.get("category").lower(),
         db.session.commit()
         flash("The category has been edited successfully.")
@@ -72,17 +81,20 @@ def edit_category(category_id):
 
 @app.route("/delete_category/<int:category_id>", methods=["GET", "POST"])
 def delete_category(category_id):
+    # Pull the category for deleting
     category = Category.query.get_or_404(category_id)
-
-    db.session.delete(category)       
+    # Delete category
+    db.session.delete(category)
     db.session.commit()
     flash("The category has been deleted successfully")
-    return redirect(url_for("categories"))   
-  
+    return redirect(url_for("categories"))
+
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
+    # Pull the data from HTML
     query = request.form.get("query").lower()
+    # Filter database for the work from HTML
     all_projects = list(
         SewingWorks.query.filter(
             or_(
@@ -90,18 +102,21 @@ def search():
                     '%{}%'.format(query)), SewingWorks.category.like(
                         '%{}%'.format(query)), SewingWorks.fabric_type.like(
                             '%{}%'.format(query)))).all())
-            
+
+    # coun the number of results
     results = len(all_projects)
 
     if results > 0:
+        # Show how many results were found
         flash("No. of results found for '{}': {}".format(query, results))
         return render_template(
-            "index.html", all_projects=all_projects, results=results)     
+            "index.html", all_projects=all_projects, results=results)
     else:
+        # When no match was found - show flash message
         flash("Sorry! No results for '{}'".format(query))
         flash("Please try another search.")
         return render_template(
-            "index.html", all_projects=all_projects, results=results)  
+            "index.html", all_projects=all_projects, results=results)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -113,7 +128,7 @@ def register():
 
         # If username already exists - notifly user with flash message
         if existing_user:
-            flash("This username already exists.") 
+            flash("This username already exists.")
             flash("Please choose another username or log in")
             return redirect(url_for("register"))
 
@@ -127,7 +142,6 @@ def register():
         # Add to database
         db.session.add(newuser)
         db.session.commit()
-
         flash("Registration successful")
         return redirect(url_for("login"))
 
@@ -154,12 +168,12 @@ def login():
                         username=session["user"]))
 
             else:
-                flash("Incorrect Username and/or Password") 
-                return redirect(url_for("login"))   
+                # when username doesn't exist in database show flash message
+                flash("Incorrect Username and/or Password")
+                return redirect(url_for("login"))
 
         else:
-            flash("Incorrect Username and/or Password")       
-
+            flash("Incorrect Username and/or Password")
     return render_template("login.html")
 
 
@@ -174,10 +188,11 @@ def logout():
 @app.route("/my_projects")
 def my_projects():
     if "user" in session:
+        # Filter Sewingworks by user
         username = session["user"]
         user = Users.query.filter_by(username=username).first()
         my_projects = list(SewingWorks.query.filter_by(users_id=user.id).all())
-       
+
     return render_template("my_projects.html", my_projects=my_projects)
 
 
@@ -209,13 +224,14 @@ def add_project():
 
             return redirect(url_for("add_project"))
 
-        # Get the session user name 
+        # Get the session user name
         # Filter for the session username in database
-        # Get user id for user_id 
+        # Get user id for user_id
         username = session["user"]
         user = Users.query.filter_by(username=username).first()
 
         if user:
+            # Add project if user is registered
             project = SewingWorks(
                 project_name=request.form.get("projectname").lower(),
                 category=request.form.get("category").lower(),
@@ -239,11 +255,14 @@ def add_project():
 
 @app.route("/edit_project/<int:sewingwork_id>", methods=["GET", "POST"])
 def edit_project(sewingwork_id):
+    # Pull project for editing
     sewingwork = SewingWorks.query.get_or_404(sewingwork_id)
     categories = Category.query.all()
 
     try:
+        # Edit project if user is logged in
         if request.method == "POST":
+            # Pull user id to add to add sewingwork user ID
             username = session["user"]
 
             user = Users.query.filter_by(username=username).first()
@@ -267,12 +286,13 @@ def edit_project(sewingwork_id):
                 "Your project has been edited successfully ."
                 )
             return redirect(url_for("my_projects"))
-        
+
         username = session["user"]
 
         user = Users.query.filter_by(username=username).first()
 
         if user.id == sewingwork.users_id or user.id == 1:
+            # Only allow post owner or an admin to edit the project
             return render_template(
                 "edit_project.html", project=sewingwork, categories=categories)
         else:
@@ -282,26 +302,29 @@ def edit_project(sewingwork_id):
         flash("You must be logged in to edit posts")
         return redirect(url_for("login"))
 
-        
+
 @app.route("/delete_project/<int:sewingwork_id>")
-def delete_project(sewingwork_id): 
+def delete_project(sewingwork_id):
+    # Pull project to be deleted
     sewingwork = SewingWorks.query.get_or_404(sewingwork_id)
-        
-    db.session.delete(sewingwork)       
+
+    # Delete project
+    db.session.delete(sewingwork)
     db.session.commit()
     flash("The post has been deleted successfully")
     return redirect(url_for("my_projects"))
 
-   
+
 @app.route("/add_comment/<int:sewingwork_id>", methods=["POST"])
 def add_comment(sewingwork_id):
     if request.method == "POST":
+        # Get the user and project that is being commented
         username = session["user"]
-      
+
         user = Users.query.filter_by(username=username).first()
         sewingwork = SewingWorks.query.get_or_404(sewingwork_id)
         comments = list(Comments.query.all())
-        
+
         if user:
             comment = Comments(
                 comment=request.form.get("comment"),
@@ -317,10 +340,12 @@ def add_comment(sewingwork_id):
 
 @app.route("/edit_comment/<int:comment_id>", methods=["GET", "POST"])
 def edit_comment(comment_id):
+    # Get the comment to be edited
     comment = Comments.query.get_or_404(comment_id)
     commented_sewingwork = comment.comment_worksid
-        
+
     if request.method == "POST":
+        # Edit the comment
         comment.comment = request.form.get("comment").lower(),
 
         db.session.commit()
@@ -330,10 +355,12 @@ def edit_comment(comment_id):
 
 @app.route("/delete_comment/<int:comment_id>", methods=["GET", "POST"])
 def delete_comment(comment_id):
+    # Get the comment to be deleted
     comment = Comments.query.get_or_404(comment_id)
     commented_sewingwork = comment.comment_worksid
 
-    db.session.delete(comment)       
+    # Delete the comment
+    db.session.delete(comment)
     db.session.commit()
     flash("The comment has been deleted successfully")
     return redirect(url_for("project", sewingwork_id=commented_sewingwork))

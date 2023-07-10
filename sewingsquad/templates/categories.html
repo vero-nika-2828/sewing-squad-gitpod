@@ -2,7 +2,7 @@
 {% block header %} Categories {% endblock %}
 {% block content %}
 <div class="row">
-    <!--Form to add project-->
+    <!--Form to add category-->
     <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('add_category') }}">
         <div class="card-panel row red lighten-5">
             <div class="row">
@@ -34,11 +34,12 @@
 </div>
 
 <div class="row ">
+    <!--Card list-->
     <div class="card-panel col s12 m8 offset-m2 red lighten-5">
         <div class="row center-align">
             <h4>Category list</h4>
         </div>
-        
+           
         <div class="row categorylist-margin">
             <ul>
                 {% for category in categories %}
