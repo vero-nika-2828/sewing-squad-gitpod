@@ -1,10 +1,10 @@
 # *Sewing Squad* 
 
 
-![Overview](./assets/readme%20_docs/project_image.JPG)
+![Overview](./sewingsquad/static/images/readme_docs/responsive_design.JPG)
 
 
-Link to the page: [Sewing Squad](https://vero-nika-2828.github.io/yasmin-jas-photography/)
+Link to the page: [Sewing Squad](http://sewing-squad-a989d3fdde75.herokuapp.com/)
 
 
 # Project Overview
@@ -239,10 +239,25 @@ The images used by copying email addresses from etsy and other google search. Im
 
 * The button directs the user to Add project page
 
-### Hero image
+### Hero image 
+
+* Indicates to the user what the website is for
+* Takes up about 1/3 of the sreensize to allow content hinting
+
 ### Title
+
+* The company name, Sewing Squad, denotes that this website is for a community of sewers
+
 ### Slogan
+
+* Serves to catch attention of the user and suggest that the website is for people who want to sew their own clothes and then wear it
 ### Search
+
+* Allows users to find posts quickly
+* The users can search by name, category or fabric type
+* When the search is successful a message with the number of posts containing the search word
+* When the search is not successful a message will appear informing the user that nothing was found for that word
+
 ###	Cards 
 
 
