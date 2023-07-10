@@ -5,7 +5,7 @@
             <div class="row valign-wrapper center-align">
                 <div class="input-field col s 12 m8">
                     <i class="material-icons prefix center-align">search</i>
-                    <input id="query" name="query" type="text" minlenght="3" class="validate" required>
+                    <input id="query" name="query" type="text" class="validate" required minlenght="3">
                     <label for="query">Search</label>
                 </div>
             </div>
@@ -31,11 +31,11 @@
                 <div class="col s12 m6 l4">
                     <div class="card hoverable">
                         <div class="card-image primary-image">
-                            <img src="{{ project.photo_URL }}">   
+                            <img src="{{ project.photo_URL }}" alt="Card image">   
                         </div>
 
                         <div class="card-image secondary-image">
-                            <img src="{{ project.secondaryphoto_URL }}">   
+                            <img src="{{ project.secondaryphoto_URL }}"alt="Second card image">   
                         </div>
 
 

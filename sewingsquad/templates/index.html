@@ -15,7 +15,7 @@
                             <div class="row valign-wrapper center-align">
                                 <div class="input-field col s12 m12">
                                     <i class="material-icons prefix center-align">search</i>
-                                    <input id="query" name="query" type="text" minlenght="3" class="validate" required>
+                                    <input id="query" name="query" type="text" class="validate" required minlenght="3">
                                     <label for="query" id="query-label" class="text-small text-large-on-large">Search by name, category, fabric</label>
                                 </div>
                             </div>
@@ -34,19 +34,16 @@
     {% block header %} All projects {% endblock %}
 
     {% block content %}
-
-
-
             <div class="row">
                 {% for post in all_projects %}
                     <div class="col s12 m6 l4 min-height">
                         <div class="card hoverable">
                             <div class="card-image primary-image">
-                                <img src="{{ post.photo_URL }}">   
+                                <img src="{{ post.photo_URL }}" alt="Card image">   
                             </div>
 
                             <div class="card-image secondary-image">
-                                <img src="{{ post.secondaryphoto_URL}}">   
+                                <img src="{{ post.secondaryphoto_URL}}" alt="Second image">   
                             </div>
 
                             <div class="card-content">
@@ -56,7 +53,7 @@
                                 <p><span class="text-space">Fabric type:</span> {{ post.fabric_type.capitalize() }}</p>
                                 <p><span class="text-space">Fabric quantity:</span> {{ post.fabric_quantity }} cm</p>
                                 <p><span class="text-space">Posted by:</span> {{ post.users.username }}</p>
-                                <a href="{{ url_for('project', sewingwork_id=post.id)}}"aria-label="See more information">
+                                <a href="{{ url_for('project', sewingwork_id=post.id)}}" aria-label="See more information">
                                     See more info...
                                 </a>
                             </div>

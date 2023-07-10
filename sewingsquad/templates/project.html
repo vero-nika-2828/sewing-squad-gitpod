@@ -76,6 +76,8 @@
                 </div>
 
             </div>
+        
+    </div>
      
 
 
@@ -112,7 +114,7 @@
                                             <div class="card-panel row red lighten-5">
                                                 <div class="row">
                                                     <div class="input-field col s12 ">
-                                                        <textarea id="comment" name="comment" type="text" rows="4" cols="50" class="validate" required>{{ comment.comment }}</textarea>
+                                                        <textarea name="comment" type="text" rows="4" cols="50" class="validate" required>{{ comment.comment }}</textarea>
                                                     </div>
                                                 </div>
                         
@@ -165,7 +167,7 @@
                     <div class="card-panel row red lighten-5">
                         <div class="row">
                             <div class="input-field col s12 comment">
-                                <textarea id="comment" name="comment" type="text" rows="4" cols="50" class="validate" required></textarea>
+                                <textarea id="comment" name="comment" rows="4" cols="50" class="validate" required></textarea>
                                 <label for="comment">Add your comment here</label>
                             </div>
                         </div>
@@ -187,7 +189,8 @@
                     </div>
                 </form>
             </div>
-        </div>
-    </div>
+     </div>
+    
+    
    
 {% endblock %}

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Sewing squad is a community of people who are passionate about sewing and making their own clothes" />
+    <meta name="description" content="Sewing squad is a community of people who are passionate about sewing and making their own clothes" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -40,7 +40,7 @@
             <nav>
                 <!--Nav bar on larger screens-->
                 <div class="row nav-wrapper">
-                    <a href="{{ url_for('home')}}" class="left brand-logo margin-left margin-right "> <span class="left">Sewing </span><i class="fa-solid fa-people-group margin-left margin-top"></i></span> Squad</a>
+                    <a href="{{ url_for('home')}}" class="left brand-logo margin-left margin-right "> <span class="left">Sewing <i class="fa-solid fa-people-group margin-left margin-top"></i></span> Squad</a>
                     <a href="#" data-target="slide-out" class="right sidenav-trigger"><i class="material-icons">menu</i></a>
                               
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -48,7 +48,7 @@
                         <li><a href="{{ url_for('about') }}">About</a></li>
                         {% if session.user %}
                             <li><a href="{{ url_for('my_projects') }}">My Projects</a></li>
-                            <li><a href="{{ url_for('add_project') }}">Add project</a></li>
+                            <li><a href="{{ url_for('add_project') }}">Add Project</a></li>
                             {% if session["user"] == 'admin' %} 
                                 <li><a href="{{ url_for('categories') }}">Categories</a></li>
                             {% endif %}
@@ -77,7 +77,7 @@
             <li><a href="{{ url_for('about') }}">About</a></li>
             {% if session.user %}
                 <li><a href="{{ url_for('my_projects') }}">My Projects</a></li>
-                <li><a href="{{ url_for('add_project') }}">Add project</a></li>
+                <li><a href="{{ url_for('add_project') }}">Add Project</a></li>
                 {% if session["user"] == 'admin' %} 
                     <li><a href="{{ url_for('categories') }}">Categories</a></li>
                 {% endif %}
@@ -106,9 +106,9 @@
     </section> 
 
 
-    <section>
+    <div>
         <h3 class="center-align text-roboto dark-color">{% block header %} {% endblock %}</h3>
-    </section>
+    </div>
  
     <main class="container">
         {% block content%}.

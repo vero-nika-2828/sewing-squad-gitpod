@@ -14,16 +14,16 @@
                 </div>
             </div>
 
-            <div class="input-field col s10 m8 offset-m2" required>
+            <div class="input-field col s10 m8 offset-m2">
                 <i class="material-icons prefix">category</i>
-                <select id="category" name="category" type="text">
+                <select id="category" name="category" >
                     <option value="{{ project.category }}" selected>{{ project.category.capitalize() }}</option>
                     {% for category in categories %}
                       <option value={{category}}>{{category }}</option>
                     {% endfor %}
                 </select>
                 <label>Category <span>*</span></label>
-              </div>
+            </div>
 
               <div class="row">
                 <div class="input-field col s10 m8 offset-m2">
@@ -108,8 +108,9 @@
             </div>
 
 
-        </div>
       </div>
     </form>
+</div>
+    
 
 {% endblock %}
