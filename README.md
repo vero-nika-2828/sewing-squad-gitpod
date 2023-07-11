@@ -389,31 +389,86 @@ The images used by copying email addresses from etsy and other google search. Im
 ### Comment 
 
 * User can add, edit and delete comment 
-
-![Project page](./sewingsquad/static/images/readme_docs/project/project_page_small_devices2.PNG)
-
+* Edit and delete button are shown as icons 
+* Add function has it's own secion with input field
 * Users comment will appear under the project content
+
+
+![Project comment section](./sewingsquad/static/images/readme_docs/project/project_page_comment.PNG)
+
+
 * User will be notified when adding, editing will be successful
 
-![Project page](./sewingsquad/static/images/readme_docs/project/project_page_small_devices2.PNG)
+![Comment adding successful](./sewingsquad/static/images/readme_docs/project/comment_add_successful.PNG)
+![Comment edit successful](./sewingsquad/static/images/readme_docs/project/comment_edit_successful.PNG)
 
 * When the user clicks on delete icon a modal will appear asking them to confirm deletion
-* When the user clicks "Yes" button the comment will get deleted and they will be notified about that
+* When the user clicks "Yes" button the comment will get deleted and they will be notified about that with a flash message
 * When the user clicks "No" button they will be redicrect to project page
 
-![Project page](./sewingsquad/static/images/readme_docs/project/project_page_small_devices2.PNG)
+![Project page](./sewingsquad/static/images/readme_docs/project/comment_delete.PNG)
+![Project page](./sewingsquad/static/images/readme_docs/project/comment_delete_successful.PNG)
 
-* Edit button will open a modal prepopulated with the current comment 
+* Edit button will open a modal pre-populated with the current comment 
 
-![Project page](./sewingsquad/static/images/readme_docs/project/project_page_small_devices2.PNG)
+![Project page](./sewingsquad/static/images/readme_docs/project/project_page_comment_edit.PNG)
 
 * Relates to following user stories: 19
 
 ## Categories (admin only)
 
+* Only visible to admin
+* Admin login details -> username: admin, password: adminss123
+* Opens when admin click on Categories link in nav bar
+* Contains a section where admin can add the category
+* Containes a list of added categories 
+* Admin can add, edit and delete categories
+* Edit and delete button are shown as icons 
+
+![Category](./sewingsquad/static/images/readme_docs/category/category.PNG)
+
+* Admin will be notified when adding, editing of categories will be successful
+
+![Category adding successful](./sewingsquad/static/images/readme_docs/category/categories_add_successful.PNG)
+![Category edit successful](./sewingsquad/static/images/readme_docs/category/categories_edit_successful.PNG)
+
+* When the user clicks on delete icon a modal will appear asking them to confirm deletion
+* When the user clicks "Yes" button the comment will get deleted and they will be notified about that with a flash message
+* When the user clicks "No" button they will be redicrect to project page
+
+![Delete category modal](./sewingsquad/static/images/readme_docs/category/categories_delete.PNG)
+![Delete successful](./sewingsquad/static/images/readme_docs/category/categories_delete_successful.PNG)
+
+* Edit button will open in a separate page and input field will be pre-populated with text from database
+
+![Edit ](./sewingsquad/static/images/readme_docs/category/categories_edit.PNG)
+
+* Relates to following user stories: 31, 35, 40
+
 ## About page
 
+* gives the user more details on what the website is for
+* register link directs the user to register page so they can get started
+
+![ About page ](./sewingsquad/static/images/readme_docs/about.PNG)
+
+* Relates to following user stories: 1
+ 
+
 ## Log out
+
+* is situation in the far right of the nav bar
+* logs the user out of their account and notifies them with a flash message
+
+![ Loggout ](./sewingsquad/static/images/readme_docs/logout.PNG)
+
+* Relates to following user stories: 15, 18, 30, 32
+
+## 404 and 505 error page
+
+* Opens when user tries to access a website or data that doesn't exist
+![ 404 and 500 error ](./sewingsquad/static/images/readme_docs/404_500_error.PNG)
+* Relates to following user stories: 15, 18, 30, 32
 
 ## Logo and Navigations Bar
 
@@ -424,7 +479,7 @@ The images used by copying email addresses from etsy and other google search. Im
 * Links to other pages are placed on the right to maintain the conventions expected by the user
 * Navigation menu will turn into hamburger menu on smaller devices
 * Hamburger menu opens to show list of other pages
-* Relates to following user stories:
+* Relates to following user stories: 15, 18, 44
 
 
 ![Header desktop](./sewingsquad/static/images/readme_docs/header_and_footer/header_desktop.PNG)
@@ -438,7 +493,7 @@ The images used by copying email addresses from etsy and other google search. Im
 * Links open in a new tab
 * Links get bigger when hovered over for easier navigation
 * Link description added for accessibility and SEO
-* Relates to following user stories: 
+* Relates to following user stories: 15, 18 
 
 ![Footer](./sewingsquad/static/images/readme_docs/header_and_footer/footer.PNG)
 
