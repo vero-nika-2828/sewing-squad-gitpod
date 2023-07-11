@@ -337,6 +337,7 @@ The images used by copying email addresses from etsy and other google search. Im
 ![Edit Successful Message](./sewingsquad/static/images/readme_docs/edit_project/edit_confirmation.PNG)
 
 * User must be logged in to edit the post and must be the owner of the post otherwise they will receive a flash message
+* Admin can edit all the posts
 
 ![No permission to edit](./sewingsquad/static/images/readme_docs/edit_project/edit_no_permission.PNG)
 ![Must be logged in to edit](./sewingsquad/static/images/readme_docs/edit_project/edit_logged_out_user.PNG)
@@ -365,13 +366,50 @@ The images used by copying email addresses from etsy and other google search. Im
 
 ## Project page
 
-## Content 
-*project page 
+### Content 
+* Contains project image, description and details instrutions 
+* The above sections will get bellow each other on smaller devices 
+* Image will change when next or previous button are clicked
+* Relates to following user stories: 27, 28, 31, 42
 
-### View All projects button
-### View My projects button
+![Project page large devices](./sewingsquad/static/images/readme_docs/project/project_page.PNG)
+![Project page large devices second picture](./sewingsquad/static/images/readme_docs/project/project_page_second_image.PNG)
 
-## Categories
+![Project page small devices](./sewingsquad/static/images/readme_docs/project/project_page_small_devices.PNG)
+![Project page small devices](./sewingsquad/static/images/readme_docs/project/project_page_small_devices2.PNG)
+
+### View All projects or My projects button
+
+* View All projects button directs user to Home page
+* View My projects button directs user to Home page
+* Relates to following user stories: 15, 18
+
+![Project page](./sewingsquad/static/images/readme_docs/project/project_page_navigation_buttons.PNG)
+
+### Comment 
+
+* User can add, edit and delete comment 
+
+![Project page](./sewingsquad/static/images/readme_docs/project/project_page_small_devices2.PNG)
+
+* Users comment will appear under the project content
+* User will be notified when adding, editing will be successful
+
+![Project page](./sewingsquad/static/images/readme_docs/project/project_page_small_devices2.PNG)
+
+* When the user clicks on delete icon a modal will appear asking them to confirm deletion
+* When the user clicks "Yes" button the comment will get deleted and they will be notified about that
+* When the user clicks "No" button they will be redicrect to project page
+
+![Project page](./sewingsquad/static/images/readme_docs/project/project_page_small_devices2.PNG)
+
+* Edit button will open a modal prepopulated with the current comment 
+
+![Project page](./sewingsquad/static/images/readme_docs/project/project_page_small_devices2.PNG)
+
+* Relates to following user stories: 19
+
+## Categories (admin only)
 
 ## About page
 
