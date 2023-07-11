@@ -42,7 +42,7 @@ def add_category():
 
         if existing_category:
             # If category exists show flash message
-            flash("Sorry! This category already exist")
+            flash("Sorry! This category already exist.")
             flash("Please use a unique name.")
 
             return redirect(url_for("add_category"))
@@ -73,7 +73,7 @@ def edit_category(category_id):
         # Edit category
         category.category = request.form.get("category").lower(),
         db.session.commit()
-        flash("The category has been edited successfully.")
+        flash("The category has been edited successfully")
         return redirect(url_for("categories"))
 
     return render_template("edit_category.html", category=category)
@@ -129,7 +129,7 @@ def register():
         # If username already exists - notifly user with flash message
         if existing_user:
             flash("This username already exists.")
-            flash("Please choose another username or log in")
+            flash("Please choose another username or log in.")
             return redirect(url_for("register"))
 
         newuser = Users(

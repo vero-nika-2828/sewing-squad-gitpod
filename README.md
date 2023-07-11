@@ -281,12 +281,45 @@ The images used by copying email addresses from etsy and other google search. Im
 
 * At the bottom of the card
 * Contains two buttons with option to edit or delete the post
-* Edit form button opens edit form
+* Edit form button opens edit form (for more details see Edit Project Form section)
 * Delete button opens delete form
 * Relate to following user stories: 15
 
 ![Card](./sewingsquad/static/images/readme_docs/home_and_my_project_page/card.PNG)
-![Card - hover efferct](./sewingsquad/static/images/readme_docs/home_and_my_project_page/card-hover.PNG)
+![Card - hover effect](./sewingsquad/static/images/readme_docs/home_and_my_project_page/card-hover.PNG)
+
+## Add Project Form
+
+* It will open when Add Project link in nav bar or add project button in My Project page is clicked
+* It contains 10 input fields
+* There is one field with drop down selection option and the rest gets filled up by typing values in. 
+* Labels and icons aid intuitive navigation for better user experience
+
+![Add project part 1](./sewingsquad/static/images/readme_docs/add_project/add_project.PNG)
+![Add project part 2](./sewingsquad/static/images/readme_docs/add_project/add_project2.PNG)
+
+* Helper text prompts the user to separate each instruction step with full-stop
+
+![Helper text](./sewingsquad/static/images/readme_docs/add_project/helper_text.PNG)
+
+* A form with empty fields will not be submitted and a message prompting the user to fill the field will appear (see register section for more information)
+* The project name must be unique in order to prevent duplicated entries. The users who use existing project name will get notified by flash message: "This project already exists.."
+
+![Duplicted project name](./sewingsquad/static/images/readme_docs/add_project/duplicated_project_name.PNG)
+
+* Add Project button will perform the upload of data to database
+* Back button will take the user back My project page
+
+![Duplicted project name](./sewingsquad/static/images/readme_docs/add_project/add_project_button.PNG)
+
+* Relates to following user stories: 3, 7, 8, 15, 18, 23, 24, 34, 36
+
+
+## Edit From
+## Delete button
+
+
+
 
 
 ## Logo and Navigations Bar
