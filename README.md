@@ -2,6 +2,8 @@
 
 
 ![Overview](./sewingsquad/static/images/readme_docs/responsive_design.JPG)
+![Overview](./sewingsquad/static/images/readme_docs/responsive_design2.PNG)
+![Overview](./sewingsquad/static/images/readme_docs/responsive_design3.PNG)
 
 
 Link to the page: [Sewing Squad](http://sewing-squad-a989d3fdde75.herokuapp.com/)
@@ -146,9 +148,10 @@ The images used by copying email addresses from etsy and other google search. Im
 
 ## User Journey
 
-![User journey legend](./sewingsquad/static/images/readme_docs/database_and_user_journey/user_journey_legend2.PNG)
-![User journey Part1](./sewingsquad/static/images/readme_docs/database_and_user_journey/user_journey11.PNG)
-![User journey Part2](./sewingsquad/static/images/readme_docs/database_and_user_journey/user_journey12.PNG)
+![User journey legend](./sewingsquad/static/images/readme_docs/database_and_user_journey/user_journey_legend.PNG)
+![User journey Part1](./sewingsquad/static/images/readme_docs/database_and_user_journey/user_journey1.PNG)
+![User journey Part2](./sewingsquad/static/images/readme_docs/database_and_user_journey/user_journey2.PNG)
+
 
 
 ## Database Scheme 
