@@ -603,3 +603,44 @@ label > span {
   }
 
 }
+
+@media screen and (max-height: 690px){
+  .title-container h1{
+    font-size: 3rem;
+  }
+
+  .title-icon {
+    font-size: 3rem;
+    padding-top: unset;
+  }
+
+  
+.title-container h5 {
+  font-size: 1rem;
+}
+}
+
+@media screen and (max-height: 570px){
+  .title-container h1{
+    font-size: 2.5rem;
+  }
+
+  .title-icon {
+    font-size: 2rem;
+    padding-left: unset;
+  }
+
+  .no-top-margin{
+    margin-top: unset;
+  }
+}
+
+@media screen and (max-height: 570px){
+  .title-container{
+    max-height: 50vh;
+  }
+
+  .header-title{
+    margin-bottom: 0;
+  }
+}

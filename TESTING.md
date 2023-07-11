@@ -5,28 +5,28 @@
 ### CSS Validator (W3C)
  * HTML Validator 
 
-   * base.html - pass
+
      <details>
-     <summary>Base HTML</summary>
+     <summary>Base HTML - pass</summary>
      <br>
 
      ![Base HMTL results](./sewingsquad/static/images/readme_docs/testing/W3C/home.PNG)
     
     </details>  
 
-   * index.html (Home) - pass
+
       <details>
-      <summary>Home</summary>
+      <summary>Home - pass</summary>
       <br>
 
       ![Home page results](./sewingsquad/static/images/readme_docs/testing/W3C/home.PNG)
 
       </details> 
 
-   * about.html - pass
+
 
       <details>
-      <summary>About</summary>
+      <summary>About - pass</summary>
       <br>
 
       ![About page test results](./sewingsquad/static/images/readme_docs/testing/W3C/about.PNG)
@@ -34,9 +34,8 @@
       </details> 
 
 
-   * login.html - pass
      <details>
-     <summary>Log In</summary>
+     <summary>Log In - pass</summary>
      <br>
 
      ![Log in test results ](./sewingsquad/static/images/readme_docs/testing/W3C/login.PNG)
@@ -44,77 +43,73 @@
     </details>  
 
     
-   * register.html - pass
+
      <details>
-     <summary>Register</summary>
+     <summary>Register - pass</summary>
      <br>
 
      ![Register page test reulst](./sewingsquad/static/images/readme_docs/testing/W3C/register.PNG)
 
     </details>  
 
-   * my_projects.html - pass
      <details>
-     <summary>My Projects</summary>
+     <summary>My Projects - pass</summary>
      <br>
 
      ![My projects page test reulst]()
 
     </details>      
 
-   * add_project.html - pass
+
      <details>
-     <summary>Add Project</summary>
+     <summary>Add Project - pass</summary>
      <br>
 
      ![Add project page test reulst]()
 
     </details>  
 
-   * edit_project.html - pass
      <details>
-     <summary>Edit Project</summary>
+     <summary>Edit Project - pass</summary>
      <br>
 
      ![Edit Project page test reulst](./sewingsquad/static/images/readme_docs/testing/W3C/edit_project.PNG)
 
     </details>  
 
-   * project.html - pass
      <details>
-     <summary>Project</summary>
+     <summary>Project - pass </summary>
      <br>
 
      ![Project page test reulst](./sewingsquad/static/images/readme_docs/testing/W3C/project.PNG)
 
     </details>  
 
-   * categories.html - pass
+
      <details>
-     <summary>Categories</summary>
+     <summary>Categories - pass</summary>
      <br>
 
      ![Categories page test reulst](./sewingsquad/static/images/readme_docs/testing/W3C/categories.PNG)
 
     </details>  
 
-   * edit_category.html - pass
      <details>
-     <summary>Edit Category</summary>
+     <summary>Edit Category - pass</summary>
      <br>
 
      ![Edit Category page test reulst](./sewingsquad/static/images/readme_docs/testing/W3C/edit-category.PNG)
 
     </details>
 
-    * 404.html - pass
-        <details>
-        <summary>404 error</summary>
-        <br>
 
-        ![404 error page test reulst]()
+    <details>
+      <summary>404 error - pass</summary>
+      <br>
 
-        </details>      
+      ![404 error page test reulst]()
+
+     </details>      
       
 
     
@@ -726,11 +721,8 @@
  | When users fills in add project form and clicks add project it should upload data to database  | When users clicks add project button with project name which already is in database, it returns duplicte key error  | The project name unique key is set to True and therefore the project name must be unique. Code was added to add_project function  to first check whether this name already exists in database and show the flash message informing the user to choose another usernam| 
  | The user should not be able to edit project without being logged in | When user clicked on edit project without being logged in it returned Key Error | The code in edit_project function was wrapped in try-except block which will capture when the "user" key is not found in the session dictionary and return flash message infroming user that they must be logged in if they want to edit post. This ensures that the user-related code is only executed when the "user" key is found in the session dictionary. For more details see code in routes.py Line 256-303|
  | Cards should be placed next to each other | The cards were positioned with big gaps from each other leaving a lot of blank space | The materialize class had to be changed from l3 to l4 for large devices so the cards would take one third of the space
- | When the user clicks on the area where the matched cards used be it should not react| The animal sound was played when clicked on the area where matched pictures used to be and when clicked on two matching the sound was played |  Added condition to apply the cardTurns function only to those cards which don't have matched class
- | When match is found the cards fade out | The outline of the cards stayed visible  | Styling added to the card class (.card) to set the border to none |
- | When users clicks on the card and it flips only the front of the card should be visible| When card was flipped to the front of the card the white outline was visible in the background  | style property was added to remove the visibility of the front card when it flips|
- |It is not possible for the user to submit their score if the input field is empty | The text got submitted even when the user didn't enter their name | The 'save to scoreboard' button was disabled and an even listener was added to remove the disabled attribute when the key is up|
- | Time's up message appears on the screen when user doesn't find all the matched before time goes to 0 | The message kept appearing every second under the previous message | The variable timeCountdown was updated to global variable
+
+
 
 ### Known bugs
 There are no known bugs
