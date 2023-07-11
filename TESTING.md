@@ -443,9 +443,17 @@
 
 | User stories | Feature | Expected result | Actual result |
 |  :---| :---|  :---|  :---|
-| 19 | Add comment button | When I click add comment button, it adds the comment in th ecomment section above |  Works as expected |
+| 19 | Add comment button | When I click add comment button, it adds the comment in the comment section above |  Works as expected |
+| 19 | Clear button | When I click clear button, it clears the text area |  Works as expected |
+| 19 | Comment area | I can see mine and other user's comments |  Works as expected |
 | 19 | Comment button | When I click clear button, it clears the text area |  Works as expected |
-| 19 | Comment button | I can see mine and other user's comments |  Works as expected |
+| 19, 41 | Edit Comment icon| When I click edit icon (a pen)  next to my comment, edit form appears and I can change the text |  Works as expected |
+| 19, 41 | Edit Comment button| When I click edit button in the edit comment form, orignal post gets udpated|  Works as expected |
+| 19, 41 | Edit Comment icon| When I click edit icon (a pen)  next to someone else's comment, a message saying that I don't have permission appears |  Works as expected |
+| 19, 41 | Delete Comment icon| When I click edit icon (a pen)  next to my comment, modal window appers asking me to confirm whether I want to delete the comment |  Works as expected |
+| 19, 41 | Delete Comment Yes button| When I click Yes button, the comment gets deleted |  Works as expected |
+| 19, 41 | Delete  Comment icon| When I click delete icon,X,  next to someone else's comment, a message saying that I don't have permission appears |  Works as expected |
+
 
 </details> 
 
@@ -456,8 +464,8 @@
 
 | User stories | Feature | Expected result | Actual result |
 |  :---| :---|  :---|  :---|
-| 41 | 404. html | When the game is not found I am directed to the page that tell me that the page is not found |  Works as expected |
-| 42 | Back to the game button | When I click the back to the game button it takes me back to theMain menu  |  Works as expected |
+| 7 | 404 page| When I click on the page that doesn’t exist, it brings me to the page  |  Works as expected |
+| 15, 18 | Back to Home page button  | When I click "Back to main page "button, it brings me back to Home page  |  Works as expected |
 
 </details> 
 
@@ -469,10 +477,16 @@
 | User stories | Feature | Expected result | Actual result |
 |  :---| :---|  :---|  :---|
 | 35 | Add category | When I click add category, the category I wrote will appear in the category list |  Works as expected |
-| 40 | Edit button | When I click the back to the game button it takes me back to theMain menu  |  Works as expected |
-| 40 | Delete button | When I click the back to the game button it takes me back to theMain menu  |  Works as expected |
-| 31 | Edit project button  | When I click the back to the game button it takes me back to theMain menu  |  Works as expected |
-| 31 | Delete project button | When I click the back to the game button it takes me back to theMain menu  |  Works as expected |
+| 40 | Edit button | Only, I can edit categories  |  Works as expected |
+| 40 | Delete button | Only, I can delete and edit categories  |  Works as expected |
+| 31 | Edit button  | When I click edit project button of any user's project, edit form appears and I can edit the content |  Works as expected |
+| 31 | Edit project button  | When I click edit project button the content of original project updates |  Works as expected |
+| 31 | Delete project button | When I click delete button of any user's project, a modal appears asking me to confirm whether I want to delete it  |  Works as expected |
+| 31 | Delete project - Yes button | When I click Yes in delete modal of any project, it gets deleted  |  Works as expected |
+| 31 | Edit comment icon | When I click edit comment icon an edit fomr opens |  Works as expected |
+| 31 | Edit comment button| When I click edit comment  button, orignal comment changes |  Works as expected |
+| 31 | Delete comment icon | When I click delete comment icon, X, of any user's comment, a modal appears asking me to confirm whether I want to delete it  |  Works as expected |
+| 31 | Delete comment icon - Yes button | When I click Yes in delete modal of any users's comment, it gets deleted  |  Works as expected |
 
 </details> 
 
@@ -703,3 +717,20 @@
 </details> 
       
 
+## Bugs
+
+### Solved bugs 
+ |  Expected |  Bug |  Fix |
+ |  :---| :---|  :---|
+ | In Edit form, the user should only need to amend the fields which they want to change the rest should stay the same with the prepopulated text | Once the user changes the fields which they wish to update and submit the edit button, ait will return null value error for category field  ![Null Value Error](./sewingsquad/static/images/readme_docs/testing/bugs/null_value_error.png) | Value {{ project.category }} was added to selected option for category in edit_project.html ![Null Value Error Fix](./sewingsquad/static/images/readme_docs/testing/bugs/null_value_error_fix.PNG) |
+ | When users fills in add project form and clicks add project it should upload data to database  | When users clicks add project button with project name which already is in database, it returns duplicte key error  | The project name unique key is set to True and therefore the project name must be unique. Code was added to add_project function  to first check whether this name already exists in database and show the flash message informing the user to choose another usernam| 
+ | The user should not be able to edit project without being logged in | When user clicked on edit project without being logged in it returned Key Error | The code in edit_project function was wrapped in try-except block which will capture when the "user" key is not found in the session dictionary and return flash message infroming user that they must be logged in if they want to edit post. This ensures that the user-related code is only executed when the "user" key is found in the session dictionary. For more details see code in routes.py Line 256-303|
+ | Cards should be placed next to each other | The cards were positioned with big gaps from each other leaving a lot of blank space | The materialize class had to be changed from l3 to l4 for large devices so the cards would take one third of the space
+ | When the user clicks on the area where the matched cards used be it should not react| The animal sound was played when clicked on the area where matched pictures used to be and when clicked on two matching the sound was played |  Added condition to apply the cardTurns function only to those cards which don't have matched class
+ | When match is found the cards fade out | The outline of the cards stayed visible  | Styling added to the card class (.card) to set the border to none |
+ | When users clicks on the card and it flips only the front of the card should be visible| When card was flipped to the front of the card the white outline was visible in the background  | style property was added to remove the visibility of the front card when it flips|
+ |It is not possible for the user to submit their score if the input field is empty | The text got submitted even when the user didn't enter their name | The 'save to scoreboard' button was disabled and an even listener was added to remove the disabled attribute when the key is up|
+ | Time's up message appears on the screen when user doesn't find all the matched before time goes to 0 | The message kept appearing every second under the previous message | The variable timeCountdown was updated to global variable
+
+### Known bugs
+There are no known bugs
