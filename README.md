@@ -376,7 +376,6 @@ The images used by copying email addresses from etsy and other google search. Im
 ![Project page large devices second picture](./sewingsquad/static/images/readme_docs/project/project_page_second_image.PNG)
 
 ![Project page small devices](./sewingsquad/static/images/readme_docs/project/project_page_small_devices.PNG)
-![Project page small devices](./sewingsquad/static/images/readme_docs/project/project_page_small_devices2.PNG)
 
 ### View All projects or My projects button
 

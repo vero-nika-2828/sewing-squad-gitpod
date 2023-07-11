@@ -382,10 +382,6 @@ label > span {
     font-size: small!important;
   }
 
-  #comment-person-icon{
-    margin-right: 10px;
-  }
-
   .carousel {
     min-height: 18rem;
     max-height: 18rem;
@@ -402,7 +398,7 @@ label > span {
 
 @media screen and (min-width: 601px){
   #comment-person-icon{
-    margin-right: 20px;
+    margin-right: 10px;
   }
 
   .margin-top{
@@ -480,6 +476,10 @@ label > span {
     min-height: 28rem;
     max-height: 28rem;
   }
+
+  #comment-person-icon{
+    margin-right: 5px;
+  }
 }
 
 @media screen and (min-width: 993px){
@@ -553,6 +553,10 @@ label > span {
     max-height: 19rem;
   }
 
+  #comment-person-icon{
+    margin-right: -5px;
+  }
+
 }
 
 @media screen and (min-width: 1300px){
@@ -592,6 +596,10 @@ label > span {
 
   .carousel-button-next, .carousel-button-prev {
     margin-top: -24%;
+  }
+
+  #comment-person-icon{
+    margin-right: -15px;
   }
 
 }
