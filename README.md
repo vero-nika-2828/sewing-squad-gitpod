@@ -619,3 +619,27 @@ To fork the repository:
 10. Press enter 
 
 Alternatively, you can click on Download ZIP
+
+
+# Credits
+
+### Images
+
+Images were taken from Adobe Stock and Pixabay
+
+* OpenClipart-Vectors 
+   * [Picture (used for favicon)](https://pixabay.com/vectors/needle-sewing-thread-repair-pointy-312738/)
+ 
+
+* AM_art
+   * [Sewing- retro (used for background)](https://stock.adobe.com/uk/images/vector-hand-drawn-sewing-retro-set-collection-of-highly-detailed-hand-drawn-sewing-tools-isolated-on-background/509211487?asset_id=595878873)
+
+
+## Aknowledgement
+
+I would like to thank to following people who helped me along the way in completing this project: 
+* My Code Institute mentor, Mitko Bachvarov, for his valuable advice and comprehensive guidance
+* My tutor for being so patient with me and being there for me every time I had any questions
+* Oisin, Sarah and Holly from Tutor support for helping me with some issues I came across in my project
+* My family and friends for giving me moral support and for taking time to test the final version of the project
+
