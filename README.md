@@ -1,9 +1,7 @@
 # *Sewing Squad* 
 
 
-![Overview](./sewingsquad/static/images/readme_docs/responsive_design.JPG)
-![Overview](./sewingsquad/static/images/readme_docs/responsive_design2.PNG)
-![Overview](./sewingsquad/static/images/readme_docs/responsive_design3.PNG)
+![Overview](./sewingsquad/static/images/readme_docs/responsive_design.PNG)
 
 
 Link to the page: [Sewing Squad](http://sewing-squad-a989d3fdde75.herokuapp.com/)
@@ -234,14 +232,15 @@ The images used by copying email addresses from etsy and other google search. Im
 
 
 
-## My Projects page and Home page
+## My Projects 
 
 * My project page is visible only to logged-in user while home page is visible to everyone
 
-###	Add Project button (My projects only)
+###	Add Project button
 
 * The button directs the user to Add project page
 
+## Home page
 ### Hero image 
 
 * Indicates to the user what the website is for
@@ -261,10 +260,33 @@ The images used by copying email addresses from etsy and other google search. Im
 * When the search is successful a message with the number of posts containing the search word
 * When the search is not successful a message will appear informing the user that nothing was found for that word
 
-###	Cards 
+##	Card
 
+* Appears on My Projects and home page
+* When hovered over, the card will get shadows
+* Relate to following user stories: 9, 23, 37
 
+### Card Image
 
+* Shows the pictures added by the user
+* When hovered over, the images changes
+* Relate to following user stories: 12
+
+### Card Content
+
+* Contains title and short description
+* Relate to following user stories: 11
+
+### Card action 
+
+* At the bottom of the card
+* Contains two buttons with option to edit or delete the post
+* Edit form button opens edit form
+* Delete button opens delete form
+* Relate to following user stories: 15
+
+![Card](./sewingsquad/static/images/readme_docs/home_and_my_project_page/card.PNG)
+![Card - hover efferct](./sewingsquad/static/images/readme_docs/home_and_my_project_page/card-hover.PNG)
 
 
 ## Logo and Navigations Bar
