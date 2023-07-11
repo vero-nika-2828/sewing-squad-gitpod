@@ -177,7 +177,7 @@ main {
   flex: 1 0 auto;
 }
 
-/*Catyegory list styling*/
+/*Category list styling*/
 .horizontal-list{
   display: flex;
 }
@@ -225,6 +225,12 @@ main {
   object-fit: cover;
   object-position:top;
   overflow: hidden;
+}
+
+/*Modal styling*/
+.modal {
+  padding: 24px;
+  border-radius: 25px;
 }
 
 /*Footer styling*/

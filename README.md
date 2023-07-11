@@ -290,7 +290,7 @@ The images used by copying email addresses from etsy and other google search. Im
 
 ## Add Project Form
 
-* It will open when Add Project link in nav bar or add project button in My Project page is clicked
+* It will open when user clicks on Add Project link in nav bar or add project button in My Project page
 * It contains 10 input fields
 * There is one field with drop down selection option and the rest gets filled up by typing values in. 
 * Labels and icons aid intuitive navigation for better user experience
@@ -316,11 +316,66 @@ The images used by copying email addresses from etsy and other google search. Im
 
 
 ## Edit From
+
+* Opens when user clicks on Edit button at the bottom of card in Home or My Project Page 
+
+![Edit project open button](./sewingsquad/static/images/readme_docs/edit_project/edit_project_open_button.PNG)
+
+* It contains 10 input fields
+* The input fields are pre-populated with current data for that project
+
+![Edit project form part 1](./sewingsquad/static/images/readme_docs/edit_project/edit_project.PNG)
+
+![Edit project form part 2](./sewingsquad/static/images/readme_docs/edit_project/edit_project2.PNG)
+
+* Edit Project button will trigger the update the project data in database when user clicks on it
+
+![Edit Project button](./sewingsquad/static/images/readme_docs/edit_project/edit_project_button.PNG)
+
+* The user will be notified when the project gets edit with flash message "Your project has been edited successfully and they will be redirected to My project page
+
+![Edit Successful Message](./sewingsquad/static/images/readme_docs/edit_project/edit_confirmation.PNG)
+
+* User must be logged in to edit the post and must be the owner of the post otherwise they will receive a flash message
+
+![No permission to edit](./sewingsquad/static/images/readme_docs/edit_project/edit_no_permission.PNG)
+![Must be logged in to edit](./sewingsquad/static/images/readme_docs/edit_project/edit_logged_out_user.PNG)
+
+* Relates to following user stories: 3, 7, 15, 18, 25, 39, 41 
+
 ## Delete button
 
+* Modal opens when user clicks on Delete button at the bottom of card in Home or My Project Page 
 
+![Card Delete button](./sewingsquad/static/images/readme_docs/delete/delete_button_open_modal.PNG)
 
+* Users can only delete their own posts. If user tries to delete someone else's post the flass message notifying them will appear 
 
+![No permission to delete ](./sewingsquad/static/images/readme_docs/delete/delete_modal_no_permission.PNG)
+
+* When the delete button is clicked, a user will be prompted to confirm whether they want to delete the post 
+* When user clicks Yes button they the post will be deleted and they notified about it with flash message saying
+* When user clicks No button they be redirected back to Home or My project page
+
+![Confirm deletion ](./sewingsquad/static/images/readme_docs/delete/delete_modal_confirm_deletion.PNG)
+![Delete successful](./sewingsquad/static/images/readme_docs/delete/delete_successful.PNG)
+
+* Admin can delete all the posts
+* Relates to following user stories: 27, 28, 31, 42
+
+## Project page
+
+## Content 
+*project page 
+
+### View All projects button
+### View My projects button
+
+## Categories
+
+## About page
+
+## Log out
 
 ## Logo and Navigations Bar
 
