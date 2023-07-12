@@ -16,17 +16,49 @@ Sewing Squad is a friendly community of people who share the same passion for se
 
 - [Project Overview](#project-overview)
 - [Project objectives](#project-objectives)
-   - [User Goals](#user-goals) 
-- [User Experience] 
+   - [User Goals](#user-goals)
+   - [Site Owner Goals](#site-owner-goals)  
+- [User Experience](#user-experience)
+   - [Target user](#target-user)  
+   - [First Time Visitor Goals](#first-time-visitor-goals)
+   - [Returning Visitor Goals](#returning-visitor-goals)
+   - [Returning Visitor Goals](#site-owner's-goals)      
 - [Design]
-- [Database Scheme & User Journey]
-- [Wireframes]
-- [Features]
-- [Technologies Used]
-- [Testing]
-- [Deployment & local development]
-- [Credits]
-- [Aknowledgement]
+   - [Design choices](#design-choicesr)  
+   - [Color Scheme](#color-scheme)
+   - [Typography](#typography)  
+   - [Imagery](#imagery)    
+- [Database Scheme & User Journey](#database-scheme-&-user-journey)
+   - [User Journey](#user-journey) 
+   - [Database Scheme](#database-scheme) 
+- [Wireframes](#wireframes)
+- [Features](#features)
+   - [Register page](#register-page)
+   - [Log in page](#log-in-page)
+   - [My projects](#my-projects)
+   - [Home page](#home-page)
+   - [search](#search)
+   - [card](#card)
+   - [Add Project Form](#add-project-form)
+   - [Edit Project Form](#edit-project-form)
+   - [Project page](#project-page)
+   - [Comment](#cooment)
+   - [Categories (admin only)](#categories-(admin-only))
+   - [About page](#about-page)
+   - [Log out](#log-out)
+   - [404 and 505 error page](#404-and-505-error-page)
+   - [Logo and Navigations Bar](#logo-and-navigations-bar)
+- [Technologies Used](#technologies-used)
+   - [Languages Used](#languages-used)
+   - [Frameworks, libraries and programs used](#frameworks,-libraries-and-programs-used)
+- [Testing](#testing)
+- [Deployment & local development](#deployment-&-local-development)
+   - [Deployment](#deployment)
+   - [Local Development](#local-development)
+      - [How to Fork](#how-to-fork)
+      - [How to Clone](#how-to-clone)
+- [Credits](#credits)
+- [Aknowledgement](#aknowledgement)
 
 # Project objectives
 
@@ -419,7 +451,7 @@ The images used by copying email addresses from Etsy.com and other google search
 * Relates to following user stories: 3, 7, 8, 15, 18, 23, 24, 34, 36
 
 
-## Edit From
+## Edit Project From
 
 * Opens when user clicks on Edit button at the bottom of card in Home or My Project Page 
 
