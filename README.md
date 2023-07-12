@@ -10,11 +10,23 @@ Link to the page: [Sewing Squad](http://sewing-squad-a989d3fdde75.herokuapp.com/
 # Project Overview
 
 
-Sewing Squad is a friendly community of people who share the same passion for sewing, making their own clothes. They desire to combine their skills together with those of others to not only become better seamsters/seamstresses themselves but to help others reach their potential. 
+Sewing Squad is a friendly community of people who share the same passion for sewing, making their own clothes and fashiong. They desire to combine their skills together with those of others to not only become better seamsters/seamstresses themselves but to help others reach their potential. The platform enables members to share their patterns, sewing instructions and tips on how to sew garments more effectively and how to adjust them to fit sewer's personal style. The squad consists of members of variety of ages, backgrounds and experience levels so everybody can benefit from being part of this community
 
-The platform facilitates /enables the members to share their patterns, sewing instructions and advice/tips on making the garment more customised/ to alter the garments to fit their style. The squad consists of members of variety of ages and experience levels.
+# Table of Content 
 
-
+- [Project Overview](#project-overview)
+- [Project objectives](#project-objectives)
+   -[User Goals](#puser-goals) 
+- [User Experience] 
+- [Design]
+- [Database Scheme & User Journey]
+- [Wireframes]
+- [Features]
+- [Technologies Used]
+- [Testing]
+- [Deployment & local development]
+- [Credits]
+- [Aknowledgement]
 
 # Project objectives
 
@@ -157,7 +169,7 @@ The images used by copying email addresses from Etsy.com and other google search
 ![Database Scheme](./sewingsquad/static/images/readme_docs/database_and_user_journey/database_scheme.PNG)
 
 
-## Wireframes
+# Wireframes
 <details>
 <summary>Register</summary>
 <br>
@@ -726,7 +738,7 @@ Images were taken from Adobe Stock and Pixabay
    * [Sewing- retro (used for background)](https://stock.adobe.com/uk/images/vector-hand-drawn-sewing-retro-set-collection-of-highly-detailed-hand-drawn-sewing-tools-isolated-on-background/509211487?asset_id=595878873)
 
 
-## Aknowledgement
+# Aknowledgement
 
 I would like to thank to following people who helped me along the way in completing this project: 
 * My Code Institute mentor, Mitko Bachvarov, for his valuable advice and comprehensive guidance

@@ -1896,10 +1896,8 @@ Full testing was performed on following web browsers:
    * Microsoft Explorer
    * Safari
    * Samsung browser
-   
-   
 
-
+   
 ## Bugs
 
 ### Solved bugs 
