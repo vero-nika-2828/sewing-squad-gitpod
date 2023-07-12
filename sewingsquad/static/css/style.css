@@ -633,9 +633,7 @@ label > span {
   .no-top-margin{
     margin-top: unset;
   }
-}
 
-@media screen and (max-height: 570px){
   .title-container{
     max-height: 50vh;
   }
@@ -643,4 +641,5 @@ label > span {
   .header-title{
     margin-bottom: 0;
   }
+
 }
