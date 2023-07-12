@@ -23,7 +23,7 @@ Sewing Squad is a friendly community of people who share the same passion for se
    - [First Time Visitor Goals](#first-time-visitor-goals)
    - [Returning Visitor Goals](#returning-visitor-goals)
    - [Returning Visitor Goals](#site-owner's-goals)      
-- [Design]
+- [Design](#design)  
    - [Design choices](#design-choicesr)  
    - [Color Scheme](#color-scheme)
    - [Typography](#typography)  
