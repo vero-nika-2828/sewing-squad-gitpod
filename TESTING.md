@@ -1182,7 +1182,7 @@
 
 
 <details>
-<summary> User 5:   Device -  Laptop Lenovo ThinkPad, Browser: Chrome, Microsoft Edge, Microsoft Explorer
+<summary> User 5:   Device -  Laptop: Lenovo ThinkPad P14S, Browser: Chrome, Microsoft Edge, Microsoft Explorer
 </summary>
 <br>
 
@@ -1412,7 +1412,7 @@
 </details> 
 
 <details>
-<summary> User 6:   Device -  Lapton Asus VivoBook, Browser: Mozilla Firefox and Chrome
+<summary> User 6:   Device -  Laptop: Asus VivoBook X542U, Browser: Mozilla Firefox and Chrome
 </summary>
 <br>
 
@@ -1872,7 +1872,33 @@
 
 </details> 
 
-      
+## Full testing
+
+Full testing was performed on following devices
+
+* Laptop: 
+    * Lenovo Thinpad P14S
+    * Asus VivoBook X542U
+
+* Mobile phone:
+   * Samsung Galaxy S9
+   * iPhone 13 mini
+   * iPhone 6S
+
+* Notepad:
+   * Apple iPad mini
+   * Samsung Galaxy Tab A8
+
+Full testing was performed on following web browsers:
+   * Chrome
+   * Mozilla Firefox
+   * Microsoft Edge
+   * Microsoft Explorer
+   * Safari
+   * Samsung browser
+   
+   
+
 
 ## Bugs
 
