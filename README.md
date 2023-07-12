@@ -140,7 +140,7 @@ Roboto was used as a general font for the website. Sacramento was used for logo 
 ![Font Roboto](./sewingsquad/static/images/readme_docs/color_and_font/font_roboto.PNG)
 ## Imagery
 
-The images used by copying email addresses from etsy and other google search. Image addresses are saved in the database.
+The images used by copying email addresses from Etsy.com and other google search. Image addresses are saved in the database.
 
 # Database Scheme & User Journey
 
@@ -155,6 +155,72 @@ The images used by copying email addresses from etsy and other google search. Im
 ## Database Scheme 
 
 ![Database Scheme](./sewingsquad/static/images/readme_docs/database_and_user_journey/database_scheme.PNG)
+
+
+## Wireframes
+<details>
+<summary>Main Menu</summary>
+<br>
+
+![Main Menu](./assets/readme_docs/wireframes/main-menu.png) 
+</details>
+
+<details>
+<summary>Main Menu - How to play</summary>
+<br>
+
+![Main Menu - How to play](./assets//readme_docs/wireframes/main-menu-how-to-play.png) 
+
+</details>
+
+<details>
+<summary>Main Menu - Play</summary>
+<br>
+
+![Main Menu - Play](./assets/readme_docs/wireframes/main-menu-play.png) 
+</details>
+
+<details>
+<summary>Main Menu - Scoreboard No Score</summary>
+<br>
+
+![Main Menu - Scoreboard No Score](./assets/readme_docs/wireframes/main-menu-score-board-no-score.png) 
+</details>
+
+<details>
+<summary>Main Menu - Scoreboard</summary>
+<br>
+
+![Main Menu - Scoreboard](./assets/readme_docs/wireframes/main-menu-score-board.png) 
+</details>
+
+<details>
+<summary>Level A1 -A2</summary>
+<br>
+
+![Level A1 -A2](./assets/readme_docs/wireframes/game-level-a1.png) 
+</details>
+
+<details>
+<summary>Level B1 -B2</summary>
+<br>
+
+![Level B1 -B2](./assets/readme_docs/wireframes/game-level-b1.png) 
+</details>
+
+<details>
+<summary>Win Modal</summary>
+<br>
+
+![Win modal](./assets/readme_docs/wireframes/well-done.png) 
+</details>
+
+<details>
+<summary>Time's up</summary>
+<br>
+
+![Time's up modal](./assets/readme_docs/wireframes/times-up.png) 
+</details>
 
 
 # Features
