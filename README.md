@@ -16,7 +16,7 @@ Sewing Squad is a friendly community of people who share the same passion for se
 
 - [Project Overview](#project-overview)
 - [Project objectives](#project-objectives)
-   -[User Goals](#puser-goals) 
+   - [User Goals](#user-goals) 
 - [User Experience] 
 - [Design]
 - [Database Scheme & User Journey]
