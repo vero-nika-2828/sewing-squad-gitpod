@@ -159,67 +159,74 @@ The images used by copying email addresses from Etsy.com and other google search
 
 ## Wireframes
 <details>
-<summary>Main Menu</summary>
+<summary>Register</summary>
 <br>
 
-![Main Menu](./assets/readme_docs/wireframes/main-menu.png) 
+![Register](./sewingsquad/static/images/readme_docs/wireframes/register.JPG)
 </details>
 
 <details>
-<summary>Main Menu - How to play</summary>
+<summary>Log in </summary>
 <br>
 
-![Main Menu - How to play](./assets//readme_docs/wireframes/main-menu-how-to-play.png) 
+![Log in](./sewingsquad/static/images/readme_docs/wireframes/login.JPG)
 
 </details>
 
 <details>
-<summary>Main Menu - Play</summary>
+<summary>Home</summary>
 <br>
 
-![Main Menu - Play](./assets/readme_docs/wireframes/main-menu-play.png) 
+![Home](./sewingsquad/static/images/readme_docs/wireframes/home.JPG)
 </details>
 
 <details>
-<summary>Main Menu - Scoreboard No Score</summary>
+<summary>My Projects</summary>
 <br>
 
-![Main Menu - Scoreboard No Score](./assets/readme_docs/wireframes/main-menu-score-board-no-score.png) 
+![My Projects](./sewingsquad/static/images/readme_docs/wireframes/my_projects.JPG)
 </details>
 
 <details>
-<summary>Main Menu - Scoreboard</summary>
+<summary>Add Project</summary>
 <br>
 
-![Main Menu - Scoreboard](./assets/readme_docs/wireframes/main-menu-score-board.png) 
+![Add Project](./sewingsquad/static/images/readme_docs/wireframes/add_project.JPG)
 </details>
 
 <details>
-<summary>Level A1 -A2</summary>
+<summary>Edit Project</summary>
 <br>
 
-![Level A1 -A2](./assets/readme_docs/wireframes/game-level-a1.png) 
+![Edit Project](./sewingsquad/static/images/readme_docs/wireframes/edit_project.JPG)
 </details>
 
 <details>
-<summary>Level B1 -B2</summary>
+<summary>Project</summary>
 <br>
 
-![Level B1 -B2](./assets/readme_docs/wireframes/game-level-b1.png) 
+![Project](./sewingsquad/static/images/readme_docs/wireframes/project.JPG)
 </details>
 
 <details>
-<summary>Win Modal</summary>
+<summary>About</summary>
 <br>
 
-![Win modal](./assets/readme_docs/wireframes/well-done.png) 
+![About](./sewingsquad/static/images/readme_docs/wireframes/about.JPG)
 </details>
 
 <details>
-<summary>Time's up</summary>
+<summary>Categories</summary>
 <br>
 
-![Time's up modal](./assets/readme_docs/wireframes/times-up.png) 
+![Categories](./sewingsquad/static/images/readme_docs/wireframes/categories.JPG)
+</details>
+
+<details>
+<summary>404 and 500 error</summary>
+<br>
+
+![404 and 500 error](./sewingsquad/static/images/readme_docs/wireframes/404_and_500_error.JPG)
 </details>
 
 
@@ -306,7 +313,11 @@ The images used by copying email addresses from Etsy.com and other google search
 
 * The button directs the user to Add project page
 
+
+![Add project button](./sewingsquad/static/images/readme_docs/home_and_my_project_page/add_project.JPG)
+
 ## Home page
+
 ### Hero image 
 
 * Indicates to the user what the website is for
@@ -319,12 +330,27 @@ The images used by copying email addresses from Etsy.com and other google search
 ### Slogan
 
 * Serves to catch attention of the user and suggest that the website is for people who want to sew their own clothes and then wear it
+
+![Home page large device](./sewingsquad/static/images/readme_docs/home_and_my_project_page/home_page.JPG)
+
+![Home page medium size device device](./sewingsquad/static/images/readme_docs/home_and_my_project_page/home_page_hero_medium_devices.JPG)
+
+![Home page small device](./sewingsquad/static/images/readme_docs/home_and_my_project_page/home_page_small_device_view.JPG)
+
+
 ### Search
 
 * Allows users to find posts quickly
 * The users can search by name, category or fabric type
 * When the search is successful a message with the number of posts containing the search word
 * When the search is not successful a message will appear informing the user that nothing was found for that word
+
+![Search](./sewingsquad/static/images/readme_docs/home_and_my_project_page/home_page_search.JPG)
+
+![Search results](./sewingsquad/static/images/readme_docs/home_and_my_project_page/search_result.JPG)
+
+![Search no result](./sewingsquad/static/images/readme_docs/home_and_my_project_page/search_no_result.JPG)
+
 
 ##	Card
 
@@ -362,7 +388,7 @@ The images used by copying email addresses from Etsy.com and other google search
 * Labels and icons aid intuitive navigation for better user experience
 
 ![Add project part 1](./sewingsquad/static/images/readme_docs/add_project/add_project.PNG)
-![Add project part 2](./sewingsquad/static/images/readme_docs/add_project/add_project2.PNG)
+![Add project part 2](./sewingsquad/static/images/readme_docs/add_project/add_project2.JPG)
 
 * Helper text prompts the user to separate each instruction step with full-stop
 
